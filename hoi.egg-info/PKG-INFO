@@ -1,0 +1,21 @@
+Metadata-Version: 1.2
+Name: hoi
+Version: 0.0.0
+Summary: Higher Order Interactions
+Home-page: https://github.com/brainets/hoi
+Author: BraiNets
+Author-email: e.combrisson@gmail.com
+Maintainer: Etienne Combrisson
+License: BSD 3-Clause License
+Download-URL: https://github.com/brainets/hoi/archive/v0.0.0.tar.gz
+Description: # doc_prac
+Keywords: information-theory statistics higher-order-interactions
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8

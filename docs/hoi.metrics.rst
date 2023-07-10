@@ -20,6 +20,22 @@ hoi.metrics.infotopo module
    :undoc-members:
    :show-inheritance:
 
+hoi.metrics.infotopo\_v2 module
+-------------------------------
+
+.. automodule:: hoi.metrics.infotopo_v2
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+hoi.metrics.infotopo\_v3 module
+-------------------------------
+
+.. automodule:: hoi.metrics.infotopo_v3
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 hoi.metrics.oinfo\_zerolag module
 ---------------------------------
 

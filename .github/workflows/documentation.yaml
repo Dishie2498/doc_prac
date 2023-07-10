@@ -12,6 +12,7 @@ jobs:
         run: |
           pip install sphinx sphinx_rtd_theme
           pip install sphinx pydata-sphinx-theme
+          pip install e .
       - name: Sphinx build
         run: |
           sphinx-build doc _build

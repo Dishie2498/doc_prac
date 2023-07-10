@@ -35,3 +35,5 @@ html_static_path = ['_static']
 
 
 autodoc_mock_imports = ['jax','tqdm','jax_tqdm']
+
+language='en'

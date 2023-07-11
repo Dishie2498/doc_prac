@@ -15,8 +15,8 @@ project = "HOI"
 copyright = "BraiNets"
 author = "BraiNets"
 
-version = hoi.__version__
-release = hoi.__version__
+version = hoi.hoi.__version__
+release = hoi.hoi.__version__
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

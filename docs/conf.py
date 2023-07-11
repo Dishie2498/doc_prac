@@ -9,14 +9,14 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath(".."))
 # sys.path.append(os.path.abspath("sphinxext"))
 
-project = "HOI"
-copyright = "BraiNets"
-author = "BraiNets"
+sys.path.insert(0, os.path.abspath(".."))
 
-version = "0.0.1"
+project = "HOI"
+copyright = "2023, Dishie"
+author = "Dishie"
+release = "1.0.0"
 # release = hoi.hoi.__version__
 
 # -- General configuration ---------------------------------------------------
@@ -53,5 +53,5 @@ html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
 
 
-autodoc_mock_imports = ["jax", "tqdm", "hoi", "jax_tqdm"]
+autodoc_mock_imports = ["jax", "tqdm", "jax_tqdm"]
 

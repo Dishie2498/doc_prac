@@ -8,6 +8,7 @@
 
 import os
 import sys
+import hoi
 
 # sys.path.append(os.path.abspath("sphinxext"))
 
@@ -16,8 +17,8 @@ sys.path.insert(0, os.path.abspath(".."))
 project = "HOI"
 copyright = "2023, Dishie"
 author = "Dishie"
-release = "1.0.0"
-# release = hoi.hoi.__version__
+release = hoi.__version__
+release = hoi.__version__
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

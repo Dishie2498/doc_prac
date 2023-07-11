@@ -4,4 +4,5 @@ jax
 sphinx
 pydata-sphinx-theme
 sphinx_gallery
-# sphinxcontrib.bibtex
+jaxlib
+sphinxcontrib-packages

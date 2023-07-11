@@ -1,6 +1,5 @@
 numpy
 ghp-import
 jax
-torch
 sphinx
 pydata-sphinx-theme

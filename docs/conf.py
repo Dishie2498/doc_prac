@@ -39,8 +39,6 @@ extensions = [
     "sphinx_panels",
     "numpydoc",
     "sphinx_copybutton",
-    "sphinx.ext.extname",
-    "sphinxcontrib.bibtex",
 ]
 
 

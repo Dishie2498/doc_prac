@@ -26,20 +26,19 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
     "sphinx.ext.autodoc",
-    "sphinx.ext.doctest",
-    "sphinx.ext.intersphinx",
-    "sphinx.ext.coverage",
-    "sphinx.ext.mathjax",
-    "sphinx.ext.githubpages",
-    "sphinx.ext.autosummary",
-    "sphinx.ext.linkcode",
-    "sphinx.ext.extlinks",
-    "sphinx_gallery.gen_gallery",
-    "sphinxcontrib.bibtex",
-    "sphinx_panels",
-    "numpydoc",
-    "sphinx_copybutton",
-    "sphinx.ext.extname",
+    # "sphinx.ext.doctest",
+    # "sphinx.ext.intersphinx",
+    # "sphinx.ext.coverage",
+    # "sphinx.ext.mathjax",
+    # "sphinx.ext.githubpages",
+    # "sphinx.ext.autosummary",
+    # "sphinx.ext.linkcode",
+    # "sphinx.ext.extlinks",
+    # "sphinx_gallery.gen_gallery",
+    # "sphinx_panels",
+    # "numpydoc",
+    # "sphinx_copybutton",
+    # "sphinx.ext.extname",
 ]
 
 
@@ -54,5 +53,5 @@ html_theme = "pydata_sphinx_theme"
 html_static_path = ["_static"]
 
 
-autodoc_mock_imports = ["jax", "tqdm"]
+autodoc_mock_imports = ["jax", "tqdm", "hoi"]
 

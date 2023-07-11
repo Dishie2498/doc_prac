@@ -9,14 +9,15 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath(".."))
+# sys.path.insert(0, os.path.abspath(".."))
+sys.path.append(os.path.abspath("sphinxext"))
 
 project = "HOI"
 copyright = "BraiNets"
 author = "BraiNets"
 
-version = hoi.hoi.__version__
-release = hoi.hoi.__version__
+version = "0.0.1"
+# release = hoi.hoi.__version__
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -38,6 +39,7 @@ extensions = [
     "sphinx_panels",
     "numpydoc",
     "sphinx_copybutton",
+    "sphinx.ext.extname",
 ]
 
 

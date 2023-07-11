@@ -3,7 +3,10 @@ ghp-import
 jax
 sphinx
 pydata-sphinx-theme
-sphinx_gallery
 jaxlib
 tqdm
-sphinxcontrib-packages
+sphinx-gallery
+sphinx-panels
+numpydoc
+sphinx-copybutton
+# sphinxcontrib-packages

@@ -43,7 +43,7 @@ jobs:
         run: |
           cd docs/
           make html
-          touch build/html/.nojekyll
+          touch _build/html/.nojekyll
 
       # Use ghp import to push build dir contents to gh pages
       - name: Run ghp-import

@@ -56,5 +56,5 @@ jobs:
           branch: gh-pages
           folder: docs/_build/html/
           clean: true
-          # ssh-key: ${{ secrets.DEPLOY_KEY }}
-          ssh-key: true
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+          # ssh-key: true

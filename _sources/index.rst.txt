@@ -19,7 +19,7 @@ In summary, this package aims at calculating the O-information thereby understan
    :caption: Contents:
 
    API Reference <api/modules>
-
+   Installation <install>
 
 
 Indices and tables

@@ -1,11 +1,11 @@
-Low-level core functions
-------------------------
+Metrics of HOI
+--------------
 
-:py:mod:`hoi.core`:
+:py:mod:`hoi.metrics`:
 
-.. currentmodule:: hoi.core
+.. currentmodule:: hoi.metrics
 
-.. automodule:: hoi.core
+.. automodule:: hoi.metrics
    :no-members:
    :no-inherited-members:
 
@@ -24,4 +24,4 @@ Combinatory
 .. autosummary::
    :toctree: generated/
 
-   hoi.plot.combinatory
+   hoi.metrics.HOImetrics

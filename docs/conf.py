@@ -50,6 +50,22 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 html_theme = "pydata_sphinx_theme"
 # html_theme = "sphinx_rtd_theme"
+html_theme_options = {
+    "show_toc_level": 1,
+    "use_edit_page_button": False,
+    "icon_links": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/brainets/frites",
+            "icon": "fab fa-github-square",
+        },
+        {
+            "name": "Twitter",
+            "url": "https://twitter.com/kNearNeighbors",
+            "icon": "fab fa-twitter-square",
+        },
+    ],
+}
 html_static_path = ["_static"]
 
 

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>hoi.plot package &#8212; HOI 0.0.1 documentation</title>
+    <title>Low-level core functions &#8212; HOI 0.0.1 documentation</title>
   
   
   
@@ -45,11 +45,9 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api/hoi.plot';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/api_core';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="hoi.utils package" href="hoi.utils.html" />
-    <link rel="prev" title="hoi.metrics package" href="hoi.metrics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -131,7 +129,7 @@
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="modules.html">
                         API Reference
                       </a>
@@ -231,7 +229,7 @@ document.write(`
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -249,7 +247,7 @@ document.write(`
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="modules.html">
                         API Reference
                       </a>
@@ -314,23 +312,6 @@ document.write(`
     
   </div>
   
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="hoi.html">hoi package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="hoi.core.html">hoi.core package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.html">hoi.metrics package</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">hoi.plot package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hoi.utils.html">hoi.utils package</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</nav></div>
-    </div>
-  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -363,13 +344,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    
-    <li class="breadcrumb-item"><a href="modules.html" class="nav-link">hoi</a></li>
-    
-    
-    <li class="breadcrumb-item"><a href="hoi.html" class="nav-link">hoi package</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page">hoi.plot package</li>
+    <li class="breadcrumb-item active" aria-current="page">Low-level core functions</li>
   </ul>
 </nav>
 </div>
@@ -386,54 +361,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="hoi-plot-package">
-<h1>hoi.plot package<a class="headerlink" href="#hoi-plot-package" title="Permalink to this headline">#</a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="module-hoi.plot.landscape">
-<span id="hoi-plot-landscape-module"></span><h2>hoi.plot.landscape module<a class="headerlink" href="#module-hoi.plot.landscape" title="Permalink to this headline">#</a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="hoi.plot.landscape.plot_landscape">
-<span class="sig-prename descclassname"><span class="pre">hoi.plot.landscape.</span></span><span class="sig-name descname"><span class="pre">plot_landscape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hoi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hist'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">undersampling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hist_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plt_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/plot/landscape.html#plot_landscape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.plot.landscape.plot_landscape" title="Permalink to this definition">#</a></dt>
-<dd><p>Landscape representation of higher order interactions.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>hoi</strong><span class="classifier">array_like</span></dt><dd><p>Higher order interactions.</p>
-</dd>
-<dt><strong>model</strong><span class="classifier">hoi.metrics</span></dt><dd><p>Higher order interaction model.</p>
-</dd>
-<dt><strong>minsize, maxsize</strong><span class="classifier">int | 2, None</span></dt><dd><p>Minimum and maximum size of the multiplets</p>
-</dd>
-<dt><strong>kind</strong><span class="classifier">{‘hist’, ‘scatter’}</span></dt><dd><p>Kind of plot. Use either:</p>
-<ul class="simple">
-<li><p>‘hist’ : 2D histogram of the higher order interactions</p></li>
-<li><p>‘scatter’ : scatter plot of the higher order interactions</p></li>
-</ul>
-</dd>
-<dt><strong>undersampling</strong><span class="classifier">bool | True</span></dt><dd><p>If True, plot the undersampling threshold.</p>
-</dd>
-<dt><strong>hist_kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Optional arguments for the histogram.</p>
-</dd>
-<dt><strong>plt_kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Optional arguments for the plot. If kind is ‘hist’, the arguments
-are passed to <cite>plt.pcolormesh</cite>. If kind is ‘scatter’, the arguments
-are passed to <cite>plt.scatter</cite>.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>ax</strong><span class="classifier">axis</span></dt><dd><p>Current axis.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-</section>
-<section id="module-hoi.plot">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-hoi.plot" title="Permalink to this headline">#</a></h2>
+  <section id="low-level-core-functions">
+<h1>Low-level core functions<a class="headerlink" href="#low-level-core-functions" title="Permalink to this headline">#</a></h1>
+<p><a class="reference internal" href="#module-hoi.core" title="hoi.core"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hoi.core</span></code></a>:</p>
+<span class="target" id="module-hoi.core"></span><section id="plotting-functions-for-connectivity-estimations">
+<h2>Plotting functions for connectivity estimations<a class="headerlink" href="#plotting-functions-for-connectivity-estimations" title="Permalink to this headline">#</a></h2>
+<table class="autosummary longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+</tbody>
+</table>
 </section>
 </section>
 
@@ -448,24 +388,6 @@ are passed to <cite>plt.scatter</cite>.</p>
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="hoi.metrics.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">hoi.metrics package</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="hoi.utils.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">hoi.utils package</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -484,15 +406,13 @@ are passed to <cite>plt.scatter</cite>.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hoi.plot.landscape">hoi.plot.landscape module</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hoi.plot">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-functions-for-connectivity-estimations">Plotting functions for connectivity estimations</a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">
-    <a href="../_sources/api/hoi.plot.rst.txt">
+    <a href="../_sources/api/api_core.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

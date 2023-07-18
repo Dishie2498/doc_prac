@@ -18,7 +18,7 @@ In summary, this package aims at calculating the O-information thereby understan
    :maxdepth: 2
    :caption: Contents:
 
-   modules
+   API Reference <api/modules>
 
 
 

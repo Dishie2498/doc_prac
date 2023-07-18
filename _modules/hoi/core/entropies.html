@@ -375,7 +375,7 @@ document.write(`
 <span class="kn">from</span> <span class="nn">jax.scipy.special</span> <span class="kn">import</span> <span class="n">gamma</span>
 <span class="kn">from</span> <span class="nn">jax.scipy.stats</span> <span class="kn">import</span> <span class="n">gaussian_kde</span>
 
-<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;frites&quot;</span><span class="p">)</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;hoi&quot;</span><span class="p">)</span>
 
 
 <span class="c1">###############################################################################</span>
@@ -385,7 +385,7 @@ document.write(`
 <span class="c1">###############################################################################</span>
 
 
-<div class="viewcode-block" id="get_entropy"><a class="viewcode-back" href="../../../hoi.core.html#hoi.core.entropies.get_entropy">[docs]</a><span class="k">def</span> <span class="nf">get_entropy</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;gcmi&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="get_entropy"><a class="viewcode-back" href="../../../api/hoi.core.html#hoi.core.entropies.get_entropy">[docs]</a><span class="k">def</span> <span class="nf">get_entropy</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;gcmi&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get entropy function.</span>
 
 <span class="sd">    Parameters</span>
@@ -408,8 +408,7 @@ document.write(`
     <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;knn&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">partial</span><span class="p">(</span><span class="n">entropy_knn</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;kernel&#39;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">entropy_kernel</span>
-        <span class="c1"># return partial(entropy_kernel, **kwargs)</span>
+        <span class="k">return</span> <span class="n">partial</span><span class="p">(</span><span class="n">entropy_kernel</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Method </span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2"> doesn&#39;t exist.&quot;</span><span class="p">)</span></div>
 
@@ -421,15 +420,10 @@ document.write(`
 <span class="c1">###############################################################################</span>
 
 
-<div class="viewcode-block" id="prepare_for_entropy"><a class="viewcode-back" href="../../../hoi.core.html#hoi.core.entropies.prepare_for_entropy">[docs]</a><span class="k">def</span> <span class="nf">prepare_for_entropy</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="prepare_for_entropy"><a class="viewcode-back" href="../../../api/hoi.core.html#hoi.core.entropies.prepare_for_entropy">[docs]</a><span class="k">def</span> <span class="nf">prepare_for_entropy</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Prepare the data before computing entropy.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">n_samples</span><span class="p">,</span> <span class="n">n_features</span><span class="p">,</span> <span class="n">n_variables</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span>
-
-    <span class="c1"># for task-related, add behavior along spatial dimension</span>
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n_variables</span><span class="p">))</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">data</span><span class="p">,</span> <span class="n">data</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
     <span class="c1"># type checking</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">method</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;binning&#39;</span><span class="p">])</span> <span class="ow">and</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">):</span>
@@ -450,8 +444,8 @@ document.write(`
         <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;demean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;kernel&#39;</span><span class="p">:</span>
         <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;    Unit circle normalization&#39;</span><span class="p">)</span>
-        <span class="n">data_norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">data</span> <span class="o">*</span> <span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="n">data</span> <span class="o">/</span> <span class="n">data_norm</span>
+        <span class="kn">from</span> <span class="nn">hoi.utils</span> <span class="kn">import</span> <span class="n">normalize</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">apply_along_axis</span><span class="p">(</span><span class="n">normalize</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">to_min</span><span class="o">=-</span><span class="mf">1.</span><span class="p">,</span> <span class="n">to_max</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;binning&#39;</span><span class="p">:</span>
         <span class="k">pass</span>
 
@@ -467,9 +461,9 @@ document.write(`
 <span class="c1">###############################################################################</span>
 <span class="c1">###############################################################################</span>
 
-<div class="viewcode-block" id="entropy_gcmi"><a class="viewcode-back" href="../../../hoi.core.html#hoi.core.entropies.entropy_gcmi">[docs]</a><span class="nd">@partial</span><span class="p">(</span><span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<div class="viewcode-block" id="entropy_gcmi"><a class="viewcode-back" href="../../../api/hoi.core.html#hoi.core.entropies.entropy_gcmi">[docs]</a><span class="nd">@partial</span><span class="p">(</span><span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 <span class="k">def</span> <span class="nf">entropy_gcmi</span><span class="p">(</span>
-        <span class="n">x</span><span class="p">:</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">biascorrect</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">demean</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">x</span><span class="p">:</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">biascorrect</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">demean</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Entropy of a Gaussian variable in bits.</span>
 
@@ -480,7 +474,7 @@ document.write(`
 <span class="sd">    ----------</span>
 <span class="sd">    x : array_like</span>
 <span class="sd">        Array of data of shape (n_features, n_samples)</span>
-<span class="sd">    biascorrect : bool | True</span>
+<span class="sd">    biascorrect : bool | False</span>
 <span class="sd">        Specifies whether bias correction should be applied to the estimated MI</span>
 <span class="sd">    demean : bool | False</span>
 <span class="sd">        Specifies whether the input data have to be demeaned</span>
@@ -515,7 +509,7 @@ document.write(`
     <span class="k">return</span> <span class="n">hx</span> <span class="o">/</span> <span class="n">ln2</span></div>
 
 
-<div class="viewcode-block" id="ctransform"><a class="viewcode-back" href="../../../hoi.core.html#hoi.core.entropies.ctransform">[docs]</a><span class="k">def</span> <span class="nf">ctransform</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="viewcode-block" id="ctransform"><a class="viewcode-back" href="../../../api/hoi.core.html#hoi.core.entropies.ctransform">[docs]</a><span class="k">def</span> <span class="nf">ctransform</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Copula transformation (empirical CDF).</span>
 
 <span class="sd">    Parameters</span>
@@ -535,7 +529,7 @@ document.write(`
     <span class="k">return</span> <span class="n">xr</span></div>
 
 
-<div class="viewcode-block" id="copnorm_1d"><a class="viewcode-back" href="../../../hoi.core.html#hoi.core.entropies.copnorm_1d">[docs]</a><span class="k">def</span> <span class="nf">copnorm_1d</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="viewcode-block" id="copnorm_1d"><a class="viewcode-back" href="../../../api/hoi.core.html#hoi.core.entropies.copnorm_1d">[docs]</a><span class="k">def</span> <span class="nf">copnorm_1d</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Copula normalization for a single vector.</span>
 
 <span class="sd">    Parameters</span>
@@ -552,7 +546,7 @@ document.write(`
     <span class="k">return</span> <span class="n">ndtri</span><span class="p">(</span><span class="n">ctransform</span><span class="p">(</span><span class="n">x</span><span class="p">))</span></div>
 
 
-<div class="viewcode-block" id="copnorm_nd"><a class="viewcode-back" href="../../../hoi.core.html#hoi.core.entropies.copnorm_nd">[docs]</a><span class="k">def</span> <span class="nf">copnorm_nd</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+<div class="viewcode-block" id="copnorm_nd"><a class="viewcode-back" href="../../../api/hoi.core.html#hoi.core.entropies.copnorm_nd">[docs]</a><span class="k">def</span> <span class="nf">copnorm_nd</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Copula normalization for a multidimentional array.</span>
 
 <span class="sd">    Parameters</span>
@@ -578,7 +572,7 @@ document.write(`
 <span class="c1">###############################################################################</span>
 
 
-<div class="viewcode-block" id="entropy_bin"><a class="viewcode-back" href="../../../hoi.core.html#hoi.core.entropies.entropy_bin">[docs]</a><span class="nd">@partial</span><span class="p">(</span><span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
+<div class="viewcode-block" id="entropy_bin"><a class="viewcode-back" href="../../../api/hoi.core.html#hoi.core.entropies.entropy_bin">[docs]</a><span class="nd">@partial</span><span class="p">(</span><span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
 <span class="k">def</span> <span class="nf">entropy_bin</span><span class="p">(</span>
         <span class="n">x</span><span class="p">:</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">base</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">:</span>
@@ -616,14 +610,14 @@ document.write(`
 <span class="c1">###############################################################################</span>
 
 
-<div class="viewcode-block" id="set_to_inf"><a class="viewcode-back" href="../../../hoi.core.html#hoi.core.entropies.set_to_inf">[docs]</a><span class="nd">@partial</span><span class="p">(</span><span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">)</span>
+<div class="viewcode-block" id="set_to_inf"><a class="viewcode-back" href="../../../api/hoi.core.html#hoi.core.entropies.set_to_inf">[docs]</a><span class="nd">@partial</span><span class="p">(</span><span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">set_to_inf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Set to infinity the minimum in a vector.&quot;&quot;&quot;</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">jnp</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">inf</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">jnp</span><span class="o">.</span><span class="n">nan</span></div>
 
 
-<div class="viewcode-block" id="cdistknn"><a class="viewcode-back" href="../../../hoi.core.html#hoi.core.entropies.cdistknn">[docs]</a><span class="nd">@partial</span><span class="p">(</span><span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,))</span>
+<div class="viewcode-block" id="cdistknn"><a class="viewcode-back" href="../../../api/hoi.core.html#hoi.core.entropies.cdistknn">[docs]</a><span class="nd">@partial</span><span class="p">(</span><span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,))</span>
 <span class="k">def</span> <span class="nf">cdistknn</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">knn</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;K-th minimum euclidian distance.&quot;&quot;&quot;</span>
     <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">xx</span><span class="p">[:,</span> <span class="p">[</span><span class="n">idx</span><span class="p">]],</span> <span class="n">xx</span>
@@ -637,7 +631,7 @@ document.write(`
     <span class="k">return</span> <span class="n">xx</span><span class="p">,</span> <span class="n">eucl</span><span class="p">[</span><span class="n">jnp</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">eucl</span><span class="p">)]</span></div>
 
 
-<div class="viewcode-block" id="entropy_knn"><a class="viewcode-back" href="../../../hoi.core.html#hoi.core.entropies.entropy_knn">[docs]</a><span class="nd">@partial</span><span class="p">(</span><span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
+<div class="viewcode-block" id="entropy_knn"><a class="viewcode-back" href="../../../api/hoi.core.html#hoi.core.entropies.entropy_knn">[docs]</a><span class="nd">@partial</span><span class="p">(</span><span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
 <span class="k">def</span> <span class="nf">entropy_knn</span><span class="p">(</span>
         <span class="n">x</span><span class="p">:</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">knn</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">:</span>
@@ -688,9 +682,9 @@ document.write(`
 <span class="c1">###############################################################################</span>
 
 
-<div class="viewcode-block" id="entropy_kernel"><a class="viewcode-back" href="../../../hoi.core.html#hoi.core.entropies.entropy_kernel">[docs]</a><span class="nd">@partial</span><span class="p">(</span><span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,))</span>
+<div class="viewcode-block" id="entropy_kernel"><a class="viewcode-back" href="../../../api/hoi.core.html#hoi.core.entropies.entropy_kernel">[docs]</a><span class="nd">@partial</span><span class="p">(</span><span class="n">jax</span><span class="o">.</span><span class="n">jit</span><span class="p">,</span> <span class="n">static_argnums</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 <span class="k">def</span> <span class="nf">entropy_kernel</span><span class="p">(</span>
-        <span class="n">x</span><span class="p">:</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">base</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">x</span><span class="p">:</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">,</span> <span class="n">base</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">bw_method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Entropy using gaussian kernel density.</span>
 
@@ -704,7 +698,7 @@ document.write(`
 <span class="sd">    hx : float</span>
 <span class="sd">        Entropy of x</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">model</span> <span class="o">=</span> <span class="n">gaussian_kde</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">gaussian_kde</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bw_method</span><span class="o">=</span><span class="n">bw_method</span><span class="p">)</span>
     <span class="k">return</span> <span class="o">-</span><span class="n">jnp</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">jnp</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">model</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span></div>
     <span class="c1"># p = model.pdf(x)</span>
     <span class="c1"># return jax.scipy.special.entr(p).sum() / np.log(base)</span>

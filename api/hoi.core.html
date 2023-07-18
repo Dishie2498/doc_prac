@@ -45,6 +45,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/hoi.core';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -395,7 +396,7 @@ document.write(`
 <span id="hoi-core-combinatory-module"></span><h2>hoi.core.combinatory module<a class="headerlink" href="#module-hoi.core.combinatory" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="hoi.core.combinatory.combinations">
-<span class="sig-prename descclassname"><span class="pre">hoi.core.combinatory.</span></span><span class="sig-name descname"><span class="pre">combinations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_related</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_iterator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_jax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/core/combinatory.html#combinations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.combinatory.combinations" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">hoi.core.combinatory.</span></span><span class="sig-name descname"><span class="pre">combinations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_iterator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_jax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/core/combinatory.html#combinations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.combinatory.combinations" title="Permalink to this definition">#</a></dt>
 <dd><p>Get combinations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -403,9 +404,6 @@ document.write(`
 <dt><strong>n</strong><span class="classifier">int</span></dt><dd><p>Represents the total number of elements in the set</p>
 </dd>
 <dt><strong>k</strong><span class="classifier">int</span></dt><dd><p>Represents the size of the combinations to be generated</p>
-</dd>
-<dt><strong>task_related</strong><span class="classifier">bool, optional</span></dt><dd><p>If True, include an additional column in the returned array
-representing task-related behavior, by default False.</p>
 </dd>
 </dl>
 </dd>
@@ -517,7 +515,7 @@ be discretize</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hoi.core.entropies.entropy_gcmi">
-<span class="sig-prename descclassname"><span class="pre">hoi.core.entropies.</span></span><span class="sig-name descname"><span class="pre">entropy_gcmi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">jax._src.numpy.lax_numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">biascorrect</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">demean</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">jax._src.numpy.lax_numpy.array</span></span></span><a class="reference internal" href="../_modules/hoi/core/entropies.html#entropy_gcmi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.entropies.entropy_gcmi" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">hoi.core.entropies.</span></span><span class="sig-name descname"><span class="pre">entropy_gcmi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">jax._src.numpy.lax_numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">biascorrect</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">demean</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">jax._src.numpy.lax_numpy.array</span></span></span><a class="reference internal" href="../_modules/hoi/core/entropies.html#entropy_gcmi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.entropies.entropy_gcmi" title="Permalink to this definition">#</a></dt>
 <dd><p>Entropy of a Gaussian variable in bits.</p>
 <p>H = ent_g(x) returns the entropy of a (possibly multidimensional) Gaussian
 variable x with bias correction.</p>
@@ -526,7 +524,7 @@ variable x with bias correction.</p>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>Array of data of shape (n_features, n_samples)</p>
 </dd>
-<dt><strong>biascorrect</strong><span class="classifier">bool | True</span></dt><dd><p>Specifies whether bias correction should be applied to the estimated MI</p>
+<dt><strong>biascorrect</strong><span class="classifier">bool | False</span></dt><dd><p>Specifies whether bias correction should be applied to the estimated MI</p>
 </dd>
 <dt><strong>demean</strong><span class="classifier">bool | False</span></dt><dd><p>Specifies whether the input data have to be demeaned</p>
 </dd>
@@ -543,7 +541,7 @@ variable x with bias correction.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hoi.core.entropies.entropy_kernel">
-<span class="sig-prename descclassname"><span class="pre">hoi.core.entropies.</span></span><span class="sig-name descname"><span class="pre">entropy_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">jax._src.numpy.lax_numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">jax._src.numpy.lax_numpy.array</span></span></span><a class="reference internal" href="../_modules/hoi/core/entropies.html#entropy_kernel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.entropies.entropy_kernel" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">hoi.core.entropies.</span></span><span class="sig-name descname"><span class="pre">entropy_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">jax._src.numpy.lax_numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bw_method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">jax._src.numpy.lax_numpy.array</span></span></span><a class="reference internal" href="../_modules/hoi/core/entropies.html#entropy_kernel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.entropies.entropy_kernel" title="Permalink to this definition">#</a></dt>
 <dd><p>Entropy using gaussian kernel density.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -611,7 +609,7 @@ Phy rev, 2004</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="hoi.core.entropies.prepare_for_entropy">
-<span class="sig-prename descclassname"><span class="pre">hoi.core.entropies.</span></span><span class="sig-name descname"><span class="pre">prepare_for_entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/core/entropies.html#prepare_for_entropy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.entropies.prepare_for_entropy" title="Permalink to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">hoi.core.entropies.</span></span><span class="sig-name descname"><span class="pre">prepare_for_entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/core/entropies.html#prepare_for_entropy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.entropies.prepare_for_entropy" title="Permalink to this definition">#</a></dt>
 <dd><p>Prepare the data before computing entropy.</p>
 </dd></dl>
 
@@ -619,6 +617,37 @@ Phy rev, 2004</p>
 <dt class="sig sig-object py" id="hoi.core.entropies.set_to_inf">
 <span class="sig-prename descclassname"><span class="pre">hoi.core.entropies.</span></span><span class="sig-name descname"><span class="pre">set_to_inf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/core/entropies.html#set_to_inf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.entropies.set_to_inf" title="Permalink to this definition">#</a></dt>
 <dd><p>Set to infinity the minimum in a vector.</p>
+</dd></dl>
+
+</section>
+<section id="module-hoi.core.mi">
+<span id="hoi-core-mi-module"></span><h2>hoi.core.mi module<a class="headerlink" href="#module-hoi.core.mi" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hoi.core.mi.mi_entr_comb">
+<span class="sig-prename descclassname"><span class="pre">hoi.core.mi.</span></span><span class="sig-name descname"><span class="pre">mi_entr_comb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entropy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/core/mi.html#mi_entr_comb"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.mi.mi_entr_comb" title="Permalink to this definition">#</a></dt>
+<dd><p>Entropy-based mutual information of a combination.</p>
+<p>This function can be used to scan mutual-information computations over
+set of multiplets.</p>
+<div class="math notranslate nohighlight">
+\[I_{x_{c}y} = H(x_{comb}) + H(y) - H(x_{comb}, y)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>inputs</strong><span class="classifier">tuple</span></dt><dd><p>Tuple that contains the x and y variable</p>
+</dd>
+<dt><strong>comb</strong><span class="classifier">jnp.array</span></dt><dd><p>Jax array that contains the multiplet to select.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>inputs</strong><span class="classifier">tuple</span></dt><dd><p>Original inputs</p>
+</dd>
+<dt><strong>mi</strong><span class="classifier">jnp.array</span></dt><dd><p>The mutual information</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -677,6 +706,7 @@ Phy rev, 2004</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hoi.core.combinatory">hoi.core.combinatory module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hoi.core.entropies">hoi.core.entropies module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hoi.core.mi">hoi.core.mi module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hoi.core">Module contents</a></li>
 </ul>
   </nav></div>

@@ -388,6 +388,50 @@ document.write(`
                   
   <section id="hoi-plot-package">
 <h1>hoi.plot package<a class="headerlink" href="#hoi-plot-package" title="Permalink to this headline">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="module-hoi.plot.landscape">
+<span id="hoi-plot-landscape-module"></span><h2>hoi.plot.landscape module<a class="headerlink" href="#module-hoi.plot.landscape" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hoi.plot.landscape.plot_landscape">
+<span class="sig-prename descclassname"><span class="pre">hoi.plot.landscape.</span></span><span class="sig-name descname"><span class="pre">plot_landscape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hoi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hist'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">undersampling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hist_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plt_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/plot/landscape.html#plot_landscape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.plot.landscape.plot_landscape" title="Permalink to this definition">#</a></dt>
+<dd><p>Landscape representation of higher order interactions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>hoi</strong><span class="classifier">array_like</span></dt><dd><p>Higher order interactions.</p>
+</dd>
+<dt><strong>model</strong><span class="classifier">hoi.metrics</span></dt><dd><p>Higher order interaction model.</p>
+</dd>
+<dt><strong>minsize, maxsize</strong><span class="classifier">int | 2, None</span></dt><dd><p>Minimum and maximum size of the multiplets</p>
+</dd>
+<dt><strong>kind</strong><span class="classifier">{‘hist’, ‘scatter’}</span></dt><dd><p>Kind of plot. Use either:</p>
+<ul class="simple">
+<li><p>‘hist’ : 2D histogram of the higher order interactions</p></li>
+<li><p>‘scatter’ : scatter plot of the higher order interactions</p></li>
+</ul>
+</dd>
+<dt><strong>undersampling</strong><span class="classifier">bool | True</span></dt><dd><p>If True, plot the undersampling threshold.</p>
+</dd>
+<dt><strong>hist_kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Optional arguments for the histogram.</p>
+</dd>
+<dt><strong>plt_kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Optional arguments for the plot. If kind is ‘hist’, the arguments
+are passed to <cite>plt.pcolormesh</cite>. If kind is ‘scatter’, the arguments
+are passed to <cite>plt.scatter</cite>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>ax</strong><span class="classifier">axis</span></dt><dd><p>Current axis.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="module-hoi.plot">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-hoi.plot" title="Permalink to this headline">#</a></h2>
 </section>
@@ -440,6 +484,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hoi.plot.landscape">hoi.plot.landscape module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hoi.plot">Module contents</a></li>
 </ul>
   </nav></div>

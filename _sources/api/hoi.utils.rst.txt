@@ -4,6 +4,14 @@ hoi.utils package
 Submodules
 ----------
 
+hoi.utils.progressbar module
+----------------------------
+
+.. automodule:: hoi.utils.progressbar
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 hoi.utils.stats module
 ----------------------
 

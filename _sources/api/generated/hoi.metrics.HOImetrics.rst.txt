@@ -1,8 +1,7 @@
-hoi.metrics package
-===================
+hoi.plot.metrics
+==================
 
-Submodules
-----------
+.. currentmodule:: hoi.metrics
 
 hoi.metrics.base\_hoi module
 ----------------------------
@@ -56,14 +55,6 @@ hoi.metrics.syn\_mmi module
 ---------------------------
 
 .. automodule:: hoi.metrics.syn_mmi
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: hoi.metrics
    :members:
    :undoc-members:
    :show-inheritance:

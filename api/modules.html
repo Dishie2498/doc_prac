@@ -48,7 +48,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/modules';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="hoi package" href="hoi.html" />
+    <link rel="next" title="Low-level core functions" href="api_core.html" />
     <link rel="prev" title="HOI jax implementation" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -319,13 +319,8 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="hoi.html">hoi package</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.html">hoi.metrics package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hoi.utils.html">hoi.utils package</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="api_core.html">Low-level core functions</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="api_plot.html">Plotting</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api_plot.html">Plot HOI</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="generated/hoi.plot.landscape.html">hoi.plot.landscape</a></li>
 </ul>
 </li>
@@ -387,37 +382,12 @@ document.write(`
 <h1>hoi<a class="headerlink" href="#hoi" title="Permalink to this headline">#</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="hoi.html">hoi package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hoi.html#subpackages">Subpackages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="hoi.metrics.html">hoi.metrics package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="hoi.metrics.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hoi.metrics.html#module-hoi.metrics.base_hoi">hoi.metrics.base_hoi module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hoi.metrics.html#module-hoi.metrics.info_tot">hoi.metrics.info_tot module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hoi.metrics.html#module-hoi.metrics.infotopo">hoi.metrics.infotopo module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hoi.metrics.html#module-hoi.metrics.oinfo_zerolag">hoi.metrics.oinfo_zerolag module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hoi.metrics.html#module-hoi.metrics.red_mmi">hoi.metrics.red_mmi module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hoi.metrics.html#module-hoi.metrics.rsi">hoi.metrics.rsi module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hoi.metrics.html#module-hoi.metrics.syn_mmi">hoi.metrics.syn_mmi module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hoi.metrics.html#module-hoi.metrics">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="hoi.utils.html">hoi.utils package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="hoi.utils.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hoi.utils.html#module-hoi.utils.progressbar">hoi.utils.progressbar module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hoi.utils.html#module-hoi.utils.stats">hoi.utils.stats module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hoi.utils.html#module-hoi.utils">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="hoi.html#module-hoi">Module contents</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="api_core.html">Low-level core functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api_core.html#plotting-functions-for-connectivity-estimations">Plotting functions for connectivity estimations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_core.html#information-theoretical-measures">Information-theoretical measures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_core.html#combinatory">Combinatory</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api_plot.html">Plotting</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="api_plot.html">Plot HOI</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api_plot.html#plotting-functions-for-connectivity-estimations">Plotting functions for connectivity estimations</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="generated/hoi.plot.landscape.html">hoi.plot.landscape</a></li>
 </ul>
@@ -449,11 +419,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="hoi.html"
+       href="api_core.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">hoi package</p>
+        <p class="prev-next-title">Low-level core functions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -1,4 +1,4 @@
-Plotting
+Plot HOI
 --------
 
 :py:mod:`hoi.plot`:

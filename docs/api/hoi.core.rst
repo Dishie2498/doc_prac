@@ -20,6 +20,14 @@ hoi.core.entropies module
    :undoc-members:
    :show-inheritance:
 
+hoi.core.mi module
+------------------
+
+.. automodule:: hoi.core.mi
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 

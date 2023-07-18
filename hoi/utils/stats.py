@@ -57,9 +57,9 @@ def landscape(x, mult_size, n_bins=100, centered=False, stat='probability',
     msize = np.arange(minsize, maxsize + 1)
 
     # define bin edges
-    omin, omax = np.min(x), np.max(x)
+    omin, omax = np.nanmin(x), np.nanmax(x)
     if centered:
-        minmax = np.max(np.abs([omin, omax]))
+        minmax = np.nanmax(np.abs([omin, omax]))
         o_range = (-minmax, minmax)
     else:
         o_range = (omin, omax)
@@ -95,7 +95,7 @@ def landscape(x, mult_size, n_bins=100, centered=False, stat='probability',
         attrs = dict(stat=stat, n_bins=n_bins)
         lscp = xr.DataArray(
             lscp, dims=('bins', 'order'), coords=(edge_centers, msize),
-            name='Landscape', attrs=attrs
+            name=stat, attrs=attrs
         )
         lscp.bins.attrs['unit'] = 'bits'
         return lscp
@@ -105,6 +105,7 @@ def landscape(x, mult_size, n_bins=100, centered=False, stat='probability',
 
 def digitize_1d(x, n_bins):
     """One dimensional digitization."""
+    assert x.ndim == 1
     x_min, x_max = x.min(), x.max()
     dx = (x_max - x_min) / n_bins
     x_binned = ((x - x_min) / dx).astype(int)
@@ -112,7 +113,15 @@ def digitize_1d(x, n_bins):
     return x_binned.astype(int)
 
 
-def digitize(x, n_bins, axis=0):
+def digitize_sklearn(x, **kwargs):
+    """One dimensional digitization."""
+    assert x.ndim == 1
+    from sklearn.preprocessing import KBinsDiscretizer
+    return KBinsDiscretizer(**kwargs).fit_transform(
+        x.reshape(-1, 1)).astype(int).squeeze()
+
+
+def digitize(x, n_bins, axis=0, use_sklearn=False, **kwargs):
     """Discretize a continuous variable.
 
     Parameters
@@ -124,10 +133,134 @@ def digitize(x, n_bins, axis=0):
     axis : int | 0
         Axis along which to perform the discretization. By default,
         discretization is performed along the first axis (n_samples,)
+    use_sklearn : bool | False
+        If True, use sklearn.preprocessing.KBinsDiscretizer to discretize the
+        data.
+    kwargs : dict | {}
+        Additional arguments are passed to
+        sklearn.preprocessing.KBinsDiscretizer. For example, use
+        `strategy='quantile'` for equal population binning.
 
     Returns
     -------
     x_binned : array_like
         Digitized array with the same shape as x
     """
-    return np.apply_along_axis(digitize_1d, axis, x, n_bins)
+    if not use_sklearn:
+        return np.apply_along_axis(digitize_1d, axis, x, n_bins)
+    else:
+        kwargs['n_bins'] = n_bins
+        kwargs['encode'] = 'ordinal'
+        kwargs['subsample'] = None
+        return np.apply_along_axis(digitize_sklearn, axis, x, **kwargs)
+
+
+def normalize(x, to_min=0., to_max=1.):
+    """Normalize the array x between to_min and to_max.
+
+    Parameters
+    ----------
+    x : array_like
+        The array to normalize
+    to_min : int/float | 0.
+        Minimum of returned array
+    to_max : int/float | 1.
+        Maximum of returned array
+
+    Returns
+    -------
+    xn : array_like
+        The normalized array
+    """
+    # find minimum and maximum
+    if to_min is None: to_min = np.nanmin(x)  # noqa
+    if to_max is None: to_max = np.nanmax(x)  # noqa
+
+    # normalize
+    if x.size:
+        xm, xh = np.nanmin(x), np.nanmax(x)
+        if xm != xh:
+            x_n = to_max - (((to_max - to_min) * (xh - x)) / (xh - xm))
+        else:
+            x_n = x * to_max / xh
+    else:
+        x_n = x
+
+    return x_n
+
+
+def get_nbest_mult(hoi, model, n_best=5, minsize=None, maxsize=None,
+                   names=None):
+    """Get the n best multiplets.
+
+    This function requires pandas to be installed.
+
+    Parameters
+    ----------
+    hoi : array_like
+        Array of higher-order information.
+    model : hoi.metrics
+        Model used to compute the higher-order information.
+    n_best : int, optional
+        Number of best multiplets to return. The default is 5.
+    minsize : int, optional
+        Minimum size of the multiplets. The default is None.
+    maxsize : int, optional
+        Maximum size of the multiplets. The default is None.
+    names : list, optional
+        List of names of the variables. The default is None.
+
+    Returns
+    -------
+    df_best : pandas.DataFrame
+        Dataframe containing the n best multiplets.
+    """
+    import pandas as pd
+
+    hoi = np.asarray(hoi).squeeze()
+
+    # get computed orders
+    orders = model.order
+    if minsize is None:
+        minsize = orders.min()
+    if maxsize is None:
+        maxsize = orders.max()
+
+    # get the data at selected order
+    indices = np.arange(hoi.shape[0])
+    keep_order = np.logical_and(orders >= minsize, orders <= maxsize)
+
+    # merge into a dataframe
+    df = pd.DataFrame({
+        'hoi': hoi[keep_order], 'index': indices[keep_order],
+        'order': orders[keep_order]
+    }).sort_values(by='hoi', ascending=False)
+
+    # df selection
+    is_syn = df['hoi'] < 0
+    df_syn = df.loc[is_syn]
+    df_syn = df_syn.iloc[-min(n_best, len(df_syn))::]
+    df_red = df.loc[~is_syn]
+    df_red = df_red.iloc[:min(n_best, len(df_red))]
+    df_best = pd.concat((df_red, df_syn)).reset_index(drop=True)
+    df_best['type'] = ['syn' if o < 0 else 'red' for o in df_best['hoi']]
+
+    # reorder columns
+    df_best = df_best[['index', 'order', 'hoi', 'type']]
+
+    # multiplets selection
+    mults = []
+    for m in model.multiplets[df_best['index'].values, :]:
+        mults.append(m[m != -1])
+    df_best['multiplet'] = mults
+
+    # find names
+    if names is not None:
+        cols = np.asarray(names)
+        names = []
+        for c in df_best['multiplet'].values:
+            c = np.asarray(c)
+            names.append(' / '.join(cols[c].tolist()))
+        df_best['names'] = names
+
+    return df_best

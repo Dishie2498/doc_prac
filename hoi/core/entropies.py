@@ -13,7 +13,7 @@ from jax.scipy.special import digamma as psi
 from jax.scipy.special import gamma
 from jax.scipy.stats import gaussian_kde
 
-logger = logging.getLogger("frites")
+logger = logging.getLogger("hoi")
 
 
 ###############################################################################
@@ -46,8 +46,7 @@ def get_entropy(method='gcmi', **kwargs):
     elif method == 'knn':
         return partial(entropy_knn, **kwargs)
     elif method == 'kernel':
-        return entropy_kernel
-        # return partial(entropy_kernel, **kwargs)
+        return partial(entropy_kernel, **kwargs)
     else:
         raise ValueError(f"Method {method} doesn't exist.")
 
@@ -59,15 +58,10 @@ def get_entropy(method='gcmi', **kwargs):
 ###############################################################################
 
 
-def prepare_for_entropy(data, method, y, **kwargs):
+def prepare_for_entropy(data, method, **kwargs):
     """Prepare the data before computing entropy.
     """
     n_samples, n_features, n_variables = data.shape
-
-    # for task-related, add behavior along spatial dimension
-    if isinstance(y, (list, np.ndarray, tuple)):
-        y = np.tile(y.reshape(-1, 1, 1), (1, 1, n_variables))
-        data = np.concatenate((data, data), axis=1)
 
     # type checking
     if (method in ['binning']) and (data.dtype != int):
@@ -88,8 +82,8 @@ def prepare_for_entropy(data, method, y, **kwargs):
         kwargs['demean'] = False
     elif method == 'kernel':
         logger.info('    Unit circle normalization')
-        data_norm = np.sqrt(np.sum(data * data, axis=1, keepdims=True))
-        data = data / data_norm
+        from hoi.utils import normalize
+        data = np.apply_along_axis(normalize, 0, data, to_min=-1., to_max=1.)
     elif method == 'binning':
         pass
 
@@ -107,7 +101,7 @@ def prepare_for_entropy(data, method, y, **kwargs):
 
 @partial(jax.jit, static_argnums=(1, 2))
 def entropy_gcmi(
-        x: jnp.array, biascorrect: bool = True, demean: bool = False
+        x: jnp.array, biascorrect: bool = False, demean: bool = False
     ) -> jnp.array:
     """Entropy of a Gaussian variable in bits.
 
@@ -118,7 +112,7 @@ def entropy_gcmi(
     ----------
     x : array_like
         Array of data of shape (n_features, n_samples)
-    biascorrect : bool | True
+    biascorrect : bool | False
         Specifies whether bias correction should be applied to the estimated MI
     demean : bool | False
         Specifies whether the input data have to be demeaned
@@ -326,9 +320,9 @@ def entropy_knn(
 ###############################################################################
 
 
-@partial(jax.jit, static_argnums=(1,))
+@partial(jax.jit, static_argnums=(1, 2))
 def entropy_kernel(
-        x: jnp.array, base: int = 2
+        x: jnp.array, base: int = 2, bw_method: str = None
     ) -> jnp.array:
     """Entropy using gaussian kernel density.
 
@@ -342,7 +336,7 @@ def entropy_kernel(
     hx : float
         Entropy of x
     """
-    model = gaussian_kde(x)
+    model = gaussian_kde(x, bw_method=bw_method)
     return -jnp.mean(jnp.log2(model(x)))
     # p = model.pdf(x)
     # return jax.scipy.special.entr(p).sum() / np.log(base)

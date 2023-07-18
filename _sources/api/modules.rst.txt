@@ -7,4 +7,5 @@ hoi
    .. hoi
    api_core
    api_plot
-   aoi_metrics
+   api_metrics
+   api_utils

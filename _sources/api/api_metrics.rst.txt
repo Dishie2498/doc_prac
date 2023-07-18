@@ -9,18 +9,6 @@ Metrics of HOI
    :no-members:
    :no-inherited-members:
 
-Information-theoretical measures
-++++++++++++++++++++++++++++++++
-
-.. autosummary::
-   :toctree: generated/
-
-   hoi.core.ITmeasures
-
-   
-Combinatory
-+++++++++++
-
 .. autosummary::
    :toctree: generated/
 

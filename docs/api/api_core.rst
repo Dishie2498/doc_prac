@@ -1,11 +1,11 @@
-Plotting
---------
+Low-level core functions
+------------------------
 
-:py:mod:`hoi.plot`:
+:py:mod:`hoi.core`:
 
-.. currentmodule:: hoi.plot
+.. currentmodule:: hoi.core
 
-.. automodule:: hoi.plot
+.. automodule:: hoi.core
    :no-members:
    :no-inherited-members:
 
@@ -15,4 +15,5 @@ Plotting functions for connectivity estimations
 .. autosummary::
    :toctree: generated/
 
-   hoi.plot.landscape
+   hoi.plot.combinatory
+   hoi.core.ITmeasures

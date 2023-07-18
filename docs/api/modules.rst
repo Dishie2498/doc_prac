@@ -4,8 +4,8 @@ hoi
 .. toctree::
    :maxdepth: 4
 
-   .. hoi
-   api_core
-   api_plot
-   api_metrics
-   api_utils
+   hoi
+   .. api_core
+   .. api_plot
+   .. api_metrics
+   .. api_utils

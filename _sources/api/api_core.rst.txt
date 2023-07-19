@@ -1,5 +1,5 @@
 Low-level core functions
-------------------------
+========================
 
 :py:mod:`hoi.core`:
 
@@ -10,20 +10,19 @@ Low-level core functions
    :no-inherited-members:
 
 Information-theoretical measures
-++++++++++++++++++++++++++++++++
+--------------------------------
 Measures of Entropy
---------------------
++++++++++++++++++++
 .. currentmodule:: hoi.core
 
 .. automodule:: hoi.core.entropies
    :no-members:
    :no-inherited-members:
 
-.. autofunction:: entropy_gcmi, entropy_bin, entropy_knn,entropy_kernel, copnorm_nd, prepare_for_entropy
-.. autofunction:: get_entropy
+.. autofunction:: entropy_gcmi, entropy_bin, entropy_knn,entropy_kernel, copnorm_nd, prepare_for_entropy, get_entropy
 
 Measures of Mutual Information
-------------------------------
+++++++++++++++++++++++++++++++++
 .. currentmodule:: hoi.core
 
 .. automodule:: hoi.core.entropies
@@ -33,7 +32,7 @@ Measures of Mutual Information
 .. autofunction:: 
    
 Combinatory
-+++++++++++
+-----------
 .. currentmodule:: hoi.core
 
 .. automodule:: hoi.core.combinatory

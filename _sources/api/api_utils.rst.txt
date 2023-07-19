@@ -15,8 +15,9 @@ try1
 ----
 .. currentmodule:: hoi.utils
 
-.. automodule:: hoi.utils
-   :members: normalize, digitize
+.. automodule:: hoi.utils.stats
+   :no-members:
+   :no-inherited-members:
 
 try2
 ----

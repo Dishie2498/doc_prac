@@ -18,16 +18,11 @@ Preprocessing
    normalize
 
    
-.. Postprocessing
-.. ++++++++++++++
-.. .. currentmodule:: hoi.utils
+Postprocessing
+++++++++++++++
+.. autosummary::
+   :toctree: generated/UtilityFunctions
 
-.. .. automodule:: hoi.utils.stats
-..    :no-members:
-..    :no-inherited-members:
-   
-.. .. autofunction:: landscape
-
-.. .. autofunction:: get_nbest_mult
-
+   landscape
+   get_nbest_mult
 

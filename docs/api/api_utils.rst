@@ -11,30 +11,27 @@ Utility functions
 
 Preprocessing
 +++++++++++++
-try1
-----
 .. currentmodule:: hoi.utils
 
 .. automodule:: hoi.utils.stats
    :no-members:
    :no-inherited-members:
 
-try2
-----
 .. autofunction:: normalize
 
 .. autofunction:: digitize
 
-.. autosummary::
-   :toctree: generated/UtilityFunctions
-
-   hoi.utils.preprocess
-
    
 Postprocessing
 ++++++++++++++
+.. currentmodule:: hoi.utils
 
-.. autosummary::
-   :toctree: generated/
+.. automodule:: hoi.utils.stats
+   :no-members:
+   :no-inherited-members:
+   
+.. autofunction:: landscape
 
-   hoi.metrics.HOImetrics
+.. autofunction:: get_nbest_mult
+
+

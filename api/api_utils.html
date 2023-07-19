@@ -326,6 +326,8 @@ document.write(`
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api_metrics.html">Metrics of HOI</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Utility functions</a></li>
+
+
 </ul>
 </div>
 </nav></div>
@@ -388,6 +390,125 @@ document.write(`
 <p><a class="reference internal" href="hoi.utils.html#module-hoi.utils" title="hoi.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hoi.utils</span></code></a>:</p>
 <span class="target" id="module-hoi.utils"></span><section id="preprocessing">
 <h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="module-0">
+<span id="try1"></span><h1>try1<a class="headerlink" href="#module-0" title="Permalink to this headline">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="hoi.utils.digitize">
+<span class="sig-prename descclassname"><span class="pre">hoi.utils.</span></span><span class="sig-name descname"><span class="pre">digitize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sklearn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/utils/stats.html#digitize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.digitize" title="Permalink to this definition">#</a></dt>
+<dd><p>Discretize a continuous variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>Array to discretize</p>
+</dd>
+<dt><strong>n_bins</strong><span class="classifier">int</span></dt><dd><p>Number of bins</p>
+</dd>
+<dt><strong>axis</strong><span class="classifier">int | 0</span></dt><dd><p>Axis along which to perform the discretization. By default,
+discretization is performed along the first axis (n_samples,)</p>
+</dd>
+<dt><strong>use_sklearn</strong><span class="classifier">bool | False</span></dt><dd><p>If True, use sklearn.preprocessing.KBinsDiscretizer to discretize the
+data.</p>
+</dd>
+<dt><strong>kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Additional arguments are passed to
+sklearn.preprocessing.KBinsDiscretizer. For example, use
+<cite>strategy=’quantile’</cite> for equal population binning.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>x_binned</strong><span class="classifier">array_like</span></dt><dd><p>Digitized array with the same shape as x</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hoi.utils.normalize">
+<span class="sig-prename descclassname"><span class="pre">hoi.utils.</span></span><span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/utils/stats.html#normalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.normalize" title="Permalink to this definition">#</a></dt>
+<dd><p>Normalize the array x between to_min and to_max.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>The array to normalize</p>
+</dd>
+<dt><strong>to_min</strong><span class="classifier">int/float | 0.</span></dt><dd><p>Minimum of returned array</p>
+</dd>
+<dt><strong>to_max</strong><span class="classifier">int/float | 1.</span></dt><dd><p>Maximum of returned array</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>xn</strong><span class="classifier">array_like</span></dt><dd><p>The normalized array</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="try2">
+<h1>try2<a class="headerlink" href="#try2" title="Permalink to this headline">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-prename descclassname"><span class="pre">hoi.utils.</span></span><span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/utils/stats.html#normalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id0" title="Permalink to this definition">#</a></dt>
+<dd><p>Normalize the array x between to_min and to_max.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>The array to normalize</p>
+</dd>
+<dt><strong>to_min</strong><span class="classifier">int/float | 0.</span></dt><dd><p>Minimum of returned array</p>
+</dd>
+<dt><strong>to_max</strong><span class="classifier">int/float | 1.</span></dt><dd><p>Maximum of returned array</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>xn</strong><span class="classifier">array_like</span></dt><dd><p>The normalized array</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-prename descclassname"><span class="pre">hoi.utils.</span></span><span class="sig-name descname"><span class="pre">digitize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sklearn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/utils/stats.html#digitize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id1" title="Permalink to this definition">#</a></dt>
+<dd><p>Discretize a continuous variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>Array to discretize</p>
+</dd>
+<dt><strong>n_bins</strong><span class="classifier">int</span></dt><dd><p>Number of bins</p>
+</dd>
+<dt><strong>axis</strong><span class="classifier">int | 0</span></dt><dd><p>Axis along which to perform the discretization. By default,
+discretization is performed along the first axis (n_samples,)</p>
+</dd>
+<dt><strong>use_sklearn</strong><span class="classifier">bool | False</span></dt><dd><p>If True, use sklearn.preprocessing.KBinsDiscretizer to discretize the
+data.</p>
+</dd>
+<dt><strong>kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Additional arguments are passed to
+sklearn.preprocessing.KBinsDiscretizer. For example, use
+<cite>strategy=’quantile’</cite> for equal population binning.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>x_binned</strong><span class="classifier">array_like</span></dt><dd><p>Digitized array with the same shape as x</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 <table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
@@ -396,7 +517,6 @@ document.write(`
 <tbody>
 </tbody>
 </table>
-</section>
 <section id="postprocessing">
 <h2>Postprocessing<a class="headerlink" href="#postprocessing" title="Permalink to this headline">#</a></h2>
 <table class="autosummary longtable table autosummary">
@@ -457,9 +577,17 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Utility functions</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#module-0">try1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#try2">try2</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postprocessing">Postprocessing</a></li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
   <div class="sidebar-secondary-item">

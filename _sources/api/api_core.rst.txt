@@ -1,3 +1,50 @@
+.. Low-level core functions
+.. ========================
+
+.. :py:mod:`hoi.core`:
+
+.. .. currentmodule:: hoi.core
+
+.. .. automodule:: hoi.core
+..    :no-members:
+..    :no-inherited-members:
+
+.. Information-theoretical measures
+.. --------------------------------
+.. Measures of Entropy
+.. +++++++++++++++++++
+.. .. currentmodule:: hoi.core
+
+.. .. automodule:: hoi.core.entropies
+..    :no-members:
+..    :no-inherited-members:
+
+.. .. autofunction:: entropy_gcmi   
+.. .. autofunction:: entropy_bin
+.. .. autofunction:: entropy_knn
+.. .. autofunction:: entropy_kernel
+.. .. autofunction:: copnorm_nd
+.. .. autofunction:: prepare_for_entropy
+.. .. autofunction:: get_entropy
+
+.. Measures of Mutual Information
+.. ++++++++++++++++++++++++++++++++
+.. .. currentmodule:: hoi.core
+
+.. .. automodule:: hoi.core.entropies
+..    :no-members:
+..    :no-inherited-members:
+
+   
+.. Combinatory
+.. -----------
+.. .. currentmodule:: hoi.core
+
+.. .. automodule:: hoi.core.combinatory
+..    :no-members:
+..    :no-inherited-members:
+   
+.. .. autofunction:: combinations
 Low-level core functions
 ========================
 
@@ -5,44 +52,32 @@ Low-level core functions
 
 .. currentmodule:: hoi.core
 
-.. automodule:: hoi.core
-   :no-members:
-   :no-inherited-members:
 
 Information-theoretical measures
 --------------------------------
 Measures of Entropy
 +++++++++++++++++++
-.. currentmodule:: hoi.core
+.. autosummary::
+   :toctree: generated/coreFunctions
 
-.. automodule:: hoi.core.entropies
-   :no-members:
-   :no-inherited-members:
-
-.. autofunction:: entropy_gcmi   
-.. autofunction:: entropy_bin
-.. autofunction:: entropy_knn
-.. autofunction:: entropy_kernel
-.. autofunction:: copnorm_nd
-.. autofunction:: prepare_for_entropy
-.. autofunction:: get_entropy
-
+   entropy_gcmi
+   entropy_bin
+   entropy_knn
+   entropy_kernel
+   copnorm_nd
+   prepare_for_entropy
+   get_entropy
 Measures of Mutual Information
 ++++++++++++++++++++++++++++++++
-.. currentmodule:: hoi.core
+.. autosummary::
+   :toctree: generated/coreFunctions
 
-.. automodule:: hoi.core.entropies
-   :no-members:
-   :no-inherited-members:
+   mi_entr_comb
 
-.. autofunction:: 
-   
+
 Combinatory
 -----------
-.. currentmodule:: hoi.core
+.. autosummary::
+   :toctree: generated/coreFunctions
 
-.. automodule:: hoi.core.combinatory
-   :no-members:
-   :no-inherited-members:
-   
-.. autofunction:: combinations
+   combinations

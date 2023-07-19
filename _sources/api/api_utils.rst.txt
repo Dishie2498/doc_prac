@@ -13,9 +13,9 @@ Preprocessing
 +++++++++++++
 
 .. autosummary::
-   :toctree: generated/
+   :toctree: generated/UtilityFunctions
 
-   hoi.core.ITmeasures
+   hoi.utils.preprocess
 
    
 Postprocessing

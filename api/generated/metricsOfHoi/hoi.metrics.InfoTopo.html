@@ -48,8 +48,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/generated/metricsOfHoi/hoi.metrics.InfoTopo';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="hoi.metrics.oinfo_zerolag" href="hoi.metrics.oinfo_zerolag.html" />
-    <link rel="prev" title="Metrics of HOI" href="../../api_metrics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -131,7 +129,7 @@
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../modules.html">
                         API Reference
                       </a>
@@ -231,7 +229,7 @@ document.write(`
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -249,7 +247,7 @@ document.write(`
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../modules.html">
                         API Reference
                       </a>
@@ -314,28 +312,6 @@ document.write(`
     
   </div>
   
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../api_core.html">Low-level core functions</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../api_plot.html">Plot HOI</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../hoi.plot.landscape.html">hoi.plot.landscape</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../api_metrics.html">Metrics of HOI</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">hoi.metrics.InfoTopo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.oinfo_zerolag.html">hoi.metrics.oinfo_zerolag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.RSI.html">hoi.metrics.RSI</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../api_utils.html">Utility functions</a></li>
-</ul>
-</div>
-</nav></div>
-    </div>
-  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -368,12 +344,6 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    
-    <li class="breadcrumb-item"><a href="../../modules.html" class="nav-link">hoi</a></li>
-    
-    
-    <li class="breadcrumb-item"><a href="../../api_metrics.html" class="nav-link">Metrics of HOI</a></li>
-    
     <li class="breadcrumb-item active" aria-current="page">hoi.metrics.InfoTopo</li>
   </ul>
 </nav>
@@ -393,10 +363,13 @@ document.write(`
                   
   <section id="hoi-metrics-infotopo">
 <h1>hoi.metrics.InfoTopo<a class="headerlink" href="#hoi-metrics-infotopo" title="Permalink to this headline">#</a></h1>
+<section id="module-hoi.metrics.infotopo">
+<span id="hoi-metrics-infotopo-module"></span><h2>hoi.metrics.infotopo module<a class="headerlink" href="#module-hoi.metrics.infotopo" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="hoi.metrics.InfoTopo">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hoi.metrics.</span></span><span class="sig-name descname"><span class="pre">InfoTopo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/infotopo.html#InfoTopo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.InfoTopo" title="Permalink to this definition">#</a></dt>
-<dd><p>Dynamic, possibly task-related Topological Information.</p>
+<dt class="sig sig-object py" id="hoi.metrics.infotopo.InfoTopo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hoi.metrics.infotopo.</span></span><span class="sig-name descname"><span class="pre">InfoTopo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/infotopo.html#InfoTopo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.infotopo.InfoTopo" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../hoi.metrics.html#hoi.metrics.base_hoi.HOIEstimator" title="hoi.metrics.base_hoi.HOIEstimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">hoi.metrics.base_hoi.HOIEstimator</span></code></a></p>
+<p>Dynamic, possibly task-related Topological Information.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
@@ -427,7 +400,7 @@ document.write(`
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code>([minsize, maxsize, method])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../hoi.metrics.html#hoi.metrics.infotopo.InfoTopo.fit" title="hoi.metrics.infotopo.InfoTopo.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>([minsize, maxsize, method])</p></td>
 <td><p>Compute Topological Information.</p></td>
 </tr>
 </tbody>
@@ -450,57 +423,52 @@ document.write(`
 </tbody>
 </table>
 <dl class="py method">
-<dt class="sig sig-object py" id="hoi.metrics.InfoTopo.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/infotopo.html#InfoTopo.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.InfoTopo.__init__" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p class="rubric">Methods</p>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#hoi.metrics.InfoTopo.__init__" title="hoi.metrics.InfoTopo.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(data[, y, verbose])</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_entropies</span></code>([method, minsize, ...])</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_multiplets</span></code>(mults, order)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code>([minsize, maxsize, method])</p></td>
-<td><p>Compute Topological Information.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_combinations</span></code>(msize[, as_iterator, ...])</p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Attributes</p>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">entropies</span></code></p></td>
-<td><p>Entropies of shape (n_mult,)</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiplets</span></code></p></td>
-<td><p>Indices of the multiplets of shape (n_mult, maxsize).</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">order</span></code></p></td>
-<td><p>Order of each multiplet of shape (n_mult,).</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">undersampling</span></code></p></td>
-<td><p>Under-sampling threshold.</p></td>
-</tr>
-</tbody>
-</table>
+<dt class="sig sig-object py" id="hoi.metrics.infotopo.InfoTopo.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gcmi'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/infotopo.html#InfoTopo.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.infotopo.InfoTopo.fit" title="Permalink to this definition">#</a></dt>
+<dd><p>Compute Topological Information.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>minsize, maxsize</strong><span class="classifier">int | 2, None</span></dt><dd><p>Minimum and maximum size of the multiplets</p>
+</dd>
+<dt><strong>method</strong><span class="classifier">{‘gcmi’, ‘binning’, ‘knn’}</span></dt><dd><p>Name of the method to compute entropy. Use either :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>‘gcmi’: gaussian copula entropy [default]</p></li>
+<li><p>‘binning’: binning-based estimator of entropy. Note that to
+use this estimator, the data have be to discretized</p></li>
+<li><p>‘knn’: k-nearest neighbor estimator</p></li>
+</ul>
+</div></blockquote>
+</dd>
+<dt><strong>kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Additional arguments are sent to each entropy function</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>oinfo</strong><span class="classifier">array_like</span></dt><dd><p>The O-info array of shape (n_multiplets, n_variables) where positive
+values reflect redundant dominated interactions and negative values
+stand for synergistic dominated interactions.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hoi.metrics.infotopo.compute_mi">
+<span class="sig-prename descclassname"><span class="pre">hoi.metrics.infotopo.</span></span><span class="sig-name descname"><span class="pre">compute_mi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterators</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/infotopo.html#compute_mi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.infotopo.compute_mi" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hoi.metrics.infotopo.find_indices">
+<span class="sig-prename descclassname"><span class="pre">hoi.metrics.infotopo.</span></span><span class="sig-name descname"><span class="pre">find_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/infotopo.html#find_indices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.infotopo.find_indices" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<span class="target" id="module-hoi.metrics"></span></section>
 </section>
 
 
@@ -514,24 +482,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../../api_metrics.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Metrics of HOI</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="hoi.metrics.oinfo_zerolag.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">hoi.metrics.oinfo_zerolag</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -543,6 +493,16 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hoi.metrics.infotopo">hoi.metrics.infotopo module</a></li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">

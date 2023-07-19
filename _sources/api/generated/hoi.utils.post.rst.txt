@@ -1,4 +1,4 @@
-hoi.plot.Postprocessing
+hoi.utils.Postprocessing
 =======================
 
 .. automodule:: hoi.utils.stats

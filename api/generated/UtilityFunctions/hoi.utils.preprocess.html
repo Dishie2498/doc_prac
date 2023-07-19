@@ -363,11 +363,9 @@ document.write(`
                   
   <section id="preprocessing">
 <h1>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">#</a></h1>
-<section id="hoi-metrics-base-hoi-module">
-<h2>hoi.metrics.base_hoi module<a class="headerlink" href="#hoi-metrics-base-hoi-module" title="Permalink to this headline">#</a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="hoi.utils.normalize">
-<span class="sig-prename descclassname"><span class="pre">hoi.utils.</span></span><span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/utils/stats.html#normalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.normalize" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="hoi.utils.stats.normalize">
+<span class="sig-prename descclassname"><span class="pre">hoi.utils.stats.</span></span><span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/utils/stats.html#normalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.stats.normalize" title="Permalink to this definition">#</a></dt>
 <dd><p>Normalize the array x between to_min and to_max.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -390,8 +388,8 @@ document.write(`
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="hoi.utils.digitize">
-<span class="sig-prename descclassname"><span class="pre">hoi.utils.</span></span><span class="sig-name descname"><span class="pre">digitize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sklearn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/utils/stats.html#digitize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.digitize" title="Permalink to this definition">#</a></dt>
+<dt class="sig sig-object py" id="hoi.utils.stats.digitize">
+<span class="sig-prename descclassname"><span class="pre">hoi.utils.stats.</span></span><span class="sig-name descname"><span class="pre">digitize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sklearn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/utils/stats.html#digitize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.stats.digitize" title="Permalink to this definition">#</a></dt>
 <dd><p>Discretize a continuous variable.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -422,7 +420,6 @@ sklearn.preprocessing.KBinsDiscretizer. For example, use
 </dd></dl>
 
 </section>
-</section>
 
 
                 </article>
@@ -446,16 +443,6 @@ sklearn.preprocessing.KBinsDiscretizer. For example, use
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hoi-metrics-base-hoi-module">hoi.metrics.base_hoi module</a></li>
-</ul>
-  </nav></div>
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">

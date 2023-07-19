@@ -1,10 +1,7 @@
 Preprocessing
 =================
 
-.. currentmodule:: hoi.utils
-
-hoi.metrics.base\_hoi module
-----------------------------
+.. currentmodule:: hoi.utils.stats
 
 .. autofunction:: normalize
 

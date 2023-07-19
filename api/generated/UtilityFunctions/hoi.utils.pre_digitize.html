@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Preprocessing &#8212; HOI 0.0.1 documentation</title>
+    <title>hoi.utils.digitize &#8212; HOI 0.0.1 documentation</title>
   
   
   
@@ -45,7 +45,7 @@
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api/generated/UtilityFunctions/hoi.utils.preprocess';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/generated/UtilityFunctions/hoi.utils.pre_digitize';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -344,7 +344,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">Preprocessing</li>
+    <li class="breadcrumb-item active" aria-current="page">hoi.utils.digitize</li>
   </ul>
 </nav>
 </div>
@@ -361,91 +361,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="module-hoi.utils">
-<span id="preprocessing"></span><h1>Preprocessing<a class="headerlink" href="#module-hoi.utils" title="Permalink to this headline">#</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="hoi.utils.digitize">
-<span class="sig-prename descclassname"><span class="pre">hoi.utils.</span></span><span class="sig-name descname"><span class="pre">digitize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sklearn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/utils/stats.html#digitize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.digitize" title="Permalink to this definition">#</a></dt>
-<dd><p>Discretize a continuous variable.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>Array to discretize</p>
-</dd>
-<dt><strong>n_bins</strong><span class="classifier">int</span></dt><dd><p>Number of bins</p>
-</dd>
-<dt><strong>axis</strong><span class="classifier">int | 0</span></dt><dd><p>Axis along which to perform the discretization. By default,
-discretization is performed along the first axis (n_samples,)</p>
-</dd>
-<dt><strong>use_sklearn</strong><span class="classifier">bool | False</span></dt><dd><p>If True, use sklearn.preprocessing.KBinsDiscretizer to discretize the
-data.</p>
-</dd>
-<dt><strong>kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Additional arguments are passed to
-sklearn.preprocessing.KBinsDiscretizer. For example, use
-<cite>strategy=’quantile’</cite> for equal population binning.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>x_binned</strong><span class="classifier">array_like</span></dt><dd><p>Digitized array with the same shape as x</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="hoi.utils.normalize">
-<span class="sig-prename descclassname"><span class="pre">hoi.utils.</span></span><span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/utils/stats.html#normalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.normalize" title="Permalink to this definition">#</a></dt>
-<dd><p>Normalize the array x between to_min and to_max.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>The array to normalize</p>
-</dd>
-<dt><strong>to_min</strong><span class="classifier">int/float | 0.</span></dt><dd><p>Minimum of returned array</p>
-</dd>
-<dt><strong>to_max</strong><span class="classifier">int/float | 1.</span></dt><dd><p>Maximum of returned array</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>xn</strong><span class="classifier">array_like</span></dt><dd><p>The normalized array</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-</section>
-<section id="early">
-<h1>Early<a class="headerlink" href="#early" title="Permalink to this headline">#</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="hoi.utils.stats.normalize">
-<span class="sig-prename descclassname"><span class="pre">hoi.utils.stats.</span></span><span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/utils/stats.html#normalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.stats.normalize" title="Permalink to this definition">#</a></dt>
-<dd><p>Normalize the array x between to_min and to_max.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>The array to normalize</p>
-</dd>
-<dt><strong>to_min</strong><span class="classifier">int/float | 0.</span></dt><dd><p>Minimum of returned array</p>
-</dd>
-<dt><strong>to_max</strong><span class="classifier">int/float | 1.</span></dt><dd><p>Maximum of returned array</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>xn</strong><span class="classifier">array_like</span></dt><dd><p>The normalized array</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
+  <section id="module-hoi.utils.stats">
+<span id="hoi-utils-digitize"></span><h1>hoi.utils.digitize<a class="headerlink" href="#module-hoi.utils.stats" title="Permalink to this headline">#</a></h1>
+<p>Statistics and summary statistics on HOI.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hoi.utils.stats.digitize">
 <span class="sig-prename descclassname"><span class="pre">hoi.utils.stats.</span></span><span class="sig-name descname"><span class="pre">digitize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sklearn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/utils/stats.html#digitize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.stats.digitize" title="Permalink to this definition">#</a></dt>
@@ -504,20 +422,8 @@ sklearn.preprocessing.KBinsDiscretizer. For example, use
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
   <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Preprocessing</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#early">Early</a></li>
-</ul>
-
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">
-    <a href="../../../_sources/api/generated/UtilityFunctions/hoi.utils.preprocess.rst.txt">
+    <a href="../../../_sources/api/generated/UtilityFunctions/hoi.utils.pre_digitize.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

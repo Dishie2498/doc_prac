@@ -11,15 +11,11 @@ Utility functions
 
 Preprocessing
 +++++++++++++
-.. currentmodule:: hoi.utils
+.. autosummary::
+   :toctree: generated/UtilityFunctions
 
-.. automodule:: hoi.utils.stats
-   :no-members:
-   :no-inherited-members:
-
-.. autofunction:: normalize
-
-.. autofunction:: digitize
+   hoi.utils.pre_digitize
+   hoi.utils.pre_normalize
 
    
 Postprocessing

@@ -364,6 +364,38 @@ document.write(`
   <section id="module-hoi.utils">
 <span id="preprocessing"></span><h1>Preprocessing<a class="headerlink" href="#module-hoi.utils" title="Permalink to this headline">#</a></h1>
 <dl class="py function">
+<dt class="sig sig-object py" id="hoi.utils.digitize">
+<span class="sig-prename descclassname"><span class="pre">hoi.utils.</span></span><span class="sig-name descname"><span class="pre">digitize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sklearn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/utils/stats.html#digitize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.digitize" title="Permalink to this definition">#</a></dt>
+<dd><p>Discretize a continuous variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>Array to discretize</p>
+</dd>
+<dt><strong>n_bins</strong><span class="classifier">int</span></dt><dd><p>Number of bins</p>
+</dd>
+<dt><strong>axis</strong><span class="classifier">int | 0</span></dt><dd><p>Axis along which to perform the discretization. By default,
+discretization is performed along the first axis (n_samples,)</p>
+</dd>
+<dt><strong>use_sklearn</strong><span class="classifier">bool | False</span></dt><dd><p>If True, use sklearn.preprocessing.KBinsDiscretizer to discretize the
+data.</p>
+</dd>
+<dt><strong>kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Additional arguments are passed to
+sklearn.preprocessing.KBinsDiscretizer. For example, use
+<cite>strategy=’quantile’</cite> for equal population binning.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>x_binned</strong><span class="classifier">array_like</span></dt><dd><p>Digitized array with the same shape as x</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="hoi.utils.normalize">
 <span class="sig-prename descclassname"><span class="pre">hoi.utils.</span></span><span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/utils/stats.html#normalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.normalize" title="Permalink to this definition">#</a></dt>
 <dd><p>Normalize the array x between to_min and to_max.</p>

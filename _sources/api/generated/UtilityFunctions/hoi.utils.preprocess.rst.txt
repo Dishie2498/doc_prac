@@ -1,7 +1,9 @@
 Preprocessing
 =================
+.. currentmodule:: hoi.utils
+
 .. automodule:: hoi.utils
-   :members: normalize
+   :members: normalize, digitize
 
 
 Early

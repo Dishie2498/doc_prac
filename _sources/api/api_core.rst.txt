@@ -19,8 +19,14 @@ Measures of Entropy
    :no-members:
    :no-inherited-members:
 
-.. autofunction:: entropy_gcmi, entropy_bin, entropy_knn,entropy_kernel, copnorm_nd, prepare_for_entropy, get_entropy
-
+.. autofunction:: entropy_gcmi
+.. autofunction:: entropy_bin
+.. autofunction:: entropy_knn
+.. autofunction:: entropy_kernel
+.. autofunction:: copnorm_nd
+.. autofunction:: prepare_for_entropy
+.. autofunction:: get_entropy
+   
 Measures of Mutual Information
 ++++++++++++++++++++++++++++++++
 .. currentmodule:: hoi.core

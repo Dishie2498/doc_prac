@@ -326,8 +326,6 @@ document.write(`
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api_metrics.html">Metrics of HOI</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Utility functions</a></li>
-
-
 </ul>
 </div>
 </nav></div>
@@ -388,16 +386,9 @@ document.write(`
   <section id="utility-functions">
 <h1>Utility functions<a class="headerlink" href="#utility-functions" title="Permalink to this headline">#</a></h1>
 <p><a class="reference internal" href="hoi.utils.html#module-hoi.utils" title="hoi.utils"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hoi.utils</span></code></a>:</p>
-<span class="target" id="module-hoi.utils"></span><section id="preprocessing">
-<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">#</a></h2>
-</section>
-</section>
-<section id="module-hoi.utils.stats">
-<span id="try1"></span><h1>try1<a class="headerlink" href="#module-hoi.utils.stats" title="Permalink to this headline">#</a></h1>
+<span class="target" id="module-hoi.utils"></span><section id="module-hoi.utils.stats">
+<span id="preprocessing"></span><h2>Preprocessing<a class="headerlink" href="#module-hoi.utils.stats" title="Permalink to this headline">#</a></h2>
 <p>Statistics and summary statistics on HOI.</p>
-</section>
-<section id="try2">
-<h1>try2<a class="headerlink" href="#try2" title="Permalink to this headline">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="hoi.utils.stats.normalize">
 <span class="sig-prename descclassname"><span class="pre">hoi.utils.stats.</span></span><span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/utils/stats.html#normalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.stats.normalize" title="Permalink to this definition">#</a></dt>
@@ -454,24 +445,94 @@ sklearn.preprocessing.KBinsDiscretizer. For example, use
 </dl>
 </dd></dl>
 
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-</tbody>
-</table>
-<section id="postprocessing">
-<h2>Postprocessing<a class="headerlink" href="#postprocessing" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-</tbody>
-</table>
+</section>
+<section id="module-0">
+<span id="postprocessing"></span><h2>Postprocessing<a class="headerlink" href="#module-0" title="Permalink to this headline">#</a></h2>
+<p>Statistics and summary statistics on HOI.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hoi.utils.stats.landscape">
+<span class="sig-prename descclassname"><span class="pre">hoi.utils.stats.</span></span><span class="sig-name descname"><span class="pre">landscape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mult_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bins</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">centered</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'probability'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'numpy'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/utils/stats.html#landscape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.stats.landscape" title="Permalink to this definition">#</a></dt>
+<dd><p>Compute the landscape from HOI values.</p>
+<p>The landscape represents the how estimates of HOI are distributed per
+order.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>Array of data containing the HOI estimates of shape (n_hoi,)</p>
+</dd>
+<dt><strong>multi_size</strong><span class="classifier">array_like</span></dt><dd><p>Size of the multiplet associated to each HOI estimates. It should be an
+array of shape (n_hoi,)</p>
+</dd>
+<dt><strong>n_bins</strong><span class="classifier">array_like | 100</span></dt><dd><p>Number of bins to use to build the histogram at each order</p>
+</dd>
+<dt><strong>centered</strong><span class="classifier">bool | False</span></dt><dd><p>Specify whether bin edges should be centered around zero</p>
+</dd>
+<dt><strong>stat</strong><span class="classifier">{‘probability’, ‘frequency’, ‘count’, ‘density’, ‘percent’}</span></dt><dd><p>Aggregate statistic to compute in each bin.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>count: show the number of observations in each bin</p></li>
+<li><p>frequency: show the number of observations divided by the bin
+width</p></li>
+<li><p>probability or proportion: normalize such that bar heights sum to
+1</p></li>
+<li><p>percent: normalize such that bar heights sum to 100</p></li>
+<li><p>density: normalize such that the total area of the histogram
+equals 1</p></li>
+</ul>
+</div></blockquote>
+</dd>
+<dt><strong>output</strong><span class="classifier">{‘numpy’, ‘pandas’, ‘xarray’} | None</span></dt><dd><p>Output type. Use either :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>‘numpy’: in that case this function will returns the landscape,
+the unique orders (x-axis) and the central bins (y-axis)</p></li>
+<li><p>‘pandas’: 2-dimensional pandas dataframe</p></li>
+<li><p>‘xarray’: 2-dimensional dataarray</p></li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>landcape</strong><span class="classifier">array_like</span></dt><dd><p>Returns depend on the <cite>output</cite> parameter. Check to see what is returned</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hoi.utils.stats.get_nbest_mult">
+<span class="sig-prename descclassname"><span class="pre">hoi.utils.stats.</span></span><span class="sig-name descname"><span class="pre">get_nbest_mult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hoi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_best</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/utils/stats.html#get_nbest_mult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.stats.get_nbest_mult" title="Permalink to this definition">#</a></dt>
+<dd><p>Get the n best multiplets.</p>
+<p>This function requires pandas to be installed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>hoi</strong><span class="classifier">array_like</span></dt><dd><p>Array of higher-order information.</p>
+</dd>
+<dt><strong>model</strong><span class="classifier">hoi.metrics</span></dt><dd><p>Model used to compute the higher-order information.</p>
+</dd>
+<dt><strong>n_best</strong><span class="classifier">int, optional</span></dt><dd><p>Number of best multiplets to return. The default is 5.</p>
+</dd>
+<dt><strong>minsize</strong><span class="classifier">int, optional</span></dt><dd><p>Minimum size of the multiplets. The default is None.</p>
+</dd>
+<dt><strong>maxsize</strong><span class="classifier">int, optional</span></dt><dd><p>Maximum size of the multiplets. The default is None.</p>
+</dd>
+<dt><strong>names</strong><span class="classifier">list, optional</span></dt><dd><p>List of names of the variables. The default is None.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>df_best</strong><span class="classifier">pandas.DataFrame</span></dt><dd><p>Dataframe containing the n best multiplets.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 
@@ -522,17 +583,9 @@ sklearn.preprocessing.KBinsDiscretizer. For example, use
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Utility functions</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing">Preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hoi.utils.stats">Preprocessing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-0">Postprocessing</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hoi.utils.stats">try1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#try2">try2</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#postprocessing">Postprocessing</a></li>
-</ul>
-</li>
-</ul>
-
   </nav></div>
 
   <div class="sidebar-secondary-item">

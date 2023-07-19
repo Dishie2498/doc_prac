@@ -3,8 +3,8 @@ hoi.metrics.RedundancyMMI
 
 .. currentmodule:: hoi.metrics
 
-.. hoi.metrics.red\_mmi module
-.. ---------------------------
+hoi.metrics.red\_mmi module
+---------------------------
 
 .. automodule:: hoi.metrics.red_mmi
    :members:

@@ -14,8 +14,8 @@ Preprocessing
 .. autosummary::
    :toctree: generated/UtilityFunctions
 
-   hoi.utils.pre_digitize
-   hoi.utils.pre_normalize
+   digitize
+   normalize
 
    
 .. Postprocessing

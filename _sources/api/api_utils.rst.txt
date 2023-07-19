@@ -5,9 +5,9 @@ Utility functions
 
 .. currentmodule:: hoi.utils
 
-.. automodule:: hoi.utils
-   :no-members:
-   :no-inherited-members:
+.. .. automodule:: hoi.utils
+..    :no-members:
+..    :no-inherited-members:
 
 Preprocessing
 +++++++++++++
@@ -18,16 +18,16 @@ Preprocessing
    hoi.utils.pre_normalize
 
    
-Postprocessing
-++++++++++++++
-.. currentmodule:: hoi.utils
+.. Postprocessing
+.. ++++++++++++++
+.. .. currentmodule:: hoi.utils
 
-.. automodule:: hoi.utils.stats
-   :no-members:
-   :no-inherited-members:
+.. .. automodule:: hoi.utils.stats
+..    :no-members:
+..    :no-inherited-members:
    
-.. autofunction:: landscape
+.. .. autofunction:: landscape
 
-.. autofunction:: get_nbest_mult
+.. .. autofunction:: get_nbest_mult
 
 

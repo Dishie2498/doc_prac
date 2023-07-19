@@ -1,6 +1,6 @@
 Preprocessing
 =================
-.. automodule:: hoi.utils.stats
+.. automodule:: hoi.utils
    :members: normalize
 
 

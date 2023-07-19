@@ -11,17 +11,33 @@ Low-level core functions
 
 Information-theoretical measures
 ++++++++++++++++++++++++++++++++
+Measures of Entropy
+--------------------
+.. currentmodule:: hoi.core
 
-.. autosummary::
-   :toctree: generated/
+.. automodule:: hoi.core.entropies
+   :no-members:
+   :no-inherited-members:
 
-   hoi.core.ITmeasures
+.. autofunction:: entropy_gcmi, entropy_bin, entropy_knn,entropy_kernel, copnorm_nd, prepare_for_entropy
+.. autofunction:: get_entropy
 
+Measures of Mutual Information
+------------------------------
+.. currentmodule:: hoi.core
+
+.. automodule:: hoi.core.entropies
+   :no-members:
+   :no-inherited-members:
+
+.. autofunction:: 
    
 Combinatory
 +++++++++++
+.. currentmodule:: hoi.core
 
-.. autosummary::
-   :toctree: generated/
-
-   hoi.plot.combinatory
+.. automodule:: hoi.core.combinatory
+   :no-members:
+   :no-inherited-members:
+   
+.. autofunction:: combinations

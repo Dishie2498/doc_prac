@@ -1,5 +1,5 @@
-hoi.plot.metrics
-==================
+hoi.metrics
+===========
 
 .. currentmodule:: hoi.metrics
 
@@ -55,6 +55,11 @@ hoi.metrics.syn\_mmi module
 ---------------------------
 
 .. automodule:: hoi.metrics.syn_mmi
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: hoi.metrics
    :members:
    :undoc-members:
    :show-inheritance:

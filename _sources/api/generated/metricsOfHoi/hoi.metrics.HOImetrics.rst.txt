@@ -1,5 +1,5 @@
-hoi.metrics
-===========
+Metrics of HOI
+==============
 
 .. currentmodule:: hoi.metrics
 

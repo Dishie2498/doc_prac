@@ -361,11 +361,39 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="preprocessing">
-<h1>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">#</a></h1>
+  <section id="module-hoi.utils.stats">
+<span id="preprocessing"></span><h1>Preprocessing<a class="headerlink" href="#module-hoi.utils.stats" title="Permalink to this headline">#</a></h1>
+<p>Statistics and summary statistics on HOI.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="hoi.utils.stats.normalize">
 <span class="sig-prename descclassname"><span class="pre">hoi.utils.stats.</span></span><span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/utils/stats.html#normalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.stats.normalize" title="Permalink to this definition">#</a></dt>
+<dd><p>Normalize the array x between to_min and to_max.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>The array to normalize</p>
+</dd>
+<dt><strong>to_min</strong><span class="classifier">int/float | 0.</span></dt><dd><p>Minimum of returned array</p>
+</dd>
+<dt><strong>to_max</strong><span class="classifier">int/float | 1.</span></dt><dd><p>Maximum of returned array</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>xn</strong><span class="classifier">array_like</span></dt><dd><p>The normalized array</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="early">
+<h1>Early<a class="headerlink" href="#early" title="Permalink to this headline">#</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-prename descclassname"><span class="pre">hoi.utils.stats.</span></span><span class="sig-name descname"><span class="pre">normalize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/utils/stats.html#normalize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id0" title="Permalink to this definition">#</a></dt>
 <dd><p>Normalize the array x between to_min and to_max.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -443,6 +471,18 @@ sklearn.preprocessing.KBinsDiscretizer. For example, use
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Preprocessing</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#early">Early</a></li>
+</ul>
+
+  </nav></div>
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">

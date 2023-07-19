@@ -10,6 +10,9 @@ Metrics of HOI
    :no-inherited-members:
 
 .. autosummary::
-   :toctree: generated/
+   :toctree: generated/metricsOfHoi
 
-   hoi.metrics.HOImetrics
+   hoi.metrics.InfoTopo
+   hoi.metrics.oinfo_zerolag
+   hoi.metrics.RSI
+   hoi.metrics.redundancyMMI

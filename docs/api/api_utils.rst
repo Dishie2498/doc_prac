@@ -11,6 +11,18 @@ Utility functions
 
 Preprocessing
 +++++++++++++
+try1
+----
+.. currentmodule:: hoi.utils
+
+.. automodule:: hoi.utils
+   :members: normalize, digitize
+
+try2
+----
+.. autofunction:: normalize
+
+.. autofunction:: digitize
 
 .. autosummary::
    :toctree: generated/UtilityFunctions

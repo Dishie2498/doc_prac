@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Plot HOI &#8212; HOI 0.0.1 documentation</title>
+    <title>hoi.metrics.RedundancyMMI &#8212; HOI 0.0.1 documentation</title>
   
   
   
@@ -19,37 +19,35 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api/api_plot';</script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="hoi.plot.landscape" href="generated/hoi.plot.landscape.html" />
-    <link rel="prev" title="Low-level core functions" href="api_core.html" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/generated/metricsOfHoi/hoi.metrics.redundancyMMI';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -77,7 +75,7 @@
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
-      action="../search.html"
+      action="../../../search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -105,7 +103,7 @@
       <div class="navbar-item">
   
 
-<a class="navbar-brand logo" href="../index.html">
+<a class="navbar-brand logo" href="../../../index.html">
   
   
   
@@ -131,15 +129,15 @@
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="modules.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../modules.html">
                         API Reference
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../install.html">
+                      <a class="nav-link nav-internal" href="../../../install.html">
                         Installation
                       </a>
                     </li>
@@ -231,7 +229,7 @@ document.write(`
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -249,15 +247,15 @@ document.write(`
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="modules.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../modules.html">
                         API Reference
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../install.html">
+                      <a class="nav-link nav-internal" href="../../../install.html">
                         Installation
                       </a>
                     </li>
@@ -314,28 +312,6 @@ document.write(`
     
   </div>
   
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="api_core.html">Low-level core functions</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Plot HOI</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="generated/hoi.plot.landscape.html">hoi.plot.landscape</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="api_metrics.html">Metrics of HOI</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.InfoTopo.html">hoi.metrics.InfoTopo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.oinfo_zerolag.html">hoi.metrics.oinfo_zerolag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.RSI.html">hoi.metrics.RSI</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="api_utils.html">Utility functions</a></li>
-</ul>
-</div>
-</nav></div>
-    </div>
-  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -364,14 +340,11 @@ document.write(`
   <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
     
     <li class="breadcrumb-item breadcrumb-home">
-      <a href="../index.html" class="nav-link" aria-label="Home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    
-    <li class="breadcrumb-item"><a href="modules.html" class="nav-link">hoi</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page">Plot HOI</li>
+    <li class="breadcrumb-item active" aria-current="page">hoi.metrics.RedundancyMMI</li>
   </ul>
 </nav>
 </div>
@@ -388,24 +361,97 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="plot-hoi">
-<h1>Plot HOI<a class="headerlink" href="#plot-hoi" title="Permalink to this headline">#</a></h1>
-<p><a class="reference internal" href="hoi.plot.html#module-hoi.plot" title="hoi.plot"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hoi.plot</span></code></a>:</p>
-<span class="target" id="module-hoi.plot"></span><section id="plotting-functions-for-connectivity-estimations">
-<h2>Plotting functions for connectivity estimations<a class="headerlink" href="#plotting-functions-for-connectivity-estimations" title="Permalink to this headline">#</a></h2>
+  <section id="hoi-metrics-redundancymmi">
+<h1>hoi.metrics.RedundancyMMI<a class="headerlink" href="#hoi-metrics-redundancymmi" title="Permalink to this headline">#</a></h1>
+<span class="target" id="module-hoi.metrics.red_mmi"></span><dl class="py class">
+<dt class="sig sig-object py" id="hoi.metrics.red_mmi.RedundancyMMI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hoi.metrics.red_mmi.</span></span><span class="sig-name descname"><span class="pre">RedundancyMMI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/red_mmi.html#RedundancyMMI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.red_mmi.RedundancyMMI" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../../hoi.metrics.html#hoi.metrics.base_hoi.HOIEstimator" title="hoi.metrics.base_hoi.HOIEstimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">hoi.metrics.base_hoi.HOIEstimator</span></code></a></p>
+<p>Redundancy estimated using the Minimum Mutual Information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data</strong><span class="classifier">array_like</span></dt><dd><p>Standard NumPy arrays of shape (n_samples, n_features) or
+(n_samples, n_features, n_variables)</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array_like</span></dt><dd><p>The feature of shape (n_trials,) for estimating task-related O-info</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">entropies</span></code></dt><dd><p>Entropies of shape (n_mult,)</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiplets</span></code></dt><dd><p>Indices of the multiplets of shape (n_mult, maxsize).</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">order</span></code></dt><dd><p>Order of each multiplet of shape (n_mult,).</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">undersampling</span></code></dt><dd><p>Under-sampling threshold.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
 <table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="hoi.plot.html#module-hoi.plot.landscape" title="hoi.plot.landscape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hoi.plot.landscape</span></code></a></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../hoi.metrics.html#hoi.metrics.red_mmi.RedundancyMMI.fit" title="hoi.metrics.red_mmi.RedundancyMMI.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>([minsize, maxsize, method])</p></td>
+<td><p>Redundancy Index.</p></td>
 </tr>
 </tbody>
 </table>
-</section>
-</section>
+<table class="table">
+<colgroup>
+<col style="width: 68%" />
+<col style="width: 32%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>compute_entropies</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>filter_multiplets</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>get_combinations</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="hoi.metrics.red_mmi.RedundancyMMI.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gcmi'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/red_mmi.html#RedundancyMMI.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.red_mmi.RedundancyMMI.fit" title="Permalink to this definition">#</a></dt>
+<dd><p>Redundancy Index.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>minsize, maxsize</strong><span class="classifier">int | 2, None</span></dt><dd><p>Minimum and maximum size of the multiplets</p>
+</dd>
+<dt><strong>method</strong><span class="classifier">{‘gcmi’, ‘binning’, ‘knn’}</span></dt><dd><p>Name of the method to compute entropy. Use either :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>‘gcmi’: gaussian copula entropy [default]</p></li>
+<li><dl class="simple">
+<dt>‘binning’: binning-based estimator of entropy. Note that to</dt><dd><p>use this estimator, the data have be to discretized</p>
+</dd>
+</dl>
+</li>
+<li><p>‘knn’: k-nearest neighbor estimator</p></li>
+</ul>
+</div></blockquote>
+</dd>
+<dt><strong>kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Additional arguments are sent to each entropy function</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-hoi.metrics"></span></section>
 
 
                 </article>
@@ -418,24 +464,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="api_core.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Low-level core functions</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="generated/hoi.plot.landscape.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">hoi.plot.landscape</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -449,18 +477,8 @@ document.write(`
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
   <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-functions-for-connectivity-estimations">Plotting functions for connectivity estimations</a></li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">
-    <a href="../_sources/api/api_plot.rst.txt">
+    <a href="../../../_sources/api/generated/metricsOfHoi/hoi.metrics.redundancyMMI.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
@@ -479,8 +497,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">

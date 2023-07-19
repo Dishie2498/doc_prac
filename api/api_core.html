@@ -320,6 +320,8 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Low-level core functions</a></li>
+
+
 <li class="toctree-l1 has-children"><a class="reference internal" href="api_plot.html">Plot HOI</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="generated/hoi.plot.landscape.html">hoi.plot.landscape</a></li>
 </ul>
@@ -388,25 +390,63 @@ document.write(`
 <p><a class="reference internal" href="hoi.core.html#module-hoi.core" title="hoi.core"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hoi.core</span></code></a>:</p>
 <span class="target" id="module-hoi.core"></span><section id="information-theoretical-measures">
 <h2>Information-theoretical measures<a class="headerlink" href="#information-theoretical-measures" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-</tbody>
-</table>
 </section>
-<section id="combinatory">
-<h2>Combinatory<a class="headerlink" href="#combinatory" title="Permalink to this headline">#</a></h2>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-</tbody>
-</table>
+</section>
+<section id="module-hoi.core.entropies">
+<span id="measures-of-entropy"></span><h1>Measures of Entropy<a class="headerlink" href="#module-hoi.core.entropies" title="Permalink to this headline">#</a></h1>
+<p>Functions to compute entropies.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="hoi.core.entropies.get_entropy">
+<span class="sig-prename descclassname"><span class="pre">hoi.core.entropies.</span></span><span class="sig-name descname"><span class="pre">get_entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gcmi'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/core/entropies.html#get_entropy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.entropies.get_entropy" title="Permalink to this definition">#</a></dt>
+<dd><p>Get entropy function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>method</strong><span class="classifier">{‘gcmi’, ‘binning’, ‘knn’}</span></dt><dd><p>Name of the method to compute entropy.</p>
+</dd>
+<dt><strong>kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Additional arguments sent to the entropy function.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>fcn</strong><span class="classifier">callable</span></dt><dd><p>Function to compute entropy on a variable of shape
+(n_features, n_samples)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-0">
+<span id="measures-of-mutual-information"></span><h1>Measures of Mutual Information<a class="headerlink" href="#module-0" title="Permalink to this headline">#</a></h1>
+<p>Functions to compute entropies.</p>
+<section id="module-hoi.core.combinatory">
+<span id="combinatory"></span><h2>Combinatory<a class="headerlink" href="#module-hoi.core.combinatory" title="Permalink to this headline">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="hoi.core.combinatory.combinations">
+<span class="sig-prename descclassname"><span class="pre">hoi.core.combinatory.</span></span><span class="sig-name descname"><span class="pre">combinations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_iterator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_jax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/hoi/core/combinatory.html#combinations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.combinatory.combinations" title="Permalink to this definition">#</a></dt>
+<dd><p>Get combinations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>n</strong><span class="classifier">int</span></dt><dd><p>Represents the total number of elements in the set</p>
+</dd>
+<dt><strong>k</strong><span class="classifier">int</span></dt><dd><p>Represents the size of the combinations to be generated</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>combs</strong><span class="classifier">jnp.array</span></dt><dd><p>An array of shape (n_combinations, k) representing all possible
+combinations of k elements.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 
@@ -457,9 +497,17 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Low-level core functions</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-theoretical-measures">Information-theoretical measures</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatory">Combinatory</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hoi.core.entropies">Measures of Entropy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#module-0">Measures of Mutual Information</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hoi.core.combinatory">Combinatory</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
   <div class="sidebar-secondary-item">

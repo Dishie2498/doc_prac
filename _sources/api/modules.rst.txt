@@ -5,7 +5,7 @@ hoi
    :maxdepth: 4
 
    .. hoi
-   api_core
-   api_plot
    api_metrics
    api_utils
+   api_plot
+   api_core

@@ -48,8 +48,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/api_plot';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="hoi.plot.landscape" href="generated/hoi.plot.landscape.html" />
-    <link rel="prev" title="hoi.core.combinations" href="generated/coreFunctions/hoi.core.combinations.html" />
+    <link rel="next" title="hoi.plot.plot_landscape" href="generated/Plot/hoi.plot.plot_landscape.html" />
+    <link rel="prev" title="hoi.utils.get_nbest_mult" href="generated/UtilityFunctions/hoi.utils.get_nbest_mult.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -319,7 +319,19 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="api_core.html">Low-level core functions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="api_metrics.html">Metrics of HOI</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api_utils.html">Utility functions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/UtilityFunctions/hoi.utils.digitize.html">hoi.utils.digitize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/UtilityFunctions/hoi.utils.normalize.html">hoi.utils.normalize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/UtilityFunctions/hoi.utils.landscape.html">hoi.utils.landscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/UtilityFunctions/hoi.utils.get_nbest_mult.html">hoi.utils.get_nbest_mult</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Plot HOI</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/Plot/hoi.plot.plot_landscape.html">hoi.plot.plot_landscape</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api_core.html">Low-level core functions</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="generated/coreFunctions/hoi.core.entropy_gcmi.html">hoi.core.entropy_gcmi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/coreFunctions/hoi.core.entropy_bin.html">hoi.core.entropy_bin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/coreFunctions/hoi.core.entropy_knn.html">hoi.core.entropy_knn</a></li>
@@ -328,18 +340,6 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="generated/coreFunctions/hoi.core.get_entropy.html">hoi.core.get_entropy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/coreFunctions/hoi.core.mi_entr_comb.html">hoi.core.mi_entr_comb</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/coreFunctions/hoi.core.combinations.html">hoi.core.combinations</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Plot HOI</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="generated/hoi.plot.landscape.html">hoi.plot.landscape</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="api_metrics.html">Metrics of HOI</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="api_utils.html">Utility functions</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="generated/UtilityFunctions/hoi.utils.digitize.html">hoi.utils.digitize</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/UtilityFunctions/hoi.utils.normalize.html">hoi.utils.normalize</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/UtilityFunctions/hoi.utils.landscape.html">hoi.utils.landscape</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/UtilityFunctions/hoi.utils.get_nbest_mult.html">hoi.utils.get_nbest_mult</a></li>
 </ul>
 </li>
 </ul>
@@ -402,20 +402,17 @@ document.write(`
   <section id="plot-hoi">
 <h1>Plot HOI<a class="headerlink" href="#plot-hoi" title="Permalink to this headline">#</a></h1>
 <p><a class="reference internal" href="hoi.plot.html#module-hoi.plot" title="hoi.plot"><code class="xref py py-mod docutils literal notranslate"><span class="pre">hoi.plot</span></code></a>:</p>
-<span class="target" id="module-hoi.plot"></span><section id="plotting-functions-for-connectivity-estimations">
-<h2>Plotting functions for connectivity estimations<a class="headerlink" href="#plotting-functions-for-connectivity-estimations" title="Permalink to this headline">#</a></h2>
 <table class="autosummary longtable table autosummary">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="hoi.plot.html#module-hoi.plot.landscape" title="hoi.plot.landscape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hoi.plot.landscape</span></code></a></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/Plot/hoi.plot.plot_landscape.html#hoi.plot.plot_landscape" title="hoi.plot.plot_landscape"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_landscape</span></code></a>(hoi, model[, minsize, ...])</p></td>
+<td><p>Landscape representation of higher order interactions.</p></td>
 </tr>
 </tbody>
 </table>
-</section>
 </section>
 
 
@@ -430,20 +427,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="generated/coreFunctions/hoi.core.combinations.html"
+       href="generated/UtilityFunctions/hoi.utils.get_nbest_mult.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">hoi.core.combinations</p>
+        <p class="prev-next-title">hoi.utils.get_nbest_mult</p>
       </div>
     </a>
     <a class="right-next"
-       href="generated/hoi.plot.landscape.html"
+       href="generated/Plot/hoi.plot.plot_landscape.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">hoi.plot.landscape</p>
+        <p class="prev-next-title">hoi.plot.plot_landscape</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -458,16 +455,6 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-functions-for-connectivity-estimations">Plotting functions for connectivity estimations</a></li>
-</ul>
-  </nav></div>
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">

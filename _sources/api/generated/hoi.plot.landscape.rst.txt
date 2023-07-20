@@ -1,29 +1,9 @@
-﻿hoi.plot.landscape
+hoi.plot.landscape
 ==================
 
-.. automodule:: hoi.plot.landscape
+.. currentmodule:: hoi.plot
 
-   
-   
-   
-
-   
-   
-   .. rubric:: Functions
-
-   .. autosummary::
-   
-      plot_landscape
-   
-   
-
-   
-   
-   
-
-   
-   
-   
-
-
-
+.. automodule:: hoi.plot
+   :members:
+   :undoc-members:
+   :show-inheritance:

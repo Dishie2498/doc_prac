@@ -20,12 +20,13 @@ Metrics of HOI
    SynergyMMI <generated/metricsOfHoi/hoi.metrics.SynergyMMI>
    InfoTot <generated/metricsOfHoi/hoi.metrics.InfoTot>
 
-..    :toctree: generated/metricsOfHoi
+.. autosummary::
+   :toctree: generated/metricsOfHoi
    
-..    OinfoZeroLag
-..    InfoTopo
-..    RSI
-..    RedundancyMMI
-..    SynergyMMI
-..    InfoTot
+   .. OinfoZeroLag
+   .. InfoTopo
+   .. RSI
+   .. RedundancyMMI
+   .. SynergyMMI
+   .. InfoTot
 

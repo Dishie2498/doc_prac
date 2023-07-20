@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>hoi.core.prepare_for_entropy &#8212; HOI 0.0.1 documentation</title>
+    <title>hoi.metrics.OinfoZeroLag &#8212; HOI 0.0.1 documentation</title>
   
   
   
@@ -45,11 +45,11 @@
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api/generated/coreFunctions/hoi.core.prepare_for_entropy';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/generated/metricsOfHoi/hoi.metrics.OinfoZeroLag';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="hoi.core.get_entropy" href="hoi.core.get_entropy.html" />
-    <link rel="prev" title="hoi.core.copnorm_nd" href="hoi.core.copnorm_nd.html" />
+    <link rel="next" title="hoi.metrics.RSI" href="hoi.metrics.RSI.html" />
+    <link rel="prev" title="hoi.metrics.oinfo_zerolag" href="hoi.metrics.oinfo_zerolag.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -319,11 +319,11 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../api_metrics.html">Metrics of HOI</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../metricsOfHoi/hoi.metrics.InfoTopo.html">hoi.metrics.InfoTopo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../metricsOfHoi/hoi.metrics.oinfo_zerolag.html">hoi.metrics.oinfo_zerolag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../metricsOfHoi/hoi.metrics.OinfoZeroLag.html">hoi.metrics.OinfoZeroLag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../metricsOfHoi/hoi.metrics.RSI.html">hoi.metrics.RSI</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../api_metrics.html">Metrics of HOI</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.InfoTopo.html">hoi.metrics.InfoTopo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.oinfo_zerolag.html">hoi.metrics.oinfo_zerolag</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">hoi.metrics.OinfoZeroLag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.RSI.html">hoi.metrics.RSI</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../api_utils.html">Utility functions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -381,9 +381,9 @@ document.write(`
     <li class="breadcrumb-item"><a href="../../modules.html" class="nav-link">List of classes and functions</a></li>
     
     
-    <li class="breadcrumb-item"><a href="../../api_core.html" class="nav-link">Low-level core functions</a></li>
+    <li class="breadcrumb-item"><a href="../../api_metrics.html" class="nav-link">Metrics of HOI</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">hoi.core.prepare_for_entropy</li>
+    <li class="breadcrumb-item active" aria-current="page">hoi.metrics.OinfoZeroLag</li>
   </ul>
 </nav>
 </div>
@@ -400,12 +400,114 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="hoi-core-prepare-for-entropy">
-<h1>hoi.core.prepare_for_entropy<a class="headerlink" href="#hoi-core-prepare-for-entropy" title="Permalink to this headline">#</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="hoi.core.prepare_for_entropy">
-<span class="sig-prename descclassname"><span class="pre">hoi.core.</span></span><span class="sig-name descname"><span class="pre">prepare_for_entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/core/entropies.html#prepare_for_entropy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.prepare_for_entropy" title="Permalink to this definition">#</a></dt>
-<dd><p>Prepare the data before computing entropy.</p>
+  <section id="hoi-metrics-oinfozerolag">
+<h1>hoi.metrics.OinfoZeroLag<a class="headerlink" href="#hoi-metrics-oinfozerolag" title="Permalink to this headline">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="hoi.metrics.OinfoZeroLag">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hoi.metrics.</span></span><span class="sig-name descname"><span class="pre">OinfoZeroLag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/oinfo_zerolag.html#OinfoZeroLag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.OinfoZeroLag" title="Permalink to this definition">#</a></dt>
+<dd><p>Dynamic, possibly task-related O-info.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data</strong><span class="classifier">array_like</span></dt><dd><p>Standard NumPy arrays of shape (n_samples, n_features) or
+(n_samples, n_features, n_variables)</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">array_like</span></dt><dd><p>The feature of shape (n_trials,) for estimating task-related O-info</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Attributes</dt>
+<dd class="field-even"><dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">entropies</span></code></dt><dd><p>Entropies of shape (n_mult,)</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiplets</span></code></dt><dd><p>Indices of the multiplets of shape (n_mult, maxsize).</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">order</span></code></dt><dd><p>Order of each multiplet of shape (n_mult,).</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">undersampling</span></code></dt><dd><p>Under-sampling threshold.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code>([minsize, maxsize, method])</p></td>
+<td><p>Compute the O-information.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="table">
+<colgroup>
+<col style="width: 68%" />
+<col style="width: 32%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>compute_entropies</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>filter_multiplets</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>get_combinations</strong></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="hoi.metrics.OinfoZeroLag.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/oinfo_zerolag.html#OinfoZeroLag.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.OinfoZeroLag.__init__" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hoi.metrics.OinfoZeroLag.__init__" title="hoi.metrics.OinfoZeroLag.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(data[, y, verbose])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_entropies</span></code>([method, minsize, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_multiplets</span></code>(mults, order)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code>([minsize, maxsize, method])</p></td>
+<td><p>Compute the O-information.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_combinations</span></code>(msize[, as_iterator, ...])</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">entropies</span></code></p></td>
+<td><p>Entropies of shape (n_mult,)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiplets</span></code></p></td>
+<td><p>Indices of the multiplets of shape (n_mult, maxsize).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">order</span></code></p></td>
+<td><p>Order of each multiplet of shape (n_mult,).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">undersampling</span></code></p></td>
+<td><p>Under-sampling threshold.</p></td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </section>
@@ -422,20 +524,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="hoi.core.copnorm_nd.html"
+       href="hoi.metrics.oinfo_zerolag.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">hoi.core.copnorm_nd</p>
+        <p class="prev-next-title">hoi.metrics.oinfo_zerolag</p>
       </div>
     </a>
     <a class="right-next"
-       href="hoi.core.get_entropy.html"
+       href="hoi.metrics.RSI.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">hoi.core.get_entropy</p>
+        <p class="prev-next-title">hoi.metrics.RSI</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -453,7 +555,7 @@ document.write(`
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">
-    <a href="../../../_sources/api/generated/coreFunctions/hoi.core.prepare_for_entropy.rst.txt">
+    <a href="../../../_sources/api/generated/metricsOfHoi/hoi.metrics.OinfoZeroLag.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

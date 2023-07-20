@@ -9,25 +9,19 @@ Metrics of HOI
 ..    :no-members:
 ..    :no-inherited-members:
 
-.. autosummary::
-   :toctree: generated/metricsOfHoi
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
 
-   OinfoZeroLag
-   generated/metricsOfHoi/hoi.metrics.oinfo_zerolag
-.. References
-.. -----------
-.. See :cite:t:`rosas2019oinfo` for an introduction to non-standard analysis.
-.. Non-standard analysis is fun :cite:p:`rosas2019oinfo`.
-
-.. bibliography::
+   OinfoZeroLag <generated/metricsOfHoi/hoi.metrics.oinfo_zerolag>
 
 .. autosummary::
    :toctree: generated/metricsOfHoi
    
+   OinfoZeroLag
    InfoTopo
    RSI
    RedundancyMMI
    SynergyMMI
    InfoTot
-   .. hoi.metrics.HOImetrics
 

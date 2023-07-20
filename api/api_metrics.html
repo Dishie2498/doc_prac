@@ -321,13 +321,9 @@ document.write(`
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Metrics of HOI</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.OinfoZeroLag.html">hoi.metrics.OinfoZeroLag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.InfoTopo.html">hoi.metrics.InfoTopo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.RSI.html">hoi.metrics.RSI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.RedundancyMMI.html">hoi.metrics.RedundancyMMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.SynergyMMI.html">hoi.metrics.SynergyMMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.InfoTot.html">hoi.metrics.InfoTot</a></li>
 </ul>
 </li>
+
 <li class="toctree-l1 has-children"><a class="reference internal" href="api_utils.html">Utility functions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="generated/UtilityFunctions/hoi.utils.digitize.html">hoi.utils.digitize</a></li>
 <li class="toctree-l2"><a class="reference internal" href="generated/UtilityFunctions/hoi.utils.normalize.html">hoi.utils.normalize</a></li>
@@ -411,19 +407,39 @@ document.write(`
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.oinfo_zerolag.html#hoi.metrics.OinfoZeroLag" title="hoi.metrics.OinfoZeroLag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OinfoZeroLag</span></code></a>(data[, y, verbose])</p></td>
 <td><p>Dynamic, possibly task-related O-info.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.InfoTopo.html#hoi.metrics.InfoTopo" title="hoi.metrics.InfoTopo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InfoTopo</span></code></a>(data[, y, verbose])</p></td>
+</tbody>
+</table>
+</section>
+<section id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h1>
+<p>See <span id="id1">Fernando E. Rosas [<a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.oinfo_zerolag.html#id4" title="Henrik Jeldtoft Jensen Fernando E. Rosas. Quantifying high-order interdependencies via multivariate extensions of the mutual information. PHYSICAL REVIEW E, 2019.">FER19</a>]</span> for an introduction to non-standard analysis.
+Non-standard analysis is fun <span id="id2">[<a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.oinfo_zerolag.html#id4" title="Henrik Jeldtoft Jensen Fernando E. Rosas. Quantifying high-order interdependencies via multivariate extensions of the mutual information. PHYSICAL REVIEW E, 2019.">FER19</a>]</span>.</p>
+<div class="docutils container" id="id3">
+<dl class="citation">
+<dt class="label" id="id4"><span class="brackets">FER19</span></dt>
+<dd><p>Henrik Jeldtoft Jensen Fernando E. Rosas. Quantifying high-order interdependencies via multivariate extensions of the mutual information. <em>PHYSICAL REVIEW E</em>, 2019.</p>
+</dd>
+</dl>
+</div>
+<table class="autosummary longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.InfoTopo.html#hoi.metrics.InfoTopo" title="hoi.metrics.InfoTopo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InfoTopo</span></code></a>(data[, y, verbose])</p></td>
 <td><p>Dynamic, possibly task-related Topological Information.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.RSI.html#hoi.metrics.RSI" title="hoi.metrics.RSI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RSI</span></code></a>(data, y[, verbose])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.RSI.html#hoi.metrics.RSI" title="hoi.metrics.RSI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RSI</span></code></a>(data, y[, verbose])</p></td>
 <td><p>Redundancy-Synergy Index (RSI).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.RedundancyMMI.html#hoi.metrics.RedundancyMMI" title="hoi.metrics.RedundancyMMI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RedundancyMMI</span></code></a>(data, y[, verbose])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.RedundancyMMI.html#hoi.metrics.RedundancyMMI" title="hoi.metrics.RedundancyMMI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RedundancyMMI</span></code></a>(data, y[, verbose])</p></td>
 <td><p>Redundancy estimated using the Minimum Mutual Information.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.SynergyMMI.html#hoi.metrics.SynergyMMI" title="hoi.metrics.SynergyMMI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SynergyMMI</span></code></a>(data, y[, verbose])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.SynergyMMI.html#hoi.metrics.SynergyMMI" title="hoi.metrics.SynergyMMI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SynergyMMI</span></code></a>(data, y[, verbose])</p></td>
 <td><p>Synergy estimated using the Minimum Mutual Information.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.InfoTot.html#hoi.metrics.InfoTot" title="hoi.metrics.InfoTot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InfoTot</span></code></a>(data, y[, verbose])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/metricsOfHoi/hoi.metrics.InfoTot.html#hoi.metrics.InfoTot" title="hoi.metrics.InfoTot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InfoTot</span></code></a>(data, y[, verbose])</p></td>
 <td><p>Total information.</p></td>
 </tr>
 </tbody>
@@ -470,6 +486,18 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Metrics of HOI</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+
+  </nav></div>
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">

@@ -49,7 +49,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/generated/metricsOfHoi/hoi.metrics.InfoTot';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="hoi.metrics.OinfoZeroLag" href="hoi.metrics.OinfoZeroLag.html" />
+    <link rel="next" title="Utility functions" href="../../api_utils.html" />
     <link rel="prev" title="hoi.metrics.SynergyMMI" href="hoi.metrics.SynergyMMI.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -327,12 +327,6 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="hoi.metrics.redundancyMMI.html">RedundancyMMI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hoi.metrics.SynergyMMI.html">SynergyMMI</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">InfoTot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.OinfoZeroLag.html">hoi.metrics.OinfoZeroLag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.InfoTopo.html">hoi.metrics.InfoTopo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.RSI.html">hoi.metrics.RSI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.RedundancyMMI.html">hoi.metrics.RedundancyMMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.SynergyMMI.html">hoi.metrics.SynergyMMI</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">hoi.metrics.InfoTot</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../api_utils.html">Utility functions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -471,56 +465,6 @@ variable <cite>y</cite>:</p>
 </tr>
 </tbody>
 </table>
-<dl class="py method">
-<dt class="sig sig-object py" id="hoi.metrics.InfoTot.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/info_tot.html#InfoTot.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.InfoTot.__init__" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p class="rubric">Methods</p>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#hoi.metrics.InfoTot.__init__" title="hoi.metrics.InfoTot.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(data, y[, verbose])</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_entropies</span></code>([method, minsize, ...])</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_multiplets</span></code>(mults, order)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code>([minsize, maxsize, method])</p></td>
-<td><p>Compute RSI.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_combinations</span></code>(msize[, as_iterator, ...])</p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Attributes</p>
-<table class="autosummary longtable table autosummary">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">entropies</span></code></p></td>
-<td><p>Entropies of shape (n_mult,)</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiplets</span></code></p></td>
-<td><p>Indices of the multiplets of shape (n_mult, maxsize).</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">order</span></code></p></td>
-<td><p>Order of each multiplet of shape (n_mult,).</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">undersampling</span></code></p></td>
-<td><p>Under-sampling threshold.</p></td>
-</tr>
-</tbody>
-</table>
 </dd></dl>
 
 </section>
@@ -546,11 +490,11 @@ variable <cite>y</cite>:</p>
       </div>
     </a>
     <a class="right-next"
-       href="hoi.metrics.OinfoZeroLag.html"
+       href="../../api_utils.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">hoi.metrics.OinfoZeroLag</p>
+        <p class="prev-next-title">Utility functions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

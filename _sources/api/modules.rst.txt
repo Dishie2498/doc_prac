@@ -1,7 +1,5 @@
 List of classes and functions
 +++++++++++++++++++++++++++++
-High-level API for users
-^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. toctree::
    :maxdepth: 4

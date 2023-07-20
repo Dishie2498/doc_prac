@@ -12,8 +12,8 @@ Metrics of HOI
 .. autosummary::
    :toctree: generated/metricsOfHoi
 
-   .. OinfoZeroLag
-   hoi.metrics.oinfo_zerolag
+   OinfoZeroLag
+   generated/metricsOfHoi/hoi.metrics.oinfo_zerolag
 .. References
 .. -----------
 .. See :cite:t:`rosas2019oinfo` for an introduction to non-standard analysis.

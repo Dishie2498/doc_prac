@@ -5,15 +5,16 @@ Metrics of HOI
 
 .. currentmodule:: hoi.metrics
 
-.. automodule:: hoi.metrics
-   :no-members:
-   :no-inherited-members:
+.. .. automodule:: hoi.metrics
+..    :no-members:
+..    :no-inherited-members:
 
 .. autosummary::
    :toctree: generated/metricsOfHoi
 
    InfoTopo
    oinfo_zerolag
+   OinfoZeroLag
    RSI
    redundancyMMI
    .. hoi.metrics.HOImetrics

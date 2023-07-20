@@ -15,8 +15,8 @@ import hoi
 sys.path.insert(0, os.path.abspath(".."))
 
 project = "HOI"
-copyright = "2023, Dishie"
-author = "Dishie"
+copyright = "BraiNets"
+author = "BraiNets"
 release = hoi.__version__
 release = hoi.__version__
 

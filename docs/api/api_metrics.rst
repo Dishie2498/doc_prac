@@ -12,7 +12,7 @@ Metrics of HOI
 .. autosummary::
    :toctree: generated/metricsOfHoi
 
-   OinfoZeroLag
+   .. OinfoZeroLag
    hoi.metrics.oinfo_zerolag
 .. References
 .. -----------

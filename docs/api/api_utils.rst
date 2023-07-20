@@ -24,9 +24,5 @@ Postprocessing
    :toctree: generated/UtilityFunctions
 
    landscape
-   get_nbest_mult
-
-See :cite:t:`rosas2019oinfo` for an introduction to non-standard analysis.
-Non-standard analysis is fun :cite:p:`rosas2019oinfo`.
-
-.. bibliography::
+   .. get_nbest_mult
+   hoi.utils.post_nbest

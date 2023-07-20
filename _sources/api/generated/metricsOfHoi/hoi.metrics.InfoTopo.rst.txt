@@ -1,17 +1,35 @@
-hoi.metrics.InfoTopo
+﻿hoi.metrics.InfoTopo
 ====================
 
 .. currentmodule:: hoi.metrics
 
-hoi.metrics.infotopo module
----------------------------
+.. autoclass:: InfoTopo
 
-.. automodule:: hoi.metrics.infotopo
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   
+   .. automethod:: __init__
 
-.. automodule:: hoi.metrics
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~InfoTopo.__init__
+      ~InfoTopo.compute_entropies
+      ~InfoTopo.filter_multiplets
+      ~InfoTopo.fit
+      ~InfoTopo.get_combinations
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~InfoTopo.entropies
+      ~InfoTopo.multiplets
+      ~InfoTopo.order
+      ~InfoTopo.undersampling
+   
+   

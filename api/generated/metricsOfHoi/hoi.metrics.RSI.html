@@ -49,6 +49,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/generated/metricsOfHoi/hoi.metrics.RSI';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Utility functions" href="../../api_utils.html" />
+    <link rel="prev" title="hoi.metrics.oinfo_zerolag" href="hoi.metrics.oinfo_zerolag.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -130,7 +132,7 @@
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
+                    <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="../../modules.html">
                         API Reference
                       </a>
@@ -230,7 +232,7 @@ document.write(`
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -248,7 +250,7 @@ document.write(`
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
+                    <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="../../modules.html">
                         API Reference
                       </a>
@@ -313,6 +315,36 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../api_metrics.html">Metrics of HOI</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.InfoTopo.html">hoi.metrics.InfoTopo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.oinfo_zerolag.html">hoi.metrics.oinfo_zerolag</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">hoi.metrics.RSI</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api_utils.html">Utility functions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../UtilityFunctions/hoi.utils.digitize.html">hoi.utils.digitize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UtilityFunctions/hoi.utils.normalize.html">hoi.utils.normalize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UtilityFunctions/hoi.utils.landscape.html">hoi.utils.landscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UtilityFunctions/hoi.utils.get_nbest_mult.html">hoi.utils.get_nbest_mult</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api_plot.html">Plot HOI</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Plot/hoi.plot.plot_landscape.html">hoi.plot.plot_landscape</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_core.html">Low-level core functions</a></li>
+
+
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -345,6 +377,12 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
+    
+    <li class="breadcrumb-item"><a href="../../modules.html" class="nav-link">List of classes and functions</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../../api_metrics.html" class="nav-link">Metrics of HOI</a></li>
+    
     <li class="breadcrumb-item active" aria-current="page">hoi.metrics.RSI</li>
   </ul>
 </nav>
@@ -364,13 +402,10 @@ document.write(`
                   
   <section id="hoi-metrics-rsi">
 <h1>hoi.metrics.RSI<a class="headerlink" href="#hoi-metrics-rsi" title="Permalink to this headline">#</a></h1>
-<section id="module-hoi.metrics.rsi">
-<span id="hoi-metrics-rsi-module"></span><h2>hoi.metrics.rsi module<a class="headerlink" href="#module-hoi.metrics.rsi" title="Permalink to this headline">#</a></h2>
 <dl class="py class">
-<dt class="sig sig-object py" id="hoi.metrics.rsi.RSI">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hoi.metrics.rsi.</span></span><span class="sig-name descname"><span class="pre">RSI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/rsi.html#RSI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.rsi.RSI" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="../../hoi.metrics.html#hoi.metrics.base_hoi.HOIEstimator" title="hoi.metrics.base_hoi.HOIEstimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">hoi.metrics.base_hoi.HOIEstimator</span></code></a></p>
-<p>Redundancy-Synergy Index (RSI).</p>
+<dt class="sig sig-object py" id="hoi.metrics.RSI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hoi.metrics.</span></span><span class="sig-name descname"><span class="pre">RSI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/rsi.html#RSI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.RSI" title="Permalink to this definition">#</a></dt>
+<dd><p>Redundancy-Synergy Index (RSI).</p>
 <p>The RSI is designed to be maximal and positive when the variables in S are
 purported to provide synergistic information about Y. It should be negative
 when the variables in S provide redundant information about Y. It is
@@ -415,7 +450,7 @@ referred to as the redundancy (Schneidman et al. 2003b).</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../hoi.metrics.html#hoi.metrics.rsi.RSI.fit" title="hoi.metrics.rsi.RSI.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>([minsize, maxsize, method])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code>([minsize, maxsize, method])</p></td>
 <td><p>Compute RSI.</p></td>
 </tr>
 </tbody>
@@ -438,37 +473,57 @@ referred to as the redundancy (Schneidman et al. 2003b).</p>
 </tbody>
 </table>
 <dl class="py method">
-<dt class="sig sig-object py" id="hoi.metrics.rsi.RSI.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gcmi'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/rsi.html#RSI.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.rsi.RSI.fit" title="Permalink to this definition">#</a></dt>
-<dd><p>Compute RSI.</p>
-<dl class="field-list">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl>
-<dt><strong>minsize, maxsize</strong><span class="classifier">int | 2, None</span></dt><dd><p>Minimum and maximum size of the multiplets</p>
-</dd>
-<dt><strong>method</strong><span class="classifier">{‘gcmi’, ‘binning’, ‘knn’}</span></dt><dd><p>Name of the method to compute entropy. Use either :</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>‘gcmi’: gaussian copula entropy [default]</p></li>
-<li><dl class="simple">
-<dt>‘binning’: binning-based estimator of entropy. Note that to</dt><dd><p>use this estimator, the data have be to discretized</p>
-</dd>
-</dl>
-</li>
-<li><p>‘knn’: k-nearest neighbor estimator</p></li>
-</ul>
-</div></blockquote>
-</dd>
-<dt><strong>kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Additional arguments are sent to each entropy function</p>
-</dd>
-</dl>
-</dd>
-</dl>
+<dt class="sig sig-object py" id="hoi.metrics.RSI.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/metrics/rsi.html#RSI.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.RSI.__init__" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hoi.metrics.RSI.__init__" title="hoi.metrics.RSI.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(data, y[, verbose])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_entropies</span></code>([method, minsize, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">filter_multiplets</span></code>(mults, order)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code>([minsize, maxsize, method])</p></td>
+<td><p>Compute RSI.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_combinations</span></code>(msize[, as_iterator, ...])</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">entropies</span></code></p></td>
+<td><p>Entropies of shape (n_mult,)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiplets</span></code></p></td>
+<td><p>Indices of the multiplets of shape (n_mult, maxsize).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">order</span></code></p></td>
+<td><p>Order of each multiplet of shape (n_mult,).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">undersampling</span></code></p></td>
+<td><p>Under-sampling threshold.</p></td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
-</dd></dl>
-
-<span class="target" id="module-hoi.metrics"></span></section>
 </section>
 
 
@@ -482,6 +537,24 @@ referred to as the redundancy (Schneidman et al. 2003b).</p>
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="hoi.metrics.oinfo_zerolag.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">hoi.metrics.oinfo_zerolag</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../api_utils.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Utility functions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -493,16 +566,6 @@ referred to as the redundancy (Schneidman et al. 2003b).</p>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-hoi.metrics.rsi">hoi.metrics.rsi module</a></li>
-</ul>
-  </nav></div>
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">

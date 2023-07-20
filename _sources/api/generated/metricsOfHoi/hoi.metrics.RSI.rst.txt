@@ -1,17 +1,35 @@
-hoi.metrics.RSI
-========================
+﻿hoi.metrics.RSI
+===============
 
 .. currentmodule:: hoi.metrics
 
-hoi.metrics.rsi module
-----------------------
+.. autoclass:: RSI
 
-.. automodule:: hoi.metrics.rsi
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   
+   .. automethod:: __init__
 
-.. automodule:: hoi.metrics
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RSI.__init__
+      ~RSI.compute_entropies
+      ~RSI.filter_multiplets
+      ~RSI.fit
+      ~RSI.get_combinations
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RSI.entropies
+      ~RSI.multiplets
+      ~RSI.order
+      ~RSI.undersampling
+   
+   

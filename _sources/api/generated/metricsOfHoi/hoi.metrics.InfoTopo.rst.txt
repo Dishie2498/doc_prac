@@ -38,5 +38,4 @@ hoi.metrics.InfoTopo
 .. autoclass:: InfoTopo
 
 References
-----------
-baudot2019infotopo :cite:t:`baudot2019infotopo`
+baudot2019infotopo :cite:t:`2`

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>hoi.utils.digitize &#8212; HOI 0.0.1 documentation</title>
+    <title>hoi.core.copnorm_nd &#8212; HOI 0.0.1 documentation</title>
   
   
   
@@ -45,11 +45,11 @@
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api/generated/UtilityFunctions/hoi.utils.digitize';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/generated/c/hoi.core.copnorm_nd';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="hoi.utils.normalize" href="hoi.utils.normalize.html" />
-    <link rel="prev" title="Utility functions" href="../../api_utils.html" />
+    <link rel="next" title="hoi.core.prepare_for_entropy" href="hoi.core.prepare_for_entropy.html" />
+    <link rel="prev" title="hoi.core.entropy_knn" href="hoi.core.entropy_knn.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -334,23 +334,23 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../api_metrics.html">Metrics of HOI</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../metricsOfHoi/hoi.metrics.OinfoZeroLag.html">hoi.metrics.OinfoZeroLag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../metricsOfHoi/hoi.metrics.InfoTopo.html">hoi.metrics.InfoTopo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../metricsOfHoi/hoi.metrics.RSI.html">hoi.metrics.RSI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../metricsOfHoi/hoi.metrics.RedundancyMMI.html">hoi.metrics.RedundancyMMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../metricsOfHoi/hoi.metrics.SynergyMMI.html">hoi.metrics.SynergyMMI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../metricsOfHoi/hoi.metrics.InfoTot.html">hoi.metrics.InfoTot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hoi.metrics.OinfoZeroLag.html">hoi.metrics.OinfoZeroLag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hoi.metrics.InfoTopo.html">hoi.metrics.InfoTopo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hoi.metrics.RSI.html">hoi.metrics.RSI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hoi.metrics.RedundancyMMI.html">hoi.metrics.RedundancyMMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hoi.metrics.SynergyMMI.html">hoi.metrics.SynergyMMI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hoi.metrics.InfoTot.html">hoi.metrics.InfoTot</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../api_utils.html">Utility functions</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">hoi.utils.digitize</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hoi.utils.normalize.html">hoi.utils.normalize</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hoi.utils.landscape.html">hoi.utils.landscape</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hoi.utils.get_nbest_mult.html">hoi.utils.get_nbest_mult</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api_utils.html">Utility functions</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../hoi.utils.digitize.html">hoi.utils.digitize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hoi.utils.normalize.html">hoi.utils.normalize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hoi.utils.landscape.html">hoi.utils.landscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hoi.utils.get_nbest_mult.html">hoi.utils.get_nbest_mult</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../api_plot.html">Plot HOI</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Plot/hoi.plot.plot_landscape.html">hoi.plot.plot_landscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hoi.plot.plot_landscape.html">hoi.plot.plot_landscape</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../api_core.html">Low-level core functions</a></li>
@@ -397,9 +397,9 @@ document.write(`
     <li class="breadcrumb-item"><a href="../../modules.html" class="nav-link">List of classes and functions</a></li>
     
     
-    <li class="breadcrumb-item"><a href="../../api_utils.html" class="nav-link">Utility functions</a></li>
+    <li class="breadcrumb-item"><a href="../../api_core.html" class="nav-link">Low-level core functions</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">hoi.utils.digitize</li>
+    <li class="breadcrumb-item active" aria-current="page">hoi.core.copnorm_nd</li>
   </ul>
 </nav>
 </div>
@@ -416,34 +416,24 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="hoi-utils-digitize">
-<h1>hoi.utils.digitize<a class="headerlink" href="#hoi-utils-digitize" title="Permalink to this headline">#</a></h1>
+  <section id="hoi-core-copnorm-nd">
+<h1>hoi.core.copnorm_nd<a class="headerlink" href="#hoi-core-copnorm-nd" title="Permalink to this headline">#</a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="hoi.utils.digitize">
-<span class="sig-prename descclassname"><span class="pre">hoi.utils.</span></span><span class="sig-name descname"><span class="pre">digitize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bins</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_sklearn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/utils/stats.html#digitize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.digitize" title="Permalink to this definition">#</a></dt>
-<dd><p>Discretize a continuous variable.</p>
+<dt class="sig sig-object py" id="hoi.core.copnorm_nd">
+<span class="sig-prename descclassname"><span class="pre">hoi.core.</span></span><span class="sig-name descname"><span class="pre">copnorm_nd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/hoi/core/entropies.html#copnorm_nd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.copnorm_nd" title="Permalink to this definition">#</a></dt>
+<dd><p>Copula normalization for a multidimentional array.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>Array to discretize</p>
+<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>Array of data</p>
 </dd>
-<dt><strong>n_bins</strong><span class="classifier">int</span></dt><dd><p>Number of bins</p>
-</dd>
-<dt><strong>axis</strong><span class="classifier">int | 0</span></dt><dd><p>Axis along which to perform the discretization. By default,
-discretization is performed along the first axis (n_samples,)</p>
-</dd>
-<dt><strong>use_sklearn</strong><span class="classifier">bool | False</span></dt><dd><p>If True, use sklearn.preprocessing.KBinsDiscretizer to discretize the
-data.</p>
-</dd>
-<dt><strong>kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Additional arguments are passed to
-sklearn.preprocessing.KBinsDiscretizer. For example, use
-<cite>strategy=’quantile’</cite> for equal population binning.</p>
+<dt><strong>axis</strong><span class="classifier">int | -1</span></dt><dd><p>Epoch (or trial) axis. By default, the last axis is considered</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>x_binned</strong><span class="classifier">array_like</span></dt><dd><p>Digitized array with the same shape as x</p>
+<dt><strong>cx</strong><span class="classifier">array_like</span></dt><dd><p>Standard normal samples with the same empirical CDF value as the input.</p>
 </dd>
 </dl>
 </dd>
@@ -464,20 +454,20 @@ sklearn.preprocessing.KBinsDiscretizer. For example, use
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../../api_utils.html"
+       href="hoi.core.entropy_knn.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Utility functions</p>
+        <p class="prev-next-title">hoi.core.entropy_knn</p>
       </div>
     </a>
     <a class="right-next"
-       href="hoi.utils.normalize.html"
+       href="hoi.core.prepare_for_entropy.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">hoi.utils.normalize</p>
+        <p class="prev-next-title">hoi.core.prepare_for_entropy</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -495,7 +485,7 @@ sklearn.preprocessing.KBinsDiscretizer. For example, use
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">
-    <a href="../../../_sources/api/generated/UtilityFunctions/hoi.utils.digitize.rst.txt">
+    <a href="../../../_sources/api/generated/c/hoi.core.copnorm_nd.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

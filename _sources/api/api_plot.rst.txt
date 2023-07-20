@@ -28,6 +28,7 @@ Plot HOI
 ..    :no-inherited-members:
 
 .. autosummary::
-   :toctree: generated/Plot
+   .. :toctree: generated/Plot
+   :toctree: generated/
 
    plot_landscape

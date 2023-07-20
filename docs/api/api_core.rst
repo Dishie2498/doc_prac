@@ -58,7 +58,8 @@ Information-theoretical measures
 Measures of Entropy
 +++++++++++++++++++
 .. autosummary::
-   :toctree: generated/coreFunctions
+   .. :toctree: generated/coreFunctions
+   :toctree: generated/c
 
    entropy_gcmi
    entropy_bin
@@ -70,7 +71,8 @@ Measures of Entropy
 Measures of Mutual Information
 ++++++++++++++++++++++++++++++++
 .. autosummary::
-   :toctree: generated/coreFunctions
+   .. :toctree: generated/coreFunctions
+   :toctree: generated/
 
    mi_entr_comb
 
@@ -78,6 +80,7 @@ Measures of Mutual Information
 Combinatory
 -----------
 .. autosummary::
-   :toctree: generated/coreFunctions
+   .. :toctree: generated/coreFunctions
+   :toctree: generated/
 
    combinations

@@ -21,7 +21,8 @@ Metrics of HOI
 ..    InfoTot <generated/metricsOfHoi/hoi.metrics.InfoTot>
 
 .. autosummary::
-   :toctree: generated/metricsOfHoi
+   .. :toctree: generated/metricsOfHoi
+   :toctree: generated/
    
    OinfoZeroLag
    InfoTopo

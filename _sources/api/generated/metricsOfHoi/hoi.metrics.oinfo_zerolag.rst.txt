@@ -4,5 +4,5 @@ hoi.metrics.OinfoZeroLag
 
 .. autoclass:: OinfoZeroLag
 
-References
-rosas2019oinfo :cite:t:`1`
+**References**
+:cite:t:`rosas2019oinfo`

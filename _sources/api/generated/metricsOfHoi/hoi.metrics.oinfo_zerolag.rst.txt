@@ -1,35 +1,10 @@
-﻿hoi.metrics.oinfo\_zerolag
-==========================
+hoi.metrics.OinfoZeroLag
+========================
+.. currentmodule:: hoi.metrics
 
-.. automodule:: hoi.metrics.oinfo_zerolag
+.. autoclass:: OinfoZeroLag
 
-   
-   
-   
+See :cite:t:`rosas2019oinfo` for an introduction to non-standard analysis.
+Non-standard analysis is fun :cite:p:`rosas2019oinfo`.
 
-   
-   
-   .. rubric:: Functions
-
-   .. autosummary::
-   
-      compute_oinfo
-   
-   
-
-   
-   
-   .. rubric:: Classes
-
-   .. autosummary::
-   
-      OinfoZeroLag
-   
-   
-
-   
-   
-   
-
-
-
+.. bibliography::

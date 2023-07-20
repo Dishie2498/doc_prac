@@ -24,5 +24,4 @@ Postprocessing
    :toctree: generated/UtilityFunctions
 
    landscape
-   .. get_nbest_mult
-   hoi.utils.post_nbest
+   get_nbest_mult

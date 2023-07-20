@@ -1,34 +1,35 @@
-.. hoi.metrics.OinfoZeroLag
-.. ========================
+﻿hoi.metrics.oinfo\_zerolag
+==========================
 
-.. .. currentmodule:: hoi.metrics
+.. automodule:: hoi.metrics.oinfo_zerolag
 
-.. hoi.metrics.oinfo\_zerolag module
-.. ---------------------------------
+   
+   
+   
 
-.. .. automodule:: hoi.metrics.oinfo_zerolag
-..    :members:
-..    :undoc-members:
-..    :show-inheritance:
+   
+   
+   .. rubric:: Functions
 
-.. .. automodule:: hoi.metrics
-..    :members:
-..    :undoc-members:
-..    :show-inheritance:
+   .. autosummary::
+   
+      compute_oinfo
+   
+   
 
-hoi.metrics.OinfoZeroLag
-========================
-.. currentmodule:: hoi.metrics
+   
+   
+   .. rubric:: Classes
 
-.. automodule:: hoi.metrics
-   :no-members:
-   :no-inherited-members:
+   .. autosummary::
+   
+      OinfoZeroLag
+   
+   
 
-.. autoclass:: OinfoZeroLag
+   
+   
+   
 
-References
------------
-See :cite:t:`rosas2019oinfo` for an introduction to non-standard analysis.
-Non-standard analysis is fun :cite:p:`rosas2019oinfo`.
 
-.. bibliography::
+

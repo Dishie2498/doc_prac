@@ -13,13 +13,14 @@ Metrics of HOI
    :toctree: generated/metricsOfHoi
 
    OinfoZeroLag
-References
------------
-See :cite:t:`rosas2019oinfo` for an introduction to non-standard analysis.
-Non-standard analysis is fun :cite:p:`rosas2019oinfo`.
+   hoi.metrics.oinfo_zerolag
+.. References
+.. -----------
+.. See :cite:t:`rosas2019oinfo` for an introduction to non-standard analysis.
+.. Non-standard analysis is fun :cite:p:`rosas2019oinfo`.
 
 .. bibliography::
-   
+
 .. autosummary::
    :toctree: generated/metricsOfHoi
    

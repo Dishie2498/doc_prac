@@ -26,3 +26,7 @@ Postprocessing
    landscape
    get_nbest_mult
 
+See :cite:t:`rosas2019oinfo` for an introduction to non-standard analysis.
+Non-standard analysis is fun :cite:p:`rosas2019oinfo`.
+
+.. bibliography::

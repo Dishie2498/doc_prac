@@ -6,7 +6,4 @@ hoi.metrics.OinfoZeroLag
 
 References
 ----------
-See :cite:t:`rosas2019oinfo` for an introduction to non-standard analysis.
-Non-standard analysis is fun :cite:p:`rosas2019oinfo`.
-
-.. bibliography::
+rosas2019oinfo :cite:t:`rosas2019oinfo`

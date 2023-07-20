@@ -38,8 +38,9 @@ extensions = [
     "sphinx_panels",
     "numpydoc",
     "sphinx_copybutton",
+    "sphinxcontrib.bibtex",
 ]
-
+bibtex_bibfiles = ["refs.bib"]
 
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]

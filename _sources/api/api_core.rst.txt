@@ -46,7 +46,7 @@
    
 .. .. autofunction:: combinations
 Low-level core functions
-========================
+------------------------
 
 :py:mod:`hoi.core`:
 

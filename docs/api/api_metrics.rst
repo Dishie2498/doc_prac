@@ -12,9 +12,10 @@ Metrics of HOI
 .. autosummary::
    :toctree: generated/metricsOfHoi
 
-   InfoTopo
-   oinfo_zerolag
    OinfoZeroLag
+   InfoTopo
    RSI
-   redundancyMMI
+   RedundancyMMI
+   SynergyMMI
+   InfoTot
    .. hoi.metrics.HOImetrics

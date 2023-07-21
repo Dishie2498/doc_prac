@@ -1,14 +1,35 @@
 ﻿hoi.metrics.RedundancyMMI
 =========================
 
-
 .. currentmodule:: hoi.metrics
 
 .. autoclass:: RedundancyMMI
-   :special-members: __contains__,__getitem__,__iter__,__len__,__add__,__sub__,__mul__,__div__,__neg__,__hash__
-   :members:
 
-.. _sphx_glr_backreferences_hoi.metrics.RedundancyMMI:
+   
+   .. automethod:: __init__
 
-.. minigallery:: hoi.metrics.RedundancyMMI
-    :add-heading:
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RedundancyMMI.__init__
+      ~RedundancyMMI.compute_entropies
+      ~RedundancyMMI.filter_multiplets
+      ~RedundancyMMI.fit
+      ~RedundancyMMI.get_combinations
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~RedundancyMMI.entropies
+      ~RedundancyMMI.multiplets
+      ~RedundancyMMI.order
+      ~RedundancyMMI.undersampling
+   
+   

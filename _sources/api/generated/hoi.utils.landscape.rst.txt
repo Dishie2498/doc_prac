@@ -4,8 +4,3 @@
 .. currentmodule:: hoi.utils
 
 .. autofunction:: landscape
-
-.. _sphx_glr_backreferences_hoi.utils.landscape:
-
-.. minigallery:: hoi.utils.landscape
-    :add-heading:

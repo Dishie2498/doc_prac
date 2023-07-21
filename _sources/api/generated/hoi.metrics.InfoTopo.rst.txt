@@ -1,14 +1,35 @@
 ﻿hoi.metrics.InfoTopo
 ====================
 
-
 .. currentmodule:: hoi.metrics
 
 .. autoclass:: InfoTopo
-   :special-members: __contains__,__getitem__,__iter__,__len__,__add__,__sub__,__mul__,__div__,__neg__,__hash__
-   :members:
 
-.. _sphx_glr_backreferences_hoi.metrics.InfoTopo:
+   
+   .. automethod:: __init__
 
-.. minigallery:: hoi.metrics.InfoTopo
-    :add-heading:
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~InfoTopo.__init__
+      ~InfoTopo.compute_entropies
+      ~InfoTopo.filter_multiplets
+      ~InfoTopo.fit
+      ~InfoTopo.get_combinations
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~InfoTopo.entropies
+      ~InfoTopo.multiplets
+      ~InfoTopo.order
+      ~InfoTopo.undersampling
+   
+   

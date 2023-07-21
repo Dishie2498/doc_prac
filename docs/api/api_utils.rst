@@ -5,14 +5,9 @@ Utility functions
 
 .. currentmodule:: hoi.utils
 
-.. .. automodule:: hoi.utils
-..    :no-members:
-..    :no-inherited-members:
-
 Preprocessing
 +++++++++++++
 .. autosummary::
-   .. :toctree: generated/UtilityFunctions
    :toctree: generated/
 
    digitize
@@ -21,7 +16,6 @@ Preprocessing
 Postprocessing
 ++++++++++++++
 .. autosummary::
-   .. :toctree: generated/UtilityFunctions
    :toctree: generated/
 
    landscape

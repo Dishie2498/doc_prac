@@ -42,7 +42,11 @@ extensions = [
 ]
 bibtex_bibfiles = ["refs.bib"]
 
-templates_path = ["_templates"]
+templates_path = [
+    "_templates/autosummary/class.rst",
+    "_templates/autosummary/function.rst",
+    "_templates/autosummary/layout.html",
+]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 autosummary_generate = True

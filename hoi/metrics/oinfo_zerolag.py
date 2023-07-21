@@ -49,10 +49,6 @@ class OinfoZeroLag(HOIEstimator):
         (n_samples, n_features, n_variables)
     y : array_like
         The feature of shape (n_trials,) for estimating task-related O-info
-        
-    References
-    ----------
-    Rosas et al., 2019 :cite:`rosas2019oinfo` 
     """
 
     __name__ = "O-Information"
@@ -76,6 +72,10 @@ class OinfoZeroLag(HOIEstimator):
                 * 'knn': k-nearest neighbor estimator
         kwargs : dict | {}
             Additional arguments are sent to each entropy function
+
+        References
+        ----------
+        Rosas et al., 2019 :cite:`rosas2019oinfo` 
         """
         # ____________________________ ENTROPIES ______________________________
 

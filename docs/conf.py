@@ -46,6 +46,7 @@ templates_path = [
     "_templates/autosummary/class.rst",
     "_templates/autosummary/function.rst",
     "_templates/autosummary/layout.html",
+    "_templates",
 ]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 

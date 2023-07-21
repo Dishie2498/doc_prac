@@ -1,0 +1,21 @@
+{% extends '!layout.html' %}
+
+{% block header %}
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Roboto+Mono:wght@332&display=swap');
+</style>
+</head>
+{% endblock %}
+
+{% block footer %}
+    <hr>
+    <footer>
+        <div class="container">
+            <img src="{{pathto('_static/baniere.png', 1)}}" alt="Ban" height="80">
+        </div>
+        <br>
+        <!-- <br> -->
+        <p>&copy; Copyright {{ copyright }}.</p>
+    </footer>
+{% endblock %}

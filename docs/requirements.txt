@@ -15,3 +15,4 @@ sphinxcontrib-bibtex
 
 ## uncomment when the README file has one of the expected file extensions ['.txt', '.rst']. Add "sphinx_gallery.gen_gallery" to extensions in confy.py
 sphinx-gallery
+Pillow

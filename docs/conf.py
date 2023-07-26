@@ -85,7 +85,7 @@ sphinx_gallery_conf = {
     "show_memory": True,
     "filename_pattern": "/plot_|sim_",
     "default_thumb_file": "BraiNets.png",
-    "subsection_order": ExplicitOrder(["../../examples/tutorials"]),
+    "subsection_order": ExplicitOrder(["../../examples/tutorials", "../examples/core"]),
     "doc_module": ("hoi",)
     # "thumbnail_size": (100, 100),
 }

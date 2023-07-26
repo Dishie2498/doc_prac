@@ -31,6 +31,10 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -167,6 +171,13 @@
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../auto_examples/index.html">
+                        Examples
+                      </a>
+                    </li>
+                
   </ul>
 </nav></div>
       
@@ -289,6 +300,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../overview/index.html">
                         Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../auto_examples/index.html">
+                        Examples
                       </a>
                     </li>
                 
@@ -438,25 +456,25 @@ document.write(`
 <dt class="sig sig-object py" id="hoi.core.copnorm_nd">
 <span class="sig-prename descclassname"><span class="pre">hoi.core.</span></span><span class="sig-name descname"><span class="pre">copnorm_nd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/hoi/core/entropies.html#copnorm_nd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.copnorm_nd" title="Permalink to this definition">#</a></dt>
 <dd><p>Copula normalization for a multidimentional array.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>Array of data</p>
+<dd class="field-odd"><dl>
+<dt><strong>x</strong><span class="classifier"><span class="xref std std-term">numpy:array_like</span></span></dt><dd><p>Array of data</p>
 </dd>
-<dt><strong>axis</strong><span class="classifier">int | -1</span></dt><dd><p>Epoch (or trial) axis. By default, the last axis is considered</p>
+<dt><strong>axis</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:int</span></code> | -1</span></dt><dd><p>Epoch (or trial) axis. By default, the last axis is considered</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>cx</strong><span class="classifier">array_like</span></dt><dd><p>Standard normal samples with the same empirical CDF value as the input.</p>
+<dd class="field-even"><dl>
+<dt><strong>cx</strong><span class="classifier"><span class="xref std std-term">numpy:array_like</span></span></dt><dd><p>Standard normal samples with the same empirical CDF value as the input.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 </dd></dl>
 
-</section>
+<span class="target" id="sphx-glr-backreferences-hoi-core-copnorm-nd"></span></section>
 
 
                 </article>

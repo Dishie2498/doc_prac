@@ -31,6 +31,10 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -167,6 +171,13 @@
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../auto_examples/index.html">
+                        Examples
+                      </a>
+                    </li>
+                
   </ul>
 </nav></div>
       
@@ -289,6 +300,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../overview/index.html">
                         Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../auto_examples/index.html">
+                        Examples
                       </a>
                     </li>
                 
@@ -438,18 +456,18 @@ document.write(`
 <dt class="sig sig-object py" id="hoi.core.combinations">
 <span class="sig-prename descclassname"><span class="pre">hoi.core.</span></span><span class="sig-name descname"><span class="pre">combinations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_iterator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_jax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/hoi/core/combinatory.html#combinations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.combinations" title="Permalink to this definition">#</a></dt>
 <dd><p>Get combinations.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>n</strong><span class="classifier">int</span></dt><dd><p>Represents the total number of elements in the set</p>
+<dd class="field-odd"><dl>
+<dt><strong>n</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:int</span></code></span></dt><dd><p>Represents the total number of elements in the set</p>
 </dd>
-<dt><strong>k</strong><span class="classifier">int</span></dt><dd><p>Represents the size of the combinations to be generated</p>
+<dt><strong>k</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:int</span></code></span></dt><dd><p>Represents the size of the combinations to be generated</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>combs</strong><span class="classifier">jnp.array</span></dt><dd><p>An array of shape (n_combinations, k) representing all possible
+<dd class="field-even"><dl>
+<dt><strong>combs</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">jnp.array</span></code></span></dt><dd><p>An array of shape (n_combinations, k) representing all possible
 combinations of k elements.</p>
 </dd>
 </dl>
@@ -457,7 +475,7 @@ combinations of k elements.</p>
 </dl>
 </dd></dl>
 
-</section>
+<span class="target" id="sphx-glr-backreferences-hoi-core-combinations"></span></section>
 
 
                 </article>

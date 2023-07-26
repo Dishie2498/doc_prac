@@ -31,6 +31,10 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -167,6 +171,13 @@
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../auto_examples/index.html">
+                        Examples
+                      </a>
+                    </li>
+                
   </ul>
 </nav></div>
       
@@ -289,6 +300,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../overview/index.html">
                         Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../auto_examples/index.html">
+                        Examples
                       </a>
                     </li>
                 
@@ -438,18 +456,18 @@ document.write(`
 <dt class="sig sig-object py" id="hoi.core.get_entropy">
 <span class="sig-prename descclassname"><span class="pre">hoi.core.</span></span><span class="sig-name descname"><span class="pre">get_entropy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gcmi'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/hoi/core/entropies.html#get_entropy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.core.get_entropy" title="Permalink to this definition">#</a></dt>
 <dd><p>Get entropy function.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
+<dd class="field-odd"><dl>
 <dt><strong>method</strong><span class="classifier">{‘gcmi’, ‘binning’, ‘knn’}</span></dt><dd><p>Name of the method to compute entropy.</p>
 </dd>
-<dt><strong>kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Additional arguments sent to the entropy function.</p>
+<dt><strong>kwargs</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:dict</span></code> | {}</span></dt><dd><p>Additional arguments sent to the entropy function.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>fcn</strong><span class="classifier">callable</span></dt><dd><p>Function to compute entropy on a variable of shape
+<dd class="field-even"><dl>
+<dt><strong>fcn</strong><span class="classifier"><code class="xref py py-func docutils literal notranslate"><span class="pre">python:callable()</span></code></span></dt><dd><p>Function to compute entropy on a variable of shape
 (n_features, n_samples)</p>
 </dd>
 </dl>
@@ -457,7 +475,7 @@ document.write(`
 </dl>
 </dd></dl>
 
-</section>
+<span class="target" id="sphx-glr-backreferences-hoi-core-get-entropy"></span></section>
 
 
                 </article>

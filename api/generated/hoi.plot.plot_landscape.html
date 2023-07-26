@@ -31,6 +31,10 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -167,6 +171,13 @@
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../auto_examples/index.html">
+                        Examples
+                      </a>
+                    </li>
+                
   </ul>
 </nav></div>
       
@@ -289,6 +300,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../overview/index.html">
                         Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../auto_examples/index.html">
+                        Examples
                       </a>
                     </li>
                 
@@ -438,14 +456,14 @@ document.write(`
 <dt class="sig sig-object py" id="hoi.plot.plot_landscape">
 <span class="sig-prename descclassname"><span class="pre">hoi.plot.</span></span><span class="sig-name descname"><span class="pre">plot_landscape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hoi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hist'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">undersampling</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hist_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plt_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/hoi/plot/landscape.html#plot_landscape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.plot.plot_landscape" title="Permalink to this definition">#</a></dt>
 <dd><p>Landscape representation of higher order interactions.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>hoi</strong><span class="classifier">array_like</span></dt><dd><p>Higher order interactions.</p>
+<dd class="field-odd"><dl>
+<dt><strong>hoi</strong><span class="classifier"><span class="xref std std-term">numpy:array_like</span></span></dt><dd><p>Higher order interactions.</p>
 </dd>
-<dt><strong>model</strong><span class="classifier">hoi.metrics</span></dt><dd><p>Higher order interaction model.</p>
+<dt><strong>model</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hoi.metrics</span></code></span></dt><dd><p>Higher order interaction model.</p>
 </dd>
-<dt><strong>minsize, maxsize</strong><span class="classifier">int | 2, None</span></dt><dd><p>Minimum and maximum size of the multiplets</p>
+<dt><strong>minsize, maxsize</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:int</span></code> | 2, <code class="xref py py-data docutils literal notranslate"><span class="pre">python:None</span></code></span></dt><dd><p>Minimum and maximum size of the multiplets</p>
 </dd>
 <dt><strong>kind</strong><span class="classifier">{‘hist’, ‘scatter’}</span></dt><dd><p>Kind of plot. Use either:</p>
 <ul class="simple">
@@ -453,26 +471,26 @@ document.write(`
 <li><p>‘scatter’ : scatter plot of the higher order interactions</p></li>
 </ul>
 </dd>
-<dt><strong>undersampling</strong><span class="classifier">bool | True</span></dt><dd><p>If True, plot the undersampling threshold.</p>
+<dt><strong>undersampling</strong><span class="classifier"><span class="xref std std-ref">bool</span> | <code class="xref py py-data docutils literal notranslate"><span class="pre">python:True</span></code></span></dt><dd><p>If True, plot the undersampling threshold.</p>
 </dd>
-<dt><strong>hist_kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Optional arguments for the histogram.</p>
+<dt><strong>hist_kwargs</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:dict</span></code> | {}</span></dt><dd><p>Optional arguments for the histogram.</p>
 </dd>
-<dt><strong>plt_kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Optional arguments for the plot. If kind is ‘hist’, the arguments
+<dt><strong>plt_kwargs</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:dict</span></code> | {}</span></dt><dd><p>Optional arguments for the plot. If kind is ‘hist’, the arguments
 are passed to <cite>plt.pcolormesh</cite>. If kind is ‘scatter’, the arguments
 are passed to <cite>plt.scatter</cite>.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>ax</strong><span class="classifier">axis</span></dt><dd><p>Current axis.</p>
+<dd class="field-even"><dl>
+<dt><strong>ax</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axis</span></code></span></dt><dd><p>Current axis.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 </dd></dl>
 
-</section>
+<span class="target" id="sphx-glr-backreferences-hoi-plot-plot-landscape"></span></section>
 
 
                 </article>

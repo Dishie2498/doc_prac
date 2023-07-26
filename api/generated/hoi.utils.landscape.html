@@ -31,6 +31,10 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -167,6 +171,13 @@
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../auto_examples/index.html">
+                        Examples
+                      </a>
+                    </li>
+                
   </ul>
 </nav></div>
       
@@ -289,6 +300,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../overview/index.html">
                         Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../auto_examples/index.html">
+                        Examples
                       </a>
                     </li>
                 
@@ -443,14 +461,14 @@ order.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>Array of data containing the HOI estimates of shape (n_hoi,)</p>
+<dt><strong>x</strong><span class="classifier"><span class="xref std std-term">numpy:array_like</span></span></dt><dd><p>Array of data containing the HOI estimates of shape (n_hoi,)</p>
 </dd>
-<dt><strong>multi_size</strong><span class="classifier">array_like</span></dt><dd><p>Size of the multiplet associated to each HOI estimates. It should be an
+<dt><strong>multi_size</strong><span class="classifier"><span class="xref std std-term">numpy:array_like</span></span></dt><dd><p>Size of the multiplet associated to each HOI estimates. It should be an
 array of shape (n_hoi,)</p>
 </dd>
-<dt><strong>n_bins</strong><span class="classifier">array_like | 100</span></dt><dd><p>Number of bins to use to build the histogram at each order</p>
+<dt><strong>n_bins</strong><span class="classifier"><span class="xref std std-term">numpy:array_like</span> | 100</span></dt><dd><p>Number of bins to use to build the histogram at each order</p>
 </dd>
-<dt><strong>centered</strong><span class="classifier">bool | False</span></dt><dd><p>Specify whether bin edges should be centered around zero</p>
+<dt><strong>centered</strong><span class="classifier"><span class="xref std std-ref">bool</span> | <code class="xref py py-data docutils literal notranslate"><span class="pre">python:False</span></code></span></dt><dd><p>Specify whether bin edges should be centered around zero</p>
 </dd>
 <dt><strong>stat</strong><span class="classifier">{‘probability’, ‘frequency’, ‘count’, ‘density’, ‘percent’}</span></dt><dd><p>Aggregate statistic to compute in each bin.</p>
 <blockquote>
@@ -466,7 +484,7 @@ equals 1</p></li>
 </ul>
 </div></blockquote>
 </dd>
-<dt><strong>output</strong><span class="classifier">{‘numpy’, ‘pandas’, ‘xarray’} | None</span></dt><dd><p>Output type. Use either :</p>
+<dt><strong>output</strong><span class="classifier">{‘numpy’, ‘pandas’, ‘xarray’} | <code class="xref py py-data docutils literal notranslate"><span class="pre">python:None</span></code></span></dt><dd><p>Output type. Use either :</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>‘numpy’: in that case this function will returns the landscape,
@@ -479,15 +497,15 @@ the unique orders (x-axis) and the central bins (y-axis)</p></li>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>landcape</strong><span class="classifier">array_like</span></dt><dd><p>Returns depend on the <cite>output</cite> parameter. Check to see what is returned</p>
+<dd class="field-even"><dl>
+<dt><strong>landcape</strong><span class="classifier"><span class="xref std std-term">numpy:array_like</span></span></dt><dd><p>Returns depend on the <cite>output</cite> parameter. Check to see what is returned</p>
 </dd>
 </dl>
 </dd>
 </dl>
 </dd></dl>
 
-</section>
+<span class="target" id="sphx-glr-backreferences-hoi-utils-landscape"></span></section>
 
 
                 </article>

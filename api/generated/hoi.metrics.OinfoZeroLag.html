@@ -31,6 +31,10 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -167,6 +171,13 @@
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../auto_examples/index.html">
+                        Examples
+                      </a>
+                    </li>
+                
   </ul>
 </nav></div>
       
@@ -289,6 +300,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../overview/index.html">
                         Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../auto_examples/index.html">
+                        Examples
                       </a>
                     </li>
                 
@@ -438,13 +456,13 @@ document.write(`
 <dt class="sig sig-object py" id="hoi.metrics.OinfoZeroLag">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hoi.metrics.</span></span><span class="sig-name descname"><span class="pre">OinfoZeroLag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/hoi/metrics/oinfo_zerolag.html#OinfoZeroLag"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.OinfoZeroLag" title="Permalink to this definition">#</a></dt>
 <dd><p>Dynamic, possibly task-related O-info.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>data</strong><span class="classifier">array_like</span></dt><dd><p>Standard NumPy arrays of shape (n_samples, n_features) or
+<dd class="field-odd"><dl>
+<dt><strong>data</strong><span class="classifier"><span class="xref std std-term">numpy:array_like</span></span></dt><dd><p>Standard NumPy arrays of shape (n_samples, n_features) or
 (n_samples, n_features, n_variables)</p>
 </dd>
-<dt><strong>y</strong><span class="classifier">array_like</span></dt><dd><p>The feature of shape (n_trials,) for estimating task-related O-info</p>
+<dt><strong>y</strong><span class="classifier"><span class="xref std std-term">numpy:array_like</span></span></dt><dd><p>The feature of shape (n_trials,) for estimating task-related O-info</p>
 </dd>
 </dl>
 </dd>
@@ -497,7 +515,7 @@ document.write(`
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>minsize, maxsize</strong><span class="classifier">int | 2, None</span></dt><dd><p>Minimum and maximum size of the multiplets</p>
+<dt><strong>minsize, maxsize</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:int</span></code> | 2, <code class="xref py py-data docutils literal notranslate"><span class="pre">python:None</span></code></span></dt><dd><p>Minimum and maximum size of the multiplets</p>
 </dd>
 <dt><strong>method</strong><span class="classifier">{‘gcmi’, ‘binning’, ‘knn’}</span></dt><dd><p>Name of the method to compute entropy. Use either :</p>
 <blockquote>
@@ -512,7 +530,7 @@ document.write(`
 </ul>
 </div></blockquote>
 </dd>
-<dt><strong>kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Additional arguments are sent to each entropy function</p>
+<dt><strong>kwargs</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:dict</span></code> | {}</span></dt><dd><p>Additional arguments are sent to each entropy function</p>
 </dd>
 </dl>
 </dd>
@@ -523,7 +541,7 @@ document.write(`
 
 </dd></dl>
 
-</section>
+<span class="target" id="sphx-glr-backreferences-hoi-metrics-oinfozerolag"></span></section>
 
 
                 </article>

@@ -1,0 +1,64 @@
+
+
+.. _sphx_glr_auto_examples_tutorials:
+
+Tutorials
+---------
+
+HOIs' tutorials
+
+.. contents:: Contents
+   :local:
+   :depth: 2
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Tutorial 2">
+
+.. only:: html
+
+  .. image:: /auto_examples/tutorials/images/thumb/sphx_glr_tut_2_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_tutorials_tut_2.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Tutorial 2</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Tutorial 1">
+
+.. only:: html
+
+  .. image:: /auto_examples/tutorials/images/thumb/sphx_glr_tut_1_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_auto_examples_tutorials_tut_1.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Tutorial 1</div>
+    </div>
+
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /auto_examples/tutorials/tut_2
+   /auto_examples/tutorials/tut_1
+

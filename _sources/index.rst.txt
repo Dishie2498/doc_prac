@@ -21,6 +21,7 @@ In summary, this package aims at calculating the O-information thereby understan
    API Reference <api/modules>
    Installation <install>
    Overview <overview/index>
+   Examples <auto_examples/index>
 
 Indices and tables
 ==================

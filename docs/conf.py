@@ -78,7 +78,7 @@ html_static_path = ["_static"]
 
 sphinx_gallery_conf = {
     # path to your examples scripts
-    "examples_dirs": "../../examples",
+    "examples_dirs": "../examples",
     "reference_url": dict(hoi=None),
     "gallery_dirs": "auto_examples",
     "backreferences_dir": "api/generated",

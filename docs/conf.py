@@ -9,6 +9,7 @@
 import os
 import sys
 import hoi
+from sphinx_gallery.sorting import ExplicitOrder
 
 # sys.path.append(os.path.abspath("sphinxext"))
 
@@ -39,6 +40,7 @@ extensions = [
     "numpydoc",
     "sphinx_copybutton",
     "sphinxcontrib.bibtex",
+    "sphinx_gallery.gen_gallery",
 ]
 bibtex_bibfiles = ["refs.bib"]
 
@@ -74,6 +76,22 @@ html_theme_options = {
 }
 html_static_path = ["_static"]
 
+sphinx_gallery_conf = {
+    # path to your examples scripts
+    "examples_dirs": "../../examples",
+    "reference_url": dict(hoi=None),
+    "gallery_dirs": "auto_examples",
+    "backreferences_dir": "api/generated",
+    "show_memory": True,
+    "filename_pattern": "/plot_|sim_",
+    "default_thumb_file": "BraiNets.png",
+    "subsection_order": ExplicitOrder(["../../examples/tutorials"]),
+    "doc_module": ("hoi",)
+    # "thumbnail_size": (100, 100),
+}
+numpydoc_class_members_toctree = False
+numpydoc_attributes_as_param_list = True
+numpydoc_xref_param_type = True
 
 autodoc_mock_imports = ["jax", "tqdm", "jax_tqdm"]
 

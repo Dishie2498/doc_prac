@@ -151,13 +151,6 @@
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../modules.html">
-                        API Reference
-                      </a>
-                    </li>
-                
-
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../install.html">
                         Installation
@@ -168,6 +161,13 @@
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../overview/index.html">
                         Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        API Reference
                       </a>
                     </li>
                 
@@ -283,13 +283,6 @@ document.write(`
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../modules.html">
-                        API Reference
-                      </a>
-                    </li>
-                
-
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../install.html">
                         Installation
@@ -300,6 +293,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../overview/index.html">
                         Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        API Reference
                       </a>
                     </li>
                 
@@ -456,25 +456,25 @@ document.write(`
 <dt class="sig sig-object py" id="hoi.metrics.SynergyMMI">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hoi.metrics.</span></span><span class="sig-name descname"><span class="pre">SynergyMMI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/hoi/metrics/syn_mmi.html#SynergyMMI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.SynergyMMI" title="Permalink to this definition">#</a></dt>
 <dd><p>Synergy estimated using the Minimum Mutual Information.</p>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl>
-<dt><strong>data</strong><span class="classifier"><span class="xref std std-term">numpy:array_like</span></span></dt><dd><p>Standard NumPy arrays of shape (n_samples, n_features) or
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data</strong><span class="classifier">array_like</span></dt><dd><p>Standard NumPy arrays of shape (n_samples, n_features) or
 (n_samples, n_features, n_variables)</p>
 </dd>
-<dt><strong>y</strong><span class="classifier"><span class="xref std std-term">numpy:array_like</span></span></dt><dd><p>The feature of shape (n_trials,) for estimating task-related O-info</p>
+<dt><strong>y</strong><span class="classifier">array_like</span></dt><dd><p>The feature of shape (n_trials,) for estimating task-related O-info</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Attributes</dt>
 <dd class="field-even"><dl class="simple">
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">entropies</span></code></dt><dd><p>Entropies of shape (n_mult,)</p>
+<dt><a class="reference internal" href="#hoi.metrics.SynergyMMI.entropies" title="hoi.metrics.SynergyMMI.entropies"><code class="xref py py-obj docutils literal notranslate"><span class="pre">entropies</span></code></a></dt><dd><p>Entropies of shape (n_mult,)</p>
 </dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiplets</span></code></dt><dd><p>Indices of the multiplets of shape (n_mult, maxsize).</p>
+<dt><a class="reference internal" href="#hoi.metrics.SynergyMMI.multiplets" title="hoi.metrics.SynergyMMI.multiplets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiplets</span></code></a></dt><dd><p>Indices of the multiplets of shape (n_mult, maxsize).</p>
 </dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">order</span></code></dt><dd><p>Order of each multiplet of shape (n_mult,).</p>
+<dt><a class="reference internal" href="#hoi.metrics.SynergyMMI.order" title="hoi.metrics.SynergyMMI.order"><code class="xref py py-obj docutils literal notranslate"><span class="pre">order</span></code></a></dt><dd><p>Order of each multiplet of shape (n_mult,).</p>
 </dd>
-<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">undersampling</span></code></dt><dd><p>Under-sampling threshold.</p>
+<dt><a class="reference internal" href="#hoi.metrics.SynergyMMI.undersampling" title="hoi.metrics.SynergyMMI.undersampling"><code class="xref py py-obj docutils literal notranslate"><span class="pre">undersampling</span></code></a></dt><dd><p>Under-sampling threshold.</p>
 </dd>
 </dl>
 </dd>
@@ -509,13 +509,25 @@ document.write(`
 </tbody>
 </table>
 <dl class="py method">
+<dt class="sig sig-object py" id="hoi.metrics.SynergyMMI.__iter__">
+<span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hoi.metrics.SynergyMMI.__iter__" title="Permalink to this definition">#</a></dt>
+<dd><p>Iteration over orders.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hoi.metrics.SynergyMMI.entropies">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">entropies</span></span><a class="headerlink" href="#hoi.metrics.SynergyMMI.entropies" title="Permalink to this definition">#</a></dt>
+<dd><p>Entropies of shape (n_mult,)</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="hoi.metrics.SynergyMMI.fit">
 <span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'gcmi'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/hoi/metrics/syn_mmi.html#SynergyMMI.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.SynergyMMI.fit" title="Permalink to this definition">#</a></dt>
 <dd><p>Synergy Index.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>minsize, maxsize</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:int</span></code> | 2, <code class="xref py py-data docutils literal notranslate"><span class="pre">python:None</span></code></span></dt><dd><p>Minimum and maximum size of the multiplets</p>
+<dt><strong>minsize, maxsize</strong><span class="classifier">int | 2, None</span></dt><dd><p>Minimum and maximum size of the multiplets</p>
 </dd>
 <dt><strong>method</strong><span class="classifier">{‘gcmi’, ‘binning’, ‘knn’}</span></dt><dd><p>Name of the method to compute entropy. Use either :</p>
 <blockquote>
@@ -530,11 +542,30 @@ document.write(`
 </ul>
 </div></blockquote>
 </dd>
-<dt><strong>kwargs</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:dict</span></code> | {}</span></dt><dd><p>Additional arguments are sent to each entropy function</p>
+<dt><strong>kwargs</strong><span class="classifier">dict | {}</span></dt><dd><p>Additional arguments are sent to each entropy function</p>
 </dd>
 </dl>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hoi.metrics.SynergyMMI.multiplets">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">multiplets</span></span><a class="headerlink" href="#hoi.metrics.SynergyMMI.multiplets" title="Permalink to this definition">#</a></dt>
+<dd><p>Indices of the multiplets of shape (n_mult, maxsize).</p>
+<p>By convention, we used -1 to indicate that a feature has been ignored.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hoi.metrics.SynergyMMI.order">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">order</span></span><a class="headerlink" href="#hoi.metrics.SynergyMMI.order" title="Permalink to this definition">#</a></dt>
+<dd><p>Order of each multiplet of shape (n_mult,).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="hoi.metrics.SynergyMMI.undersampling">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">undersampling</span></span><a class="headerlink" href="#hoi.metrics.SynergyMMI.undersampling" title="Permalink to this definition">#</a></dt>
+<dd><p>Under-sampling threshold.</p>
 </dd></dl>
 
 </dd></dl>
@@ -612,11 +643,9 @@ document.write(`
             <img src="https://cibul.s3.amazonaws.com/e9619f705931403093351210dc70d8ee.base.image.jpg" alt="INT" height="80">
             <img src="https://www.engagement.fr/wp-content/uploads/2013/02/Aix-Marseille-Universit%C3%A9.png" alt=" Aix-Marseille university" height="80">
             <img src="https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-Vertical.png" alt="Gsoc" height="80">
-            <br>
-        <!-- <br> -->
+        <br>
         <p>&copy; Copyright BraiNets.</p>
         </div>
-        
     </footer>
 
   </body>

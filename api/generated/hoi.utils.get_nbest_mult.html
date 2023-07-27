@@ -151,13 +151,6 @@
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../modules.html">
-                        API Reference
-                      </a>
-                    </li>
-                
-
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../install.html">
                         Installation
@@ -168,6 +161,13 @@
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../overview/index.html">
                         Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        API Reference
                       </a>
                     </li>
                 
@@ -283,13 +283,6 @@ document.write(`
   </p>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../modules.html">
-                        API Reference
-                      </a>
-                    </li>
-                
-
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../install.html">
                         Installation
@@ -300,6 +293,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../overview/index.html">
                         Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../modules.html">
+                        API Reference
                       </a>
                     </li>
                 
@@ -457,26 +457,26 @@ document.write(`
 <span class="sig-prename descclassname"><span class="pre">hoi.utils.</span></span><span class="sig-name descname"><span class="pre">get_nbest_mult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hoi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_best</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/hoi/utils/stats.html#get_nbest_mult"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.utils.get_nbest_mult" title="Permalink to this definition">#</a></dt>
 <dd><p>Get the n best multiplets.</p>
 <p>This function requires pandas to be installed.</p>
-<dl class="field-list">
+<dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl>
-<dt><strong>hoi</strong><span class="classifier"><span class="xref std std-term">numpy:array_like</span></span></dt><dd><p>Array of higher-order information.</p>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>hoi</strong><span class="classifier">array_like</span></dt><dd><p>Array of higher-order information.</p>
 </dd>
-<dt><strong>model</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hoi.metrics</span></code></span></dt><dd><p>Model used to compute the higher-order information.</p>
+<dt><strong>model</strong><span class="classifier">hoi.metrics</span></dt><dd><p>Model used to compute the higher-order information.</p>
 </dd>
-<dt><strong>n_best</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Number of best multiplets to return. The default is 5.</p>
+<dt><strong>n_best</strong><span class="classifier">int, optional</span></dt><dd><p>Number of best multiplets to return. The default is 5.</p>
 </dd>
-<dt><strong>minsize</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Minimum size of the multiplets. The default is None.</p>
+<dt><strong>minsize</strong><span class="classifier">int, optional</span></dt><dd><p>Minimum size of the multiplets. The default is None.</p>
 </dd>
-<dt><strong>maxsize</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:int</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>Maximum size of the multiplets. The default is None.</p>
+<dt><strong>maxsize</strong><span class="classifier">int, optional</span></dt><dd><p>Maximum size of the multiplets. The default is None.</p>
 </dd>
-<dt><strong>names</strong><span class="classifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">python:list</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">optional</span></code></span></dt><dd><p>List of names of the variables. The default is None.</p>
+<dt><strong>names</strong><span class="classifier">list, optional</span></dt><dd><p>List of names of the variables. The default is None.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><dl>
-<dt><strong>df_best</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></span></dt><dd><p>Dataframe containing the n best multiplets.</p>
+<dd class="field-even"><dl class="simple">
+<dt><strong>df_best</strong><span class="classifier">pandas.DataFrame</span></dt><dd><p>Dataframe containing the n best multiplets.</p>
 </dd>
 </dl>
 </dd>
@@ -556,11 +556,9 @@ document.write(`
             <img src="https://cibul.s3.amazonaws.com/e9619f705931403093351210dc70d8ee.base.image.jpg" alt="INT" height="80">
             <img src="https://www.engagement.fr/wp-content/uploads/2013/02/Aix-Marseille-Universit%C3%A9.png" alt=" Aix-Marseille university" height="80">
             <img src="https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-Vertical.png" alt="Gsoc" height="80">
-            <br>
-        <!-- <br> -->
+        <br>
         <p>&copy; Copyright BraiNets.</p>
         </div>
-        
     </footer>
 
   </body>

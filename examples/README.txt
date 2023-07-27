@@ -1,7 +1,7 @@
-Tutorials
+Examples
 ---------
 
-HOIs' tutorials
+Illustration of the main functions.
 
 .. contents:: Contents
    :local:

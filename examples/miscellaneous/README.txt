@@ -1,4 +1,4 @@
-Low-level Core Functions
+Miscellaneous
 -------------------------------------
 
 .. contents:: Contents

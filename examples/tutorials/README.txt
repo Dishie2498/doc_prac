@@ -1,7 +1,5 @@
 Tutorials
----------
-
-HOIs' tutorials
+-------------------------------------
 
 .. contents:: Contents
    :local:

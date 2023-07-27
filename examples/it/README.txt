@@ -1,4 +1,4 @@
-Metrics of HOI
+Entropy and mutual information
 -------------------------------------
 
 .. contents:: Contents

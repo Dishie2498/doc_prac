@@ -25,6 +25,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -e .['flake']
 
-      - name: Test code quality 🔧
-        run: |
-          flake8
+      # - name: Test code quality 🔧
+      #   run: |
+      #     flake8
+      
+      - name: Check syntax
+        # Stop the build if there are Python syntax errors or undefined names
+        run: flake8 --count --statistics --show-source
+
+      - name: Warnings
+        run: flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics --extend-exclude=""

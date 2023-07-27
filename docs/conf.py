@@ -53,6 +53,7 @@ templates_path = [
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 autosummary_generate = True
+autodoc_default_options = {"inherited-members": None}
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
@@ -85,13 +86,17 @@ sphinx_gallery_conf = {
     "show_memory": True,
     "filename_pattern": "/plot_|sim_",
     "default_thumb_file": "BraiNets.png",
-    "subsection_order": ExplicitOrder(["../examples/tutorials", "../examples/core"]),
+    "subsection_order": ExplicitOrder(
+        [
+            "../examples/tutorials",
+            "../examples/it",
+            "../examples/metrics",
+            "../examples/miscellaneous",
+        ]
+    ),
     "doc_module": ("hoi",)
     # "thumbnail_size": (100, 100),
 }
-numpydoc_class_members_toctree = False
-numpydoc_attributes_as_param_list = True
-numpydoc_xref_param_type = True
 
 autodoc_mock_imports = ["jax", "tqdm", "jax_tqdm"]
 

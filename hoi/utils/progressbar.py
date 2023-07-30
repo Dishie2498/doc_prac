@@ -6,7 +6,7 @@ from jax.experimental import host_callback
 from tqdm.auto import tqdm
 
 
-logger = logging.getLogger('hoi')
+logger = logging.getLogger("hoi")
 
 
 def get_pbar(**kwargs):
@@ -17,7 +17,8 @@ def get_pbar(**kwargs):
     kwargs["smoothing"] = 0.05
     kwargs["bar_format"] = (
         "{percentage:3.0f}%|{bar}| {desc} {n_fmt}/{total_fmt} [{elapsed}"
-        "<{remaining}, {rate_fmt:>11}{postfix}]")
+        "<{remaining}, {rate_fmt:>11}{postfix}]"
+    )
     return tqdm(**kwargs)
 
 

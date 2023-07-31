@@ -1,9 +1,9 @@
-name: flake8 Lint
+name: flake8
 
 on: [push, pull_request]
 
 jobs:
-  flake8-lint:
+  flake8:
     runs-on: ubuntu-latest
     name: Lint
     steps:
@@ -16,7 +16,6 @@ jobs:
       - name: flake8 Lint
         uses: py-actions/flake8@v2
         with:
-          ignore: "F401"
           max-line-length: "100"
           path: "hoi"
           plugins: "flake8-bugbear==22.1.11 flake8-black"

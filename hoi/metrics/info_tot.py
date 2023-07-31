@@ -1,5 +1,4 @@
 from math import comb as ccomb
-import itertools
 from functools import partial
 
 import logging
@@ -116,7 +115,7 @@ class InfoTot(HOIEstimator):
 
 if __name__ == "__main__":
     import matplotlib.pyplot as plt
-    from hoi.utils import landscape, digitize, get_nbest_mult
+    from hoi.utils import get_nbest_mult
     from hoi.plot import plot_landscape
 
     plt.style.use("ggplot")

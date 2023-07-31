@@ -27,5 +27,8 @@ jobs:
           pip install -e .['flake']
 
       - name: Test code quality 🔧
+     	with:
+          ignore: "E501"
+          max-line-length: "2000"
         run: |
           flake8

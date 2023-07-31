@@ -165,7 +165,7 @@ class HOIEstimator(object):
 
         # task related filtering
         if self._task_related:
-            logger.info(f"    Selecting task-related multiplets")
+            logger.info("    Selecting task-related multiplets")
             keep_tr = (mults == self.n_features - 1).any(1)
             keep = jnp.logical_and(keep, keep_tr)
 

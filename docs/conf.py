@@ -25,7 +25,8 @@ release = hoi.__version__
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 
-# Add "sphinx.ext.linkcode" when you specify a linkcode_resolve function that returns an URL based on the object.
+# Add "sphinx.ext.linkcode" when you specify a linkcode_resolve function that
+# returns an URL based on the object.
 extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
@@ -99,4 +100,3 @@ sphinx_gallery_conf = {
 }
 
 autodoc_mock_imports = ["jax", "tqdm", "jax_tqdm"]
-

@@ -23,7 +23,7 @@ logger = logging.getLogger("hoi")
 ###############################################################################
 
 
-def get_entropy(method="gcmi", **kwargs):
+def get_entropy(method='gcmi', **kwargs):
     """Get entropy function.
 
     Parameters
@@ -39,13 +39,13 @@ def get_entropy(method="gcmi", **kwargs):
         Function to compute entropy on a variable of shape
         (n_features, n_samples)
     """
-    if method == "gcmi":
+    if method == 'gcmi':
         return partial(entropy_gcmi, **kwargs)
-    elif method == "binning":
+    elif method == 'binning':
         return partial(entropy_bin, **kwargs)
-    elif method == "knn":
+    elif method == 'knn':
         return partial(entropy_knn, **kwargs)
-    elif method == "kernel":
+    elif method == 'kernel':
         return partial(entropy_kernel, **kwargs)
     else:
         raise ValueError(f"Method {method} doesn't exist.")
@@ -64,26 +64,27 @@ def prepare_for_entropy(data, method, **kwargs):
     n_samples, n_features, n_variables = data.shape
 
     # type checking
-    if (method in ["binning"]) and (data.dtype != int):
+    if (method in ['binning']) and (data.dtype != int):
         raise ValueError(
             "data dtype should be integer. Check that you discretized your"
             " data. If so, use `data.astype(int)`"
         )
-    elif (method in ["kernel", "gcmi", "knn"]) and (data.dtype != float):
-        raise ValueError(f"data dtype should be float, not {data.dtype}")
+    elif (method in ['kernel', 'gcmi', 'knn']) and (data.dtype != float):
+        raise ValueError(
+            f"data dtype should be float, not {data.dtype}"
+        )
 
     # method specific preprocessing
-    if method == "gcmi":
-        logger.info("    Copnorm data")
+    if method == 'gcmi':
+        logger.info('    Copnorm data')
         data = copnorm_nd(data, axis=0)
         data = data - data.mean(axis=0, keepdims=True)
-        kwargs["demean"] = False
-    elif method == "kernel":
-        logger.info("    Unit circle normalization")
+        kwargs['demean'] = False
+    elif method == 'kernel':
+        logger.info('    Unit circle normalization')
         from hoi.utils import normalize
-
-        data = np.apply_along_axis(normalize, 0, data, to_min=-1.0, to_max=1.0)
-    elif method == "binning":
+        data = np.apply_along_axis(normalize, 0, data, to_min=-1., to_max=1.)
+    elif method == 'binning':
         pass
 
     # make the data (n_variables, n_features, n_trials)
@@ -98,11 +99,10 @@ def prepare_for_entropy(data, method, **kwargs):
 ###############################################################################
 ###############################################################################
 
-
 @partial(jax.jit, static_argnums=(1, 2))
 def entropy_gcmi(
-    x: jnp.array, biascorrect: bool = False, demean: bool = False
-) -> jnp.array:
+        x: jnp.array, biascorrect: bool = False, demean: bool = False
+    ) -> jnp.array:
     """Entropy of a Gaussian variable in bits.
 
     H = ent_g(x) returns the entropy of a (possibly multidimensional) Gaussian
@@ -133,12 +133,14 @@ def entropy_gcmi(
     chc = jnp.linalg.cholesky(c)
 
     # entropy in nats
-    hx = jnp.sum(jnp.log(jnp.diagonal(chc))) + 0.5 * nfeat * (jnp.log(2 * jnp.pi) + 1.0)
+    hx = jnp.sum(jnp.log(jnp.diagonal(chc))) + 0.5 * nfeat * (
+        jnp.log(2 * jnp.pi) + 1.0)
 
     ln2 = jnp.log(2)
     if biascorrect:
-        psiterms = psi((nsamp - jnp.arange(1, nfeat + 1).astype(float)) / 2.0) / 2.0
-        dterm = (ln2 - jnp.log(nsamp - 1.0)) / 2.0
+        psiterms = psi((nsamp - jnp.arange(1, nfeat + 1).astype(
+            float)) / 2.) / 2.
+        dterm = (ln2 - jnp.log(nsamp - 1.)) / 2.
         hx = hx - nfeat * dterm - psiterms.sum()
 
     # convert to bits
@@ -209,7 +211,9 @@ def copnorm_nd(x, axis=-1):
 
 
 @partial(jax.jit, static_argnums=(1,))
-def entropy_bin(x: jnp.array, base: int = 2) -> jnp.array:
+def entropy_bin(
+        x: jnp.array, base: int = 2
+    ) -> jnp.array:
     """Entropy using binning.
 
     Parameters
@@ -230,8 +234,10 @@ def entropy_bin(x: jnp.array, base: int = 2) -> jnp.array:
     # trial is unique. So we can prepare the output to be at most (n_samples,)
     # and if trials are repeated, just set to zero it's going to be compensated
     # by the entr() function
-    counts = jnp.unique(x, return_counts=True, size=n_samples, axis=1, fill_value=0)[1]
-    probs = counts / n_samples
+    counts = jnp.unique(
+        x, return_counts=True, size=n_samples, axis=1, fill_value=0
+    )[1]
+    probs =  counts / n_samples
     return jax.scipy.special.entr(probs).sum() / np.log(base)
 
 
@@ -250,21 +256,26 @@ def set_to_inf(x, _):
 
 
 @partial(jax.jit, static_argnums=(2,))
-def cdistknn(xx, idx, knn=1):
+def cdistk(xx, idx, k=1):
     """K-th minimum euclidian distance."""
     x, y = xx[:, [idx]], xx
 
     # compute euclidian distance
     eucl = jnp.sqrt(jnp.sum((x - y) ** 2, axis=0))
 
-    # set to inf to get knn eucl
-    eucl, _ = jax.lax.scan(set_to_inf, eucl, jnp.arange(knn))
+    # in case of 0-distances, replace them by infinity
+    eucl = jnp.where(eucl == 0, jnp.inf, eucl)
+
+    # set to inf to get k eucl
+    eucl, _ = jax.lax.scan(set_to_inf, eucl, jnp.arange(k))
 
     return xx, eucl[jnp.argmin(eucl)]
 
 
 @partial(jax.jit, static_argnums=(1,))
-def entropy_knn(x: jnp.array, knn: int = 1) -> jnp.array:
+def entropy_knn(
+        x: jnp.array, k: int = 1
+    ) -> jnp.array:
     """Entropy using the k-nearest neighbor.
 
     Original code: https://github.com/blakeaw/Python-knn-entropy/
@@ -284,27 +295,22 @@ def entropy_knn(x: jnp.array, knn: int = 1) -> jnp.array:
     hx : float
         Entropy of x
     """
-    nfeat, nsamp = float(x.shape[0]), float(x.shape[1])
+    # x = jnp.atleast_2d(x)
+    d, n = float(x.shape[0]), float(x.shape[1])
 
     # wrap with knn
-    cdist = partial(cdistknn, knn=knn)
+    cdist = partial(cdistk, k=k)
 
     # compute euclidian distance
-    _, r_k = jax.lax.scan(cdist, x, jnp.arange(nsamp).astype(int))
+    _, r_k = jax.lax.scan(cdist, x, jnp.arange(int(n)).astype(int))
 
-    # volume of unit ball in d^n
-    v_unit_ball = (jnp.pi ** (0.5 * nfeat)) / gamma(0.5 * nfeat + 1.0)
+    # log of the volume of unit ball in d^n
+    log_c_d = (d / 2.) * jnp.log(jnp.pi) - jnp.log(gamma(1 + d / 2.))# + d * jnp.log(2)
 
-    # log distances
-    lr_k = jnp.log(r_k)
+    # sum log of distances
+    sum_log_dist = jnp.sum(jnp.log(2 * r_k))
 
-    # shannon entropy estimate
-    h = (
-        psi(nsamp)
-        - psi(float(knn))
-        + jnp.log(v_unit_ball)
-        + (nfeat / nsamp) * (lr_k.sum())
-    )
+    h = -psi(k) + psi(n) + log_c_d + (d / n) * sum_log_dist
 
     return h
 
@@ -317,7 +323,9 @@ def entropy_knn(x: jnp.array, knn: int = 1) -> jnp.array:
 
 
 @partial(jax.jit, static_argnums=(1, 2))
-def entropy_kernel(x: jnp.array, base: int = 2, bw_method: str = None) -> jnp.array:
+def entropy_kernel(
+        x: jnp.array, base: int = 2, bw_method: str = None
+    ) -> jnp.array:
     """Entropy using gaussian kernel density.
 
     Parameters

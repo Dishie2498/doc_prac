@@ -93,9 +93,8 @@ class SynergyMMI(HOIEstimator):
         pbar = get_pbar(iterable=range(minsize, maxsize + 1), leave=False)
 
         # prepare the shapes of outputs
-        n_mults = sum(
-            [ccomb(self.n_features - 1, c) for c in range(minsize, maxsize + 1)]
-        )
+        x = self.n_features
+        n_mults = sum([ccomb(x - 1, c) for c in range(minsize, maxsize + 1)])
         hoi = jnp.zeros((n_mults, self.n_variables), dtype=jnp.float32)
         h_idx = jnp.full((n_mults, maxsize), -1, dtype=int)
         order = jnp.zeros((n_mults,), dtype=int)

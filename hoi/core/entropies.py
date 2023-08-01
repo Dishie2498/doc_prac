@@ -327,7 +327,6 @@ def entropy_knn(x: jnp.array, k: int = 1) -> jnp.array:
 
 @partial(jax.jit, static_argnums=(1, 2))
 # E501
-# def entropy_kernel(x: jnp.array, base: int = 2, bw_method: str = None) -> jnp.array:
 def entropy_kernel(x: jnp.array, base: int = 2, bw_method: str = None) -> jnp.array:
     """Entropy using gaussian kernel density.
 

@@ -143,7 +143,11 @@ class HOIEstimator(object):
         )
 
         # prepare output
-        n_mults = sum([ccomb(self.n_features, c) for c in range(minsize, maxsize + 1)])
+        # E501
+        # n_mults = sum([ccomb(self.n_features, c) for c in
+        # range(minsize, maxsize + 1)])
+        t = [ccomb(self.n_features, c) for c in range(minsize, maxsize + 1)]
+        n_mults = sum(t)
         h_x = jnp.zeros((n_mults, self.n_variables), dtype=jnp.float32)
         h_idx = jnp.full((n_mults, maxsize), fill_value, dtype=int)
         order = jnp.zeros((n_mults,), dtype=int)
@@ -204,9 +208,7 @@ class HOIEstimator(object):
         combinations : array_like
             Combinations of features.
         """
-        return combinations(
-            self.n_features, msize, as_iterator=as_iterator, as_jax=as_jax, order=order
-        )
+        return combinations(self.n_features, msize, as_iterator, as_jax, order)
 
     def filter_multiplets(self, mults, order):
         """Filter multiplets.

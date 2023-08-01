@@ -150,7 +150,7 @@ def build_tqdm(
         "Updates tqdm from a JAX scan or loop"
         _ = jax.jax.lax.cond(
             iter_num == 0,
-            lambda _: host_callback.id_tap(_define_tqdm, None, result=iter_num),
+            lambda _: host_callback.id_tap(_define_tqdm, None, iter_num),
             lambda _: iter_num,
             operand=None,
         )
@@ -159,7 +159,7 @@ def build_tqdm(
             # update tqdm every multiple of `print_rate`
             # except at the end
             (iter_num % print_rate == 0) & (iter_num != n - remainder),
-            lambda _: host_callback.id_tap(_update_tqdm, print_rate, result=iter_num),
+            lambda _: host_callback.id_tap(_update_tqdm, print_rate, iter_num),
             lambda _: iter_num,
             operand=None,
         )
@@ -167,7 +167,7 @@ def build_tqdm(
         _ = jax.lax.cond(
             # update tqdm by `remainder`
             iter_num == n - remainder,
-            lambda _: host_callback.id_tap(_update_tqdm, remainder, result=iter_num),
+            lambda _: host_callback.id_tap(_update_tqdm, remainder, iter_num),
             lambda _: iter_num,
             operand=None,
         )

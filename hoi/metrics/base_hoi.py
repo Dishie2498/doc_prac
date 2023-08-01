@@ -138,9 +138,7 @@ class HOIEstimator(object):
         data, kwargs = prepare_for_entropy(self._data, method, **kwargs)
 
         # get entropy function
-        entropy = partial(
-            ent_at_index, entropy=jax.vmap(get_entropy(method=method, **kwargs))
-        )
+        entropy = partial(ent_at_index, entropy=jax.vmap(get_entropy(method, **kwargs)))
 
         # prepare output
         # E501
@@ -189,14 +187,14 @@ class HOIEstimator(object):
     ###########################################################################
     ###########################################################################
 
-    def get_combinations(self, msize, as_iterator=False, as_jax=True, order=False):
+    def get_combinations(self, msize, as_iter=False, as_jax=True, order=False):
         """Get combinations of features.
 
         Parameters
         ----------
         msize : int
             Size of the multiplets
-        as_iterator : bool, optional
+        as_iter : bool, optional
             If True, return an iterator. Default is False.
         as_jax : bool, optional
             If True, return a jax array. Default is True.
@@ -208,7 +206,7 @@ class HOIEstimator(object):
         combinations : array_like
             Combinations of features.
         """
-        return combinations(self.n_features, msize, as_iterator, as_jax, order)
+        return combinations(self.n_features, msize, as_iter, as_jax, order)
 
     def filter_multiplets(self, mults, order):
         """Filter multiplets.

@@ -171,7 +171,7 @@ if __name__ == "__main__":
 
     print(get_nbest_mult(hoi, model, minsize=3, maxsize=3))
 
-    plot_landscape(
-        hoi, model, kind="scatter", undersampling=False, plt_kwargs=dict(cmap="turbo")
-    )
+    t = dict(cmap="turbo")
+    s = "scatter"
+    plot_landscape(hoi, model, kind=s, undersampling=False, plt_kwargs=t)
     plt.show()

@@ -78,9 +78,9 @@ def plot_landscape(
             keep = orders == o
             hoi_o = hoi[keep]
             x = np.random.normal(loc=o, scale=0.13, size=hoi_o.size)
-            plt.scatter(
-                x, hoi_o, c=hoi_o, vmin=-minmax, vmax=minmax, s=size[keep], **plt_kwargs
-            )
+            n = minmax
+            t = plt_kwargs
+            plt.scatter(x, hoi_o, c=hoi_o, vmin=-n, vmax=n, s=size[keep], **t)
 
     plt.xlabel("Order")
     plt.xticks(np.arange(minsize, maxsize + 1))

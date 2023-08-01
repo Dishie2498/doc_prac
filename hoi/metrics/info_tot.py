@@ -85,9 +85,6 @@ class InfoTot(HOIEstimator):
 
         # prepare the shapes of outputs
         # E501
-        # n_mults = sum(
-        #     [ccomb(self.n_features - 1, c) for c in range(minsize, maxsize + 1)]
-        # )
         x = self.n_features
         t = [ccomb(x - 1, c) for c in range(minsize, maxsize + 1)]
         n_mults = sum(t)
@@ -143,12 +140,12 @@ if __name__ == "__main__":
     from sklearn.preprocessing import KBinsDiscretizer
 
     x = (
-        KBinsDiscretizer(n_bins=3, encode="ordinal", strategy="uniform", subsample=None)
+        KBinsDiscretizer(3, "ordinal", strategy="uniform", subsample=None)
         .fit_transform(x)
         .astype(int)
     )
     y = (
-        KBinsDiscretizer(n_bins=3, encode="ordinal", strategy="uniform", subsample=None)
+        KBinsDiscretizer(3, "ordinal", strategy="uniform", subsample=None)
         .fit_transform(y.reshape(-1, 1))
         .astype(int)
         .squeeze()
@@ -160,7 +157,7 @@ if __name__ == "__main__":
 
     print(get_nbest_mult(hoi, model, minsize=3, maxsize=3))
 
-    plot_landscape(
-        hoi, model, kind="scatter", undersampling=False, plt_kwargs=dict(cmap="turbo")
-    )
+    t = dict(cmap="turbo")
+    s = "scatter"
+    plot_landscape(hoi, model, kind=s, undersampling=False, plt_kwargs=t)
     plt.show()

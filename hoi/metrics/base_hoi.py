@@ -102,7 +102,7 @@ class HOIEstimator(object):
         method : {'gcmi', 'binning', 'knn', 'kernel}
             Name of the method to compute entropy. Use either :
 
-                * 'gcmi': gaussian copula entropy [default]. See 
+                * 'gcmi': gaussian copula entropy [default]. See
                   :func:`hoi.core.entropy_gcmi`
                 * 'binning': binning-based estimator of entropy. Note that to
                   use this estimator, the data have be to discretized. See
@@ -120,7 +120,7 @@ class HOIEstimator(object):
             Value to fill the multiplet indices with. Default is -1.
         kwargs : dict, optional
             Additional arguments to pass to the entropy function.
-        
+
         Returns
         -------
         h_x : array_like
@@ -198,7 +198,7 @@ class HOIEstimator(object):
             If True, return a jax array. Default is True.
         order : bool, optional
             If True, return the order of each multiplet. Default is False.
-        
+
         Returns
         -------
         combinations : array_like
@@ -217,7 +217,7 @@ class HOIEstimator(object):
             Multiplets of shape (n_mult, maxsize)
         order : array_like
             Order of each multiplet of shape (n_mult,)
-        
+
         Returns
         -------
         keep : array_like

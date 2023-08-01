@@ -53,7 +53,7 @@ class InfoTot(HOIEstimator):
         method : {'gcmi', 'binning', 'knn', 'kernel}
             Name of the method to compute entropy. Use either :
 
-                * 'gcmi': gaussian copula entropy [default]. See 
+                * 'gcmi': gaussian copula entropy [default]. See
                   :func:`hoi.core.entropy_gcmi`
                 * 'binning': binning-based estimator of entropy. Note that to
                   use this estimator, the data have be to discretized. See

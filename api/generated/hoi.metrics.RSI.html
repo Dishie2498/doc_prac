@@ -369,7 +369,6 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../api_metrics.html">Metrics of HOI</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="hoi.metrics.OinfoZeroLag.html">hoi.metrics.OinfoZeroLag</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hoi.metrics.GradientOinfo.html">hoi.metrics.GradientOinfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hoi.metrics.InfoTopo.html">hoi.metrics.InfoTopo</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">hoi.metrics.RSI</a></li>
@@ -456,7 +455,7 @@ document.write(`
 <h1>hoi.metrics.RSI<a class="headerlink" href="#hoi-metrics-rsi" title="Permalink to this headline">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="hoi.metrics.RSI">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hoi.metrics.</span></span><span class="sig-name descname"><span class="pre">RSI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/hoi/metrics/rsi.html#RSI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.RSI" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">hoi.metrics.</span></span><span class="sig-name descname"><span class="pre">RSI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiplets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/hoi/metrics/rsi.html#RSI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#hoi.metrics.RSI" title="Permalink to this definition">#</a></dt>
 <dd><p>Redundancy-Synergy Index (RSI).</p>
 <p>The RSI is designed to be maximal and positive when the variables in S are
 purported to provide synergistic information about Y. It should be negative
@@ -471,7 +470,7 @@ information provided by individual elements of S:</p>
 <p>The RSI has been referred to as the SynSum <span id="id1">[<a class="reference internal" href="../../overview/ovw_refs.html#id8" title="Amir Globerson, Eran Stark, Eilon Vaadia, and Naftali Tishby. The minimum information principle and its application to neural code analysis. Proceedings of the National Academy of Sciences, 106(9):3490–3495, 2009.">3</a>]</span>,
 the WholeMinusSum synergy <span id="id2">[<a class="reference internal" href="../../overview/ovw_refs.html#id9" title="Virgil Griffith and Christof Koch. Quantifying synergistic mutual information. In Guided self-organization: inception, pages 159–190. Springer, 2014.">4</a>]</span>, and
 the negative of the redundancy-synergy index has also been
-referred to as the redundancy <span id="id3">[<a class="reference internal" href="../../overview/ovw_refs.html#id10" title="Elad Schneidman, Susanne Still, Michael J Berry, William Bialek, and others. Network information and connected correlations. Physical review letters, 91(23):238701, 2003.">7</a>]</span>.</p>
+referred to as the redundancy <span id="id3">[<a class="reference internal" href="../../overview/ovw_refs.html#id10" title="Elad Schneidman, Susanne Still, Michael J Berry, William Bialek, and others. Network information and connected correlations. Physical review letters, 91(23):238701, 2003.">6</a>]</span>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <ul class="simple">
@@ -482,17 +481,21 @@ referred to as the redundancy <span id="id3">[<a class="reference internal" href
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>data</strong><span class="classifier">array_like</span></dt><dd><p>Standard NumPy arrays of shape (n_samples, n_features) or
+<dt><strong>x</strong><span class="classifier">array_like</span></dt><dd><p>Standard NumPy arrays of shape (n_samples, n_features) or
 (n_samples, n_features, n_variables)</p>
 </dd>
 <dt><strong>y</strong><span class="classifier">array_like</span></dt><dd><p>The feature of shape (n_trials,) for estimating task-related O-info</p>
+</dd>
+<dt><strong>multiplets</strong><span class="classifier">list | None</span></dt><dd><p>List of multiplets to compute. Should be a list of multiplets, for
+example [(0, 1, 2), (2, 7, 8, 9)]. By default, all multiplets are
+going to be computed.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">References</p>
 <p>Chechik et al. 2001 <span id="id4">[<a class="reference internal" href="../../overview/ovw_refs.html#id7" title="Gal Chechik, Amir Globerson, M Anderson, E Young, Israel Nelken, and Naftali Tishby. Group redundancy measures reveal redundancy reduction in the auditory pathway. Advances in neural information processing systems, 2001.">2</a>]</span>; Timme et al., 2014
-<span id="id5">[<a class="reference internal" href="../../overview/ovw_refs.html#id6" title="Nicholas Timme, Wesley Alford, Benjamin Flecker, and John M Beggs. Synergy, redundancy, and multivariate information measures: an experimentalist’s perspective. Journal of computational neuroscience, 36:119–140, 2014.">9</a>]</span></p>
+<span id="id5">[<a class="reference internal" href="../../overview/ovw_refs.html#id6" title="Nicholas Timme, Wesley Alford, Benjamin Flecker, and John M Beggs. Synergy, redundancy, and multivariate information measures: an experimentalist’s perspective. Journal of computational neuroscience, 36:119–140, 2014.">8</a>]</span></p>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes</dt>
 <dd class="field-odd"><dl class="simple">
@@ -523,7 +526,7 @@ referred to as the redundancy <span id="id3">[<a class="reference internal" href
 <tr class="row-odd"><td><p><a class="reference internal" href="#hoi.metrics.RSI.fit" title="hoi.metrics.RSI.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>([minsize, maxsize, method])</p></td>
 <td><p>Compute RSI.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#hoi.metrics.RSI.get_combinations" title="hoi.metrics.RSI.get_combinations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_combinations</span></code></a>(msize[, as_iter, as_jax, order])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#hoi.metrics.RSI.get_combinations" title="hoi.metrics.RSI.get_combinations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_combinations</span></code></a>(minsize[, maxsize, astype, ...])</p></td>
 <td><p>Get combinations of features.</p></td>
 </tr>
 </tbody>
@@ -641,16 +644,17 @@ see <a class="reference internal" href="hoi.core.entropy_kernel.html#hoi.core.en
 
 <dl class="py method">
 <dt class="sig sig-object py" id="hoi.metrics.RSI.get_combinations">
-<span class="sig-name descname"><span class="pre">get_combinations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_jax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hoi.metrics.RSI.get_combinations" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">get_combinations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minsize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">astype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'jax'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hoi.metrics.RSI.get_combinations" title="Permalink to this definition">#</a></dt>
 <dd><p>Get combinations of features.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>msize</strong><span class="classifier">int</span></dt><dd><p>Size of the multiplets</p>
+<dt><strong>minsize</strong><span class="classifier">int</span></dt><dd><p>Minimum size of the multiplets</p>
 </dd>
-<dt><strong>as_iter</strong><span class="classifier">bool, optional</span></dt><dd><p>If True, return an iterator. Default is False.</p>
+<dt><strong>maxsize</strong><span class="classifier">int | None</span></dt><dd><p>Maximum size of the multiplets. If None, minsize is used.</p>
 </dd>
-<dt><strong>as_jax</strong><span class="classifier">bool, optional</span></dt><dd><p>If True, return a jax array. Default is True.</p>
+<dt><strong>astype</strong><span class="classifier">{‘jax’, ‘numpy’, ‘iterator’}</span></dt><dd><p>Specify the output type. Use either ‘jax’ get the data as a jax
+array [default], ‘numpy’ for NumPy array or ‘iterator’.</p>
 </dd>
 <dt><strong>order</strong><span class="classifier">bool, optional</span></dt><dd><p>If True, return the order of each multiplet. Default is False.</p>
 </dd>

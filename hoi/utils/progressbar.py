@@ -113,7 +113,7 @@ def loop_tqdm(
 
 
 def build_tqdm(
-    n: int, print_rate: typing.Optional[int], message: typing.Optional[str] = None
+    n: int, print_rate: typing.Optional[int], message: typing.Optional[str]
 ) -> typing.Tuple[typing.Callable, typing.Callable]:
     """
     Build the tqdm progress bar on the host

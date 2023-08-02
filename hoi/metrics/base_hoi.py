@@ -138,7 +138,10 @@ class HOIEstimator(object):
         data, kwargs = prepare_for_entropy(self._data, method, **kwargs)
 
         # get entropy function
-        entropy = partial(ent_at_index, entropy=jax.vmap(get_entropy(method, **kwargs)))
+        # entropy = partial(ent_at_index,
+        # entropy=jax.vmap(get_entropy(method, **kwargs)))
+        entropy_func = jax.vmap(get_entropy(method, **kwargs))
+        entropy = partial(ent_at_index, entropy=entropy_func)
 
         # prepare output
         # E501

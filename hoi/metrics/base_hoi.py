@@ -1,7 +1,6 @@
 import logging
 from functools import partial
 
-from math import comb as ccomb
 import numpy as np
 import jax
 import jax.numpy as jnp
@@ -171,7 +170,7 @@ class HOIEstimator(object):
             _, _h_x = jax.lax.scan(entropy, x, h_idx[keep, 0:msize])
 
             # fill entropies
-            h_x = h_x.at[offset : offset + n_mult, :].set(_h_x)
+            h_x = h_x.at[offset: offset + n_mult, :].set(_h_x)
 
             offset += n_mult
 
@@ -189,14 +188,14 @@ class HOIEstimator(object):
     ###########################################################################
     ###########################################################################
 
-    def get_combinations(self, minsize, maxsize=None, astype="jax", order=False):
+    def get_combinations(self, min, max=None, astype="jax", order=False):
         """Get combinations of features.
 
         Parameters
         ----------
-        minsize : int
+        min : int
             Minimum size of the multiplets
-        maxsize : int | None
+        max : int | None
             Maximum size of the multiplets. If None, minsize is used.
         astype : {'jax', 'numpy', 'iterator'}
             Specify the output type. Use either 'jax' get the data as a jax
@@ -209,9 +208,7 @@ class HOIEstimator(object):
         combinations : array_like
             Combinations of features.
         """
-        return combinations(
-            self.n_features, minsize, maxsize=maxsize, astype=astype, order=order
-        )
+        return combinations(self.n_features, min, max, astype, order)
 
     def filter_multiplets(self, mults, order):
         """Filter multiplets.
@@ -247,7 +244,7 @@ class HOIEstimator(object):
 
             for n_m, m in enumerate(self._custom_mults):
                 is_order = order == len(m)
-                is_mult = (mults[:, 0 : len(m)] == m).all(1)
+                is_mult = (mults[:, 0: len(m)] == m).all(1)
                 idx = np.where(np.logical_and(is_mult, is_order))[0]
                 assert len(idx) == 1
                 keep = keep.at[idx].set(True)

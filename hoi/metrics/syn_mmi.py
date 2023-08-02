@@ -53,7 +53,7 @@ class SynergyMMI(HOIEstimator):
     __name__ = "Synergy MMI"
 
     def __init__(self, x, y, multiplets=None, verbose=None):
-        HOIEstimator.__init__(self, x=x, y=y, multiplets=multiplets, verbose=verbose)
+        HOIEstimator.__init__(self, x, y, multiplets, verbose)
 
     def fit(self, minsize=2, maxsize=None, method="gcmi", **kwargs):
         """Synergy Index.

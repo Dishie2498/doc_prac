@@ -1,5 +1,4 @@
 from math import comb as ccomb
-
 from functools import partial
 import logging
 
@@ -37,7 +36,7 @@ class RedundancyMMI(HOIEstimator):
     __name__ = "Redundancy MMI"
 
     def __init__(self, x, y, multiplets=None, verbose=None):
-        HOIEstimator.__init__(self, x, y, multiplets, verbose)
+        HOIEstimator.__init__(self, x=x, y=y, multiplets=multiplets, verbose=verbose)
 
     def fit(self, minsize=2, maxsize=None, method="gcmi", **kwargs):
         """Redundancy Index.
@@ -86,8 +85,9 @@ class RedundancyMMI(HOIEstimator):
         pbar = get_pbar(iterable=range(minsize, maxsize + 1), leave=False)
 
         # prepare the shapes of outputs
-        x = self.n_features
-        n_mults = sum([ccomb(x - 1, c) for c in range(minsize, maxsize + 1)])
+        n_mults = sum(
+            [ccomb(self.n_features - 1, c) for c in range(minsize, maxsize + 1)]
+        )
         hoi = jnp.zeros((n_mults, self.n_variables), dtype=jnp.float32)
         h_idx = jnp.full((n_mults, maxsize), -1, dtype=int)
         order = jnp.zeros((n_mults,), dtype=int)
@@ -137,12 +137,12 @@ if __name__ == "__main__":
     from sklearn.preprocessing import KBinsDiscretizer
 
     x = (
-        KBinsDiscretizer(3, "ordinal", strategy="uniform", subsample=None)
+        KBinsDiscretizer(n_bins=3, encode="ordinal", strategy="uniform", subsample=None)
         .fit_transform(x)
         .astype(int)
     )
     y = (
-        KBinsDiscretizer(3, "ordinal", strategy="uniform", subsample=None)
+        KBinsDiscretizer(n_bins=3, encode="ordinal", strategy="uniform", subsample=None)
         .fit_transform(y.reshape(-1, 1))
         .astype(int)
         .squeeze()
@@ -154,7 +154,7 @@ if __name__ == "__main__":
 
     print(get_nbest_mult(hoi, model=model, minsize=3, maxsize=3))
 
-    t = dict(cmap="turbo")
-    s = "scatter"
-    plot_landscape(hoi, model, kind=s, undersampling=False, plt_kwargs=t)
+    plot_landscape(
+        hoi, model, kind="scatter", undersampling=False, plt_kwargs=dict(cmap="turbo")
+    )
     plt.show()

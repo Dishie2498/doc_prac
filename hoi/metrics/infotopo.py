@@ -84,9 +84,7 @@ class InfoTopo(HOIEstimator):
     __name__ = "Topological Information"
 
     def __init__(self, x, y=None, multiplets=None, verbose=None):
-        HOIEstimator.__init__(
-            self, x=x, y=y, multiplets=multiplets, verbose=verbose
-        )
+        HOIEstimator.__init__(self, x=x, y=y, multiplets=multiplets, verbose=verbose)
 
     def fit(self, minsize=1, maxsize=None, method="gcmi", **kwargs):
         """Compute Topological Information.
@@ -114,11 +112,10 @@ class InfoTopo(HOIEstimator):
         Returns
         -------
         oinfo : array_like
-            The O-info array of shape
-            (n_multiplets, n_variables)
+            The O-info array of shape (n_multiplets, n_variables)
             where positive values reflect redundant dominated
-            interactions and negative values
-            stand for synergistic dominated interactions.
+            interactions and negative values stand for
+            synergistic dominated interactions.
         """
         # ____________________________ ENTROPIES ______________________________
 

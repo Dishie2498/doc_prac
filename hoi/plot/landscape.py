@@ -29,6 +29,7 @@ def plot_landscape(
         Minimum and maximum size of the multiplets
     kind : {'hist', 'scatter'}
         Kind of plot. Use either:
+
             * 'hist' : 2D histogram of the higher order interactions
             * 'scatter' : scatter plot of the higher order interactions
 
@@ -81,9 +82,9 @@ def plot_landscape(
             keep = orders == o
             hoi_o = hoi[keep]
             x = np.random.normal(loc=o, scale=0.13, size=hoi_o.size)
-            n = minmax
-            t = plt_kwargs
-            plt.scatter(x, hoi_o, c=hoi_o, vmin=-n, vmax=n, s=size[keep], **t)
+            plt.scatter(
+                x, hoi_o, c=hoi_o, vmin=-minmax, vmax=minmax, s=size[keep], **plt_kwargs
+            )
 
     plt.xlabel("Order")
     plt.xticks(np.arange(minsize, maxsize + 1))

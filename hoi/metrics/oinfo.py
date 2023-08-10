@@ -37,7 +37,6 @@ def _oinfo_no_ent(inputs, index, entropy_3d=None, entropy_4d=None):
 
 
 class Oinfo(HOIEstimator):
-
     r"""O-information.
 
     The O-information is defined as the difference between the total
@@ -74,9 +73,7 @@ class Oinfo(HOIEstimator):
     __name__ = "O-Information"
 
     def __init__(self, x, y=None, multiplets=None, verbose=None):
-        HOIEstimator.__init__(
-            self, x=x, y=y, multiplets=multiplets, verbose=verbose
-        )
+        HOIEstimator.__init__(self, x=x, y=y, multiplets=multiplets, verbose=verbose)
 
     def fit(self, minsize=2, maxsize=None, method="gcmi", **kwargs):
         """Compute the O-information.
@@ -109,9 +106,10 @@ class Oinfo(HOIEstimator):
         x, kwargs = prepare_for_entropy(self._x, method, **kwargs)
 
         # get entropy function
-        e3d = jax.vmap(get_entropy(method=method, **kwargs))
-        e4d = jax.vmap(e3d, in_axes=1)
-        oinfo_no_ent = partial(_oinfo_no_ent, entropy_3d=e3d, entropy_4d=e4d)
+        entropy = jax.vmap(get_entropy(method=method, **kwargs))
+        oinfo_no_ent = partial(
+            _oinfo_no_ent, entropy_3d=entropy, entropy_4d=jax.vmap(entropy, in_axes=1)
+        )
 
         # prepare output
         kw_combs = dict(maxsize=maxsize, astype="jax")
@@ -124,10 +122,9 @@ class Oinfo(HOIEstimator):
         order = order[keep]
 
         # get progress bar
-        iter_range = range(order.min(), order.max() + 1)
-        pbar = get_pbar(iterable=iter_range, leave=False)
+        pbar = get_pbar(iterable=range(order.min(), order.max() + 1), leave=False)
 
-        # ______________________________ ENTROPY ______________________________
+        # ______________________________ ENTROPY ____________________________
         offset = 0
         hoi = jnp.zeros((len(order), self.n_variables), dtype=jnp.float32)
         for msize in pbar:
@@ -145,7 +142,7 @@ class Oinfo(HOIEstimator):
 
             # fill variables
             n_combs, n_feat = _h_idx.shape
-            hoi = hoi.at[offset: offset + n_combs, :].set(_hoi)
+            hoi = hoi.at[offset : offset + n_combs, :].set(_hoi)
 
             # updates
             offset += n_combs

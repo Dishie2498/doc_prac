@@ -9,7 +9,6 @@ logger = logging.getLogger("hoi")
 
 
 class GradientOinfo(HOIEstimator):
-
     r"""First order Gradient O-information.
 
     The Gradient O-information is defined as the difference between the
@@ -47,9 +46,7 @@ class GradientOinfo(HOIEstimator):
     __name__ = "Gradient O-Information"
 
     def __init__(self, x, y, multiplets=None, verbose=None):
-        HOIEstimator.__init__(
-            self, x=x, y=None, multiplets=multiplets, verbose=verbose
-        )
+        HOIEstimator.__init__(self, x=x, y=None, multiplets=multiplets, verbose=verbose)
         self._oinf_tr = Oinfo(x, y=y, multiplets=multiplets, verbose=verbose)
         self._oinf_tf = Oinfo(x, multiplets=multiplets, verbose=verbose)
 

@@ -9,5 +9,3 @@ from .entropies import (  # noqa
     entropy_kernel,
 )
 from .mi import mi_entr_comb  # noqa
-
-# noqa: E501

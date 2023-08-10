@@ -59,8 +59,7 @@ def get_entropy(method="gcmi", **kwargs):
 
 
 def prepare_for_entropy(data, method, **kwargs):
-    """Prepare the data before computing entropy.
-    """
+    """Prepare the data before computing entropy."""
     n_samples, n_features, n_variables = data.shape
 
     # type checking
@@ -133,17 +132,11 @@ def entropy_gcmi(
     chc = jnp.linalg.cholesky(c)
 
     # entropy in nats
-    # E501
-    # hx = jnp.sum(jnp.log(jnp.diagonal(chc))) + 0.5 * nfeat *
-    # (jnp.log(2 * jnp.pi) + 1.0)
-    diag_sum = jnp.sum(jnp.log(jnp.diagonal(chc)))
-    const_term = 0.5 * nfeat * (jnp.log(2 * jnp.pi) + 1.0)
-    hx = diag_sum + const_term
+    hx = jnp.sum(jnp.log(jnp.diagonal(chc))) + 0.5 * nfeat * (jnp.log(2 * jnp.pi) + 1.0)
 
     ln2 = jnp.log(2)
     if biascorrect:
-        term = (nsamp - jnp.arange(1, nfeat + 1).astype(float)) / 2.0
-        psiterms = psi(term) / 2.0
+        psiterms = psi((nsamp - jnp.arange(1, nfeat + 1).astype(float)) / 2.0) / 2.0
         dterm = (ln2 - jnp.log(nsamp - 1.0)) / 2.0
         hx = hx - nfeat * dterm - psiterms.sum()
 
@@ -236,10 +229,7 @@ def entropy_bin(x: jnp.array, base: int = 2) -> jnp.array:
     # trial is unique. So we can prepare the output to be at most (n_samples,)
     # and if trials are repeated, just set to zero it's going to be compensated
     # by the entr() function
-    # E501
-    # counts = jnp.unique(x, return_counts=True, size=n_samples,
-    # axis=1, fill_value=0)[1]
-    counts = jnp.unique(x, False, False, True, 1, n_samples, 0)[1]
+    counts = jnp.unique(x, return_counts=True, size=n_samples, axis=1, fill_value=0)[1]
     probs = counts / n_samples
     return jax.scipy.special.entr(probs).sum() / np.log(base)
 
@@ -326,8 +316,7 @@ def entropy_knn(x: jnp.array, k: int = 1) -> jnp.array:
 
 
 @partial(jax.jit, static_argnums=(1, 2))
-# E501
-def entropy_kernel(x: jnp.array, base: 2, bw_method: str = None) -> jnp.array:
+def entropy_kernel(x: jnp.array, base: int = 2, bw_method: str = None) -> jnp.array:
     """Entropy using gaussian kernel density.
 
     Parameters

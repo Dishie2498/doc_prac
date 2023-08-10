@@ -23,7 +23,6 @@ def test_entropy_gcmi(x, biascorrect, demean):
     pass
 
 
-
 @pytest.mark.parametrize("x", [x1, x2, j1, j2, l1, l2])
 @pytest.mark.parametrize("base", [np.random.randint(1, 100) for _ in range(10)])
 def test_entropy_bin(x, base):
@@ -46,5 +45,6 @@ def test_entropy_knn(x, closest):
 def test_entropy_kernel(x, base):
     hx = entropy_kernel(x, base)
     assert isinstance(hx, float)
+
 
 # tests core/entropies/copnorm_nd.py

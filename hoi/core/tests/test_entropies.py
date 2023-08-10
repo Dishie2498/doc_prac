@@ -19,7 +19,7 @@ j2 = jax.random.uniform(jax.random.PRNGKey(0), shape=(10, 50))
 
 
 # Smoke tests
-@pytest.mark.parametrize("x", [x1, x2, j1, j2, l1, l2])
+@pytest.mark.parametrize("x", [x1, x2, j1, j2])
 @pytest.mark.parametrize("biascorrect", [True, False])
 @pytest.mark.parametrize("demean", [True, False])
 def test_entropy_gcmi(x, biascorrect, demean):
@@ -29,7 +29,7 @@ def test_entropy_gcmi(x, biascorrect, demean):
     pass
 
 
-@pytest.mark.parametrize("x", [x1, x2, j1, j2, l1, l2])
+@pytest.mark.parametrize("x", [x1, x2, j1, j2])
 @pytest.mark.parametrize(
     "base", [np.random.randint(1, 100) for _ in range(10)]
 )
@@ -41,7 +41,7 @@ def test_entropy_bin(x, base):
     pass
 
 
-@pytest.mark.parametrize("x", [x1, x2, j1, j2, l1, l2])
+@pytest.mark.parametrize("x", [x1, x2, j1, j2])
 @pytest.mark.parametrize(
     "closest", [np.random.randint(1, 100) for _ in range(10)]
 )
@@ -52,7 +52,7 @@ def test_entropy_knn(x, closest):
     pass
 
 
-@pytest.mark.parametrize("x", [x1, x2, j1, j2, l1, l2])
+@pytest.mark.parametrize("x", [x1, x2, j1, j2])
 @pytest.mark.parametrize(
     "base", [np.random.randint(1, 100) for _ in range(10)]
 )

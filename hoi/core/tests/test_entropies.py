@@ -2,12 +2,7 @@ import pytest
 import numpy as np
 import jax
 
-from hoi.core.entropies import (
-    entropy_gcmi,
-    entropy_bin,
-    entropy_knn,
-    entropy_kernel,
-)
+from hoi.core.entropies import entropy_gcmi, entropy_bin, entropy_knn, entropy_kernel
 from hoi.utils import digitize
 
 x1 = np.random.rand(1, 50)
@@ -30,9 +25,7 @@ def test_entropy_gcmi(x, biascorrect, demean):
 
 
 @pytest.mark.parametrize("x", [x1, x2, j1, j2])
-@pytest.mark.parametrize(
-    "base", [np.random.randint(1, 100) for _ in range(10)]
-)
+@pytest.mark.parametrize("base", [np.random.randint(1, 100) for _ in range(10)])
 def test_entropy_bin(x, base):
     x_bin = digitize(x, n_bins=3)
     hx = entropy_bin(x_bin, base)
@@ -42,9 +35,7 @@ def test_entropy_bin(x, base):
 
 
 @pytest.mark.parametrize("x", [x1, x2, j1, j2])
-@pytest.mark.parametrize(
-    "closest", [np.random.randint(1, 100) for _ in range(10)]
-)
+@pytest.mark.parametrize("closest", [np.random.randint(1, 100) for _ in range(10)])
 def test_entropy_knn(x, closest):
     hx = entropy_knn(x, closest)
     hx = np.asarray(hx)
@@ -53,9 +44,7 @@ def test_entropy_knn(x, closest):
 
 
 @pytest.mark.parametrize("x", [x1, x2, j1, j2])
-@pytest.mark.parametrize(
-    "base", [np.random.randint(1, 100) for _ in range(10)]
-)
+@pytest.mark.parametrize("base", [np.random.randint(1, 100) for _ in range(10)])
 def test_entropy_kernel(x, base):
     hx = entropy_kernel(x, base)
     hx = np.asarray(hx)

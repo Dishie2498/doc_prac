@@ -1,4 +1,4 @@
-from .combinatory import combinations  # noqa
+from .combinatory import combinations, _combinations  # noqa
 from .entropies import (  # noqa
     get_entropy,
     copnorm_nd,

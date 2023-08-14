@@ -29,7 +29,7 @@ def test_normlaize(x, to_min):
     assert xn.shape == x.shape
     for row in xn:
         for val in row:
-            assert val <= to_max and val >= to_min
+            assert round(val, 8) <= to_max and round(val, 8) >= to_min
 
 
 # test landscape

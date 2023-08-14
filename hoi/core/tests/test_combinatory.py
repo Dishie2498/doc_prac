@@ -8,12 +8,13 @@ import jax.numpy as jnp
 from collections.abc import Iterable
 import itertools
 
-# @pytest.mark.parametrize("n", [np.random.randint(5, 10) for _ in range(10)])
-# @pytest.mark.parametrize("k", [np.random.randint(5, 10) for _ in range(10)])
-# @pytest.mark.parametrize("order", [True, False])
-# def test_single_combinations(n, k, order):
-#     c = list(_combinations(n, k, order))
-#     assert len(c) == ccomb(n, k)
+@pytest.mark.parametrize("n", [np.random.randint(5, 10) for _ in range(10)])
+@pytest.mark.parametrize("k", [np.random.randint(5, 10) for _ in range(10)])
+@pytest.mark.parametrize("order", [True, False])
+def test_single_combinations(n, k, order):
+    c = list(_combinations(n, k, order))
+    assert len(c) == ccomb(n, k)
+    pass
 
 
 # # def isiterable(x):
@@ -22,14 +23,15 @@ import itertools
 # #   else: return True
 
 
-# @pytest.mark.parametrize("n", [np.random.randint(5, 1000) for _ in range(5)])
-# @pytest.mark.parametrize("min", [np.random.randint(1, 10) for _ in range(5)])
-# @pytest.mark.parametrize("max", [_ for _ in range(5)])  # addition to minimum size
-# @pytest.mark.parametrize("astype", ["numpy", "jax", "iterator"])
-# @pytest.mark.parametrize("order_val", [True, False])
-# def test_combinations(n, min, max, astype, order_val):
-#     combs = combinations(n, min, min + max, astype, order_val)
-#     assert (combs, Iterable)
+@pytest.mark.parametrize("n", [np.random.randint(5, 1000) for _ in range(5)])
+@pytest.mark.parametrize("min", [np.random.randint(1, 10) for _ in range(5)])
+@pytest.mark.parametrize("max", [_ for _ in range(5)])  # addition to minimum size
+@pytest.mark.parametrize("astype", ["numpy", "jax", "iterator"])
+@pytest.mark.parametrize("order_val", [True, False])
+def test_combinations(n, min, max, astype, order_val):
+    combs = combinations(n, min, min + max, astype, order_val)
+    assert isinstance(combs, Iterable)
+    pass
 #     # # combs = np.asarray(combs)
 #     # # x = np.fromiter(combs, object)
 #     # print(type(combs))

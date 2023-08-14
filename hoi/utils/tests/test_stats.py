@@ -5,9 +5,9 @@ import jax.numpy as jnp
 from hoi.utils.stats import digitize, landscape, normalize, get_nbest_mult
 import pandas as pd
 from hoi.metrics import Oinfo
-# x1 = np.random.rand(1, 50)
+x1 = np.random.rand(1, 50)
 x2 = np.random.rand(10, 50)
-# j1 = jax.random.uniform(jax.random.PRNGKey(0), shape=(1, 50))
+j1 = jax.random.uniform(jax.random.PRNGKey(0), shape=(1, 50))
 j2 = jax.random.uniform(jax.random.PRNGKey(0), shape=(10, 50))
 
 

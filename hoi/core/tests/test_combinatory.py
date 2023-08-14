@@ -3,17 +3,17 @@ import numpy as np
 from math import comb as ccomb
 import jaxlib
 import jax
-from hoi.core.combinatory import combinations
+from hoi.core.combinatory import combinations, _combinations
 import jax.numpy as jnp
 from collections.abc import Iterable
 import itertools
 
-# # @pytest.mark.parametrize("n", [np.random.randint(5, 10) for _ in range(10)])
-# # @pytest.mark.parametrize("k", [np.random.randint(5, 10) for _ in range(10)])
-# # @pytest.mark.parametrize("order", [True, False])
-# # def test_single_combinations(n, k, order):
-# #     c = list(_combinations(n, k, order))
-# #     assert len(c) == ccomb(n, k)
+# @pytest.mark.parametrize("n", [np.random.randint(5, 10) for _ in range(10)])
+# @pytest.mark.parametrize("k", [np.random.randint(5, 10) for _ in range(10)])
+# @pytest.mark.parametrize("order", [True, False])
+# def test_single_combinations(n, k, order):
+#     c = list(_combinations(n, k, order))
+#     assert len(c) == ccomb(n, k)
 
 
 # # def isiterable(x):

@@ -33,7 +33,7 @@ def test_normlaize(x, to_min):
     assert xn.shape == x.shape
     for row in xn:
         for val in row:
-            assert to_max - val > 0.0001 and val - to_min > 0.0001
+            assert to_max - val < 0.0001 and val - to_min < 0.0001
 
 
 # test landscape

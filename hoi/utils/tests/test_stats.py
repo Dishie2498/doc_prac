@@ -53,5 +53,6 @@ def test_nbest(n_best):
     x = np.random.rand(100, 5)
     model = Oinfo(x)
     hoi = model.fit()
-    get_nbest_mult(hoi, model=model, n_best=n_best)
+    df = get_nbest_mult(hoi, model=model, n_best=n_best)
+    assert df.shape[0] == n_best
     pass

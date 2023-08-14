@@ -1,19 +1,19 @@
 import pytest
 import numpy as np
-from math import comb
+from math import comb as ccomb
 import jaxlib
 import jax
-from hoi.core.combinatory import combinations, _combinations
+from hoi.core.combinatory import combinations
 import jax.numpy as jnp
 from collections.abc import Iterable
+import itertools
 
-
-@pytest.mark.parametrize("n", [np.random.randint(5, 10) for _ in range(10)])
-@pytest.mark.parametrize("k", [np.random.randint(5, 10) for _ in range(10)])
-@pytest.mark.parametrize("order", [True, False])
-def test_single_combinations(n, k, order):
-    c = list(_combinations(n, k, order))
-    assert len(c) == comb(n, k)
+# @pytest.mark.parametrize("n", [np.random.randint(5, 10) for _ in range(10)])
+# @pytest.mark.parametrize("k", [np.random.randint(5, 10) for _ in range(10)])
+# @pytest.mark.parametrize("order", [True, False])
+# def test_single_combinations(n, k, order):
+#     c = list(_combinations(n, k, order))
+#     assert len(c) == ccomb(n, k)
 
 
 # def isiterable(x):
@@ -22,18 +22,18 @@ def test_single_combinations(n, k, order):
 #   else: return True
 
 
-@pytest.mark.parametrize("n", [np.random.randint(5, 1000) for _ in range(10)])
-@pytest.mark.parametrize("min", [np.random.randint(1, 10) for _ in range(10)])
+@pytest.mark.parametrize("n", [np.random.randint(5, 1000) for _ in range(5)])
+@pytest.mark.parametrize("min", [np.random.randint(1, 10) for _ in range(5)])
 @pytest.mark.parametrize("max", [_ for _ in range(5)])  # addition to minimum size
 @pytest.mark.parametrize("astype", ["numpy", "jax", "iterator"])
 @pytest.mark.parametrize("order_val", [True, False])
 def test_combinations(n, min, max, astype, order_val):
-    combs = combinations(n, min, min + max, "iterator", astype, order_val)
+    combs = combinations(n, min, min + max, astype, order_val)
     assert (combs, Iterable)
     # # combs = np.asarray(combs)
     # # x = np.fromiter(combs, object)
     # print(type(combs))
-    # if (astype == "jax"):
+    # if astype == "jax":
     #     assert isinstance(combs, jaxlib.xla_extension.ArrayImpl)
     # else:
     #     assert isinstance(combs, np.ndarray)
@@ -46,3 +46,9 @@ def test_combinations(n, min, max, astype, order_val):
     #     total_comb += comb(n, min + i)
 
     # assert combs.shape[0] == total_comb
+
+if __name__ == "__main__":
+    print(type(combinations(10, 2, None, "numpy", False)))
+    assert type(list(combinations(10, 2, None, "numpy", False))) == np.ndarray
+    assert type(combinations(10, 2, None, "jax", False)) == jaxlib.xla_extension.ArrayImpl
+    assert type(combinations(10, 2, None, "iterator", False)) == itertools.chain

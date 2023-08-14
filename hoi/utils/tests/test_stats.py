@@ -48,10 +48,10 @@ def test_landscape(x, multi, n_bins):
 
 
 # test get_nbest_mult
-def test_nbest():
+@pytest.mark.parametrize("n_best", [np.random.randint(6, 20) for _ in range(3)])
+def test_nbest(n_best):
     x = np.random.rand(100, 5)
     model = Oinfo(x)
     hoi = model.fit()
-    get_nbest_mult(hoi, model=model)
+    get_nbest_mult(hoi, model=model, n_best=n_best)
     pass
-

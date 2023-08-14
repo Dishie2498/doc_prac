@@ -20,9 +20,12 @@ def test_digitize(arr, bins, sklearn):
     assert arr.shape == x_binned.shape
 
 
+def truncate(f, n):
+    import math
+    return math.floor(f * 10 ** n) / 10 ** n
 # tests normalize
 @pytest.mark.parametrize("x", [x1, x2, j2])
-@pytest.mark.parametrize("to_min", [round(np.random.uniform(0, 1), 8) for n in range(5)])
+@pytest.mark.parametrize("to_min", [truncate(np.random.uniform(0, 1), 8) for n in range(5)])
 def test_normlaize(x, to_min):
     # to_max = to_min + round(np.random.uniform(0, 1), 8)
     to_max = to_min + np.random.uniform(0, 1)
@@ -30,7 +33,7 @@ def test_normlaize(x, to_min):
     assert xn.shape == x.shape
     for row in xn:
         for val in row:
-            assert round(val, 8) <= to_max and val >= to_min
+            assert truncate(val, 8) <= to_max and val >= to_min
 
 
 # test landscape

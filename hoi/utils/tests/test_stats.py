@@ -47,9 +47,11 @@ def test_landscape(x, multi, n_bins):
     assert op.shape == (n_bins, 5)
 
 
-# # test get_nbest_mult
-# model = Oinfo(x2)
-# hoi = model.fit()
-# def test_nbest():
-#     df_best = get_nbest_mult(hoi, model=model)
-#     assert df_best.shape == 5
+# test get_nbest_mult
+def test_nbest():
+    x = np.random.rand(100, 5)
+    model = Oinfo(x)
+    hoi = model.fit()
+    get_nbest_mult(hoi, model=model)
+    pass
+

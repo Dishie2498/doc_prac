@@ -22,9 +22,10 @@ def test_digitize(arr, bins, sklearn):
 
 # tests normalize
 @pytest.mark.parametrize("x", [x1, x2, j2])
-@pytest.mark.parametrize("to_min", [np.random.uniform(0, 1) for n in range(5)])
+@pytest.mark.parametrize("to_min", [round(np.random.uniform(0, 1), 8) for n in range(5)])
 def test_normlaize(x, to_min):
-    to_max = to_min + round(np.random.uniform(0, 1), 8)
+    # to_max = to_min + round(np.random.uniform(0, 1), 8)
+    to_max = to_min + np.random.uniform(0, 1)
     xn = normalize(x, to_min, to_max)
     assert xn.shape == x.shape
     for row in xn:

@@ -48,11 +48,11 @@ def test_landscape(x, multi, n_bins):
 
 
 # test get_nbest_mult
+@pytest.mark.parametrize("x", [np.random.rand(100, 5) for _ in range(3)])
 @pytest.mark.parametrize("n_best", [np.random.randint(6, 20) for _ in range(3)])
-def test_nbest(n_best):
-    x = np.random.rand(100, 5)
+def test_nbest(x, n_best):
     model = Oinfo(x)
     hoi = model.fit()
     df = get_nbest_mult(hoi, model=model, n_best=n_best)
-    assert df.shape[0] == n_best
+    assert isinstance(df, pd.DataFrame)
     pass

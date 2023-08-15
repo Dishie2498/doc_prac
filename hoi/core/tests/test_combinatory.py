@@ -17,37 +17,38 @@ def test_single_combinations(n, k, order):
     pass
 
 
+@pytest.mark.parametrize("n", [np.random.randint(5, 1000) for _ in range(5)])
+@pytest.mark.parametrize("min", [np.random.randint(1, 10) for _ in range(5)])
+@pytest.mark.parametrize("max", [_ for _ in range(5)])  # addition to minimum size
+@pytest.mark.parametrize("astype", ["numpy", "jax", "iterator"])
+@pytest.mark.parametrize("order_val", [True, False])
+def test_combinations(n, min, max, astype, order_val):
+    combs = combinations(n, min, min + max, astype, order_val)
+    assert isinstance(combs, Iterable)
+    pass
+
+
 # # # def isiterable(x):
 # # #   try: iter(x)
 # # #   except TypeError: return False
 # # #   else: return True
 
+    # # combs = np.asarray(combs)
+    # # x = np.fromiter(combs, object)
+    # print(type(combs))
+    # if astype == "jax":
+    #     assert isinstance(combs, jaxlib.xla_extension.ArrayImpl)
+    # else:
+    #     assert isinstance(combs, np.ndarray)
+    # assert isiterable(combs)
 
-# @pytest.mark.parametrize("n", [np.random.randint(5, 1000) for _ in range(5)])
-# @pytest.mark.parametrize("min", [np.random.randint(1, 10) for _ in range(5)])
-# @pytest.mark.parametrize("max", [_ for _ in range(5)])  # addition to minimum size
-# @pytest.mark.parametrize("astype", ["numpy", "jax", "iterator"])
-# @pytest.mark.parametrize("order_val", [True, False])
-# def test_combinations(n, min, max, astype, order_val):
-#     combs = combinations(n, min, min + max, astype, order_val)
-#     assert isinstance(combs, Iterable)
-#     pass
-#     # # combs = np.asarray(combs)
-#     # # x = np.fromiter(combs, object)
-#     # print(type(combs))
-#     # if astype == "jax":
-#     #     assert isinstance(combs, jaxlib.xla_extension.ArrayImpl)
-#     # else:
-#     #     assert isinstance(combs, np.ndarray)
-#     # assert isiterable(combs)
+    # assert combs.ndim == 1
+    # assert len(list(combs)) == 1
+    # total_comb = 0
+    # for i in range(max):
+    #     total_comb += comb(n, min + i)
 
-#     # assert combs.ndim == 1
-#     # assert len(list(combs)) == 1
-#     # total_comb = 0
-#     # for i in range(max):
-#     #     total_comb += comb(n, min + i)
-
-#     # assert combs.shape[0] == total_comb
+    # assert combs.shape[0] == total_comb
 
 # if __name__ == "__main__":
 #     print(type(combinations(10, 2, None, "numpy", False)))

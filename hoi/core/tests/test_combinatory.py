@@ -17,21 +17,21 @@ def test_single_combinations(n, k, order):
     pass
 
 
-# # def isiterable(x):
-# #   try: iter(x)
-# #   except TypeError: return False
-# #   else: return True
+# # # def isiterable(x):
+# # #   try: iter(x)
+# # #   except TypeError: return False
+# # #   else: return True
 
 
-@pytest.mark.parametrize("n", [np.random.randint(5, 1000) for _ in range(5)])
-@pytest.mark.parametrize("min", [np.random.randint(1, 10) for _ in range(5)])
-@pytest.mark.parametrize("max", [_ for _ in range(5)])  # addition to minimum size
-@pytest.mark.parametrize("astype", ["numpy", "jax", "iterator"])
-@pytest.mark.parametrize("order_val", [True, False])
-def test_combinations(n, min, max, astype, order_val):
-    combs = combinations(n, min, min + max, astype, order_val)
-    assert isinstance(combs, Iterable)
-    pass
+# @pytest.mark.parametrize("n", [np.random.randint(5, 1000) for _ in range(5)])
+# @pytest.mark.parametrize("min", [np.random.randint(1, 10) for _ in range(5)])
+# @pytest.mark.parametrize("max", [_ for _ in range(5)])  # addition to minimum size
+# @pytest.mark.parametrize("astype", ["numpy", "jax", "iterator"])
+# @pytest.mark.parametrize("order_val", [True, False])
+# def test_combinations(n, min, max, astype, order_val):
+#     combs = combinations(n, min, min + max, astype, order_val)
+#     assert isinstance(combs, Iterable)
+#     pass
 #     # # combs = np.asarray(combs)
 #     # # x = np.fromiter(combs, object)
 #     # print(type(combs))

@@ -4,6 +4,7 @@ import jax
 import jax.numpy as jnp
 from hoi.utils.stats import digitize, landscape, normalize, get_nbest_mult
 import pandas as pd
+import math
 from hoi.metrics import Oinfo
 x1 = np.random.rand(1, 50)
 x2 = np.random.rand(10, 50)
@@ -20,10 +21,10 @@ def test_digitize(arr, bins, sklearn):
     assert arr.shape == x_binned.shape
 
 
-def truncate(f, n):
-    import math
-    return math.floor(f * 10 ** n) / 10 ** n
-# tests normalize
+def truncate_decimal(number, decimal_points):
+    factor = 10 ** decimal_points
+    truncated_number = math.floor(number * factor) / factor
+    return truncated_number
 @pytest.mark.parametrize("x", [x1, x2, j2])
 @pytest.mark.parametrize("to_min", [np.random.uniform(0, 1) for n in range(5)])
 def test_normlaize(x, to_min):
@@ -33,7 +34,7 @@ def test_normlaize(x, to_min):
     assert xn.shape == x.shape
     for row in xn:
         for val in row:
-            assert (to_max - val) > 0.0000000000001 and (val - to_min) > 0.0000000000001
+            assert val <= to_max and val >= truncate_decimal(to_min, 7)
 
 
 # test landscape

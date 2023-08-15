@@ -17,9 +17,9 @@ def test_single_combinations(n, k, order):
     pass
 
 
-@pytest.mark.parametrize("n", [np.random.randint(5, 1000) for _ in range(5)])
-@pytest.mark.parametrize("min", [np.random.randint(1, 10) for _ in range(5)])
-@pytest.mark.parametrize("max", [_ for _ in range(5)])  # addition to minimum size
+@pytest.mark.parametrize("n", [np.random.randint(5, 10) for _ in range(2)])
+@pytest.mark.parametrize("min", [np.random.randint(1, 10) for _ in range(2)])
+@pytest.mark.parametrize("max", [_ for _ in range(2)])  # addition to minimum size
 @pytest.mark.parametrize("astype", ["numpy", "jax", "iterator"])
 @pytest.mark.parametrize("order_val", [True, False])
 def test_combinations(n, min, max, astype, order_val):

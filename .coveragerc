@@ -1,8 +1,8 @@
 [run]
 branch = True
-source = hoi/core/tests
-         hoi/metrics/tests
-         hoi/utils/tests
+source = hoi/core/tests/*
+         hoi/metrics/tests/*
+         hoi/utils/tests/*
 [report]
 omit =
     */setup.py

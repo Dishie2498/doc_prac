@@ -1,7 +1,8 @@
 [run]
 branch = True
 source = hoi
-include = */hoi/*
+include = hoi/*
+[report]
 omit =
     */setup.py
     */test/*
@@ -10,7 +11,6 @@ omit =
     */tests/*
     */io_syslog.py
     */io_dependencies.py
-
-[report]
+    
 show_missing = False
 # sort = Cover

@@ -1,7 +1,6 @@
 [run]
 branch = True
 source = hoi
-include = hoi/*
 [report]
 omit =
     */setup.py

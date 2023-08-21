@@ -10,6 +10,21 @@ omit =
     */examples/*
     */io_syslog.py
     */io_dependencies.py
+    */__init__.py 
+    hoi/core/combinatory.py 
+    hoi/core/entropies.py  
+    hoi/core/mi.py 
+    hoi/metrics/base_hoi.py 
+    hoi/metrics/gradient_oinfo.py
+    hoi/metrics/info_tot.py
+    hoi/metrics/infotopo.py
+    hoi/metrics/oinfo.py
+    hoi/metrics/red_mmi.py
+    hoi/metrics/rsi.py
+    hoi/metrics/syn_mmi.py
+    hoi/plot/landscape.py
+    hoi/utils/progressbar.py
+    hoi/utils/stats.py
     
 show_missing = False
 # sort = Cover
